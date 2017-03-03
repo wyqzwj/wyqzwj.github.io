@@ -1,0 +1,133 @@
+<HTML><HEAD><TITLE>主体标签及颜色的设定</TITLE>
+<link rel="stylesheet" href="aa.css" type="text/css">
+<STYLE type=text/css>
+<!--
+.STYLE1 {color: #FF0000}
+.STYLE2 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+</STYLE>
+</HEAD>
+<BODY background="imge/aki-5.gif" leftmargin="20" rightmargin="20">
+<H2>&nbsp;</H2>
+<H2 class=STYLE1 align=center>第二章 HTML主体标签及属性、颜色的设定 </H2>
+<P>&nbsp;&nbsp; 为了使你的网页绚丽多姿，吸引更多的浏览者阅读，可以给网页添加更多的标签及属性，这是为了对网页中的元素进行修饰、布局。下面就来逐一介绍这些标签。 
+<BR>
+<BR>&nbsp;&nbsp; <FONT color=#ff0000 size=4><STRONG>一、 
+html的主体标签<a name="主体标" id="主体标"></a>&lt;body&gt;</STRONG></FONT> <BR><BR>&nbsp;&nbsp;&nbsp;<FONT 
+color=#000000>在&lt;body&gt;和&lt;/body&gt;中放置的是页面中所有的内容，如图片、文字、表格、表单、超链接等设置。</FONT></P>
+<P><FONT color=#000000>&nbsp;&nbsp; &lt;body&gt;标签有自己的属性，设置 
+&lt;body&gt;标签内的属性，可控制整个页面的显示方式。</FONT> </P>
+<P align=center><FONT color=#000000>&nbsp;&lt;body&gt;标签的属性</FONT></P>
+<P align=center>
+<TABLE style="WIDTH: 482px; HEIGHT: 258px" borderColor=#000080 width=482 
+border=3>
+  <TBODY>
+  <TR>
+    <TD>属　性</TD>
+    <TD>描　　述</TD></TR>
+  <TR>
+    <TD>link</TD>
+    <TD>设定页面默认的连接颜色</TD></TR>
+  <TR>
+    <TD>alink</TD>
+    <TD>设定鼠标正在单击时的连接颜色</TD></TR>
+  <TR>
+    <TD>vlink</TD>
+    <TD>设定访问后连接文字的颜色</TD></TR>
+  <TR>
+    <TD>background</TD>
+    <TD>设定页面背景图像</TD></TR>
+  <TR>
+    <TD>bgcolor </TD>
+    <TD>设定页面背景颜色</TD></TR>
+  <TR>
+    <TD>leftmargin </TD>
+    <TD>设定页面的左边距</TD></TR>
+  <TR>
+    <TD>topmargin</TD>
+    <TD>设定页面的上边距</TD></TR>
+  <TR>
+    <TD>bgproperties</TD>
+    <TD>设定页面背景图像为固定，不随页面的滚动而滚动</TD></TR>
+  <TR>
+    <TD>text</TD>
+    <TD>设定页面文字的颜色</TD></TR></TBODY></TABLE></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 格式：<BR>&nbsp;&nbsp;&nbsp; 
+&lt;body text="#000000" link="#000000" alink="#000000" vlink="#000000" 
+background="gifnam.gif" bgcolor="#000000" leftmargin=3 topmargin=2 
+bgproperties="fixed"&gt;</P>
+<P><FONT color=#000000>实例：</FONT><A href="./shili/2-1.htm">2-1.html</A><BR>
+  <br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;bady的属性实例&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body bgcolor=&quot;#FFFFE7&quot; text=&quot;#ff0000&quot; link=&quot;#3300FF&quot; alink=&quot;#FF00FF&quot; vlink=&quot;#9900FF&quot;&gt;<br>
+&lt;center&gt;<br>
+&lt;h2&gt;设定不同的连接颜色&lt;/h2&gt;<br>
+测试body标签&lt;p&gt;<br>
+&lt;a href=&quot;http://www.baidu.com/&quot;&gt;默认的连接颜色&lt;/a&gt;<br>
+&lt;p&gt;<br>
+&lt;a href=&quot;http://www.sina.com.cn&quot;&gt;正在按下的连接颜色,&lt;/a&gt;<br>
+&lt;p&gt;<br>
+&lt;a href=&quot;http://www.sohu.com/&quot;&gt;访问过后的连接颜色,&lt;/a&gt;<br>
+&lt;P&gt;<br>
+&lt;a href=&quot;#&quot; onClick=&quot;javascript:window.history.back()&quot;&gt;返回&lt;/a&gt;<br>
+&lt;/conter&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</P>
+<P><FONT size=+0>实例说明：<BR>&nbsp;&nbsp;&nbsp;&nbsp; <BR>
+&nbsp;&nbsp;&nbsp; 
+&lt;body&gt;的属性设定了页面的背景颜色，文字的颜色，链接的颜色为#3300ff，单击的连接颜色为#ff00ff，单击过后的颜色为#9900ff。</FONT> </P>
+<P><FONT size=+0>&nbsp;&nbsp;&nbsp; 
+Body里面的是页面中的链接标签，对于属性可根据页面的效果来定，用那个属性就设定那个属性。对于上面的属性在后面的章节中还会介绍，在这里就不逐一引用了，我们的学习目的主要是掌握标签及属性的使用方法。<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+class=STYLE2><FONT size=4> 二、 颜色的设定<a name="颜色的设" id="颜色的设"></a> </FONT></SPAN></FONT></P>
+<P><FONT 
+size=+0>&nbsp;&nbsp;&nbsp;&nbsp;颜色值是一个关键字或一个RGB格式的数字。在网页中用得很多，在此就先介绍一下。</FONT></P>
+<P><FONT size=+0>&nbsp;&nbsp;&nbsp; 
+颜色是由 "red" "green" "blue " 三原色组合而成的，在 HTML 中对</FONT><FONT size=+0>颜色的定义是用十六进位的，对於三原色 HTML 分别给予两个十六进位去定义，也就是每个原色可有 256 
+种彩度，故此三原色可混合成16777216种颜色。<BR>
+&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp; 例如：&nbsp; 
+</FONT><FONT style="BACKGROUND-COLOR: #99cc55" color=#ffffff>白色的组成是 red=ff, 
+green=ff, blue= ff,RGB 值即为ffffff</FONT><FONT color=#000000> 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT 
+color=#ff0000>红色的组成是 red=ff, green= 00, blue= 00, 
+RGB值即为ff0000</FONT>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT 
+color=#000000> <FONT color=#339966>绿色的组成是 red=00, green=ff, blue= 00, RGB值即为 
+00ff00</FONT> &nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT 
+color=#0000ff>蓝色的组成是 red=00, green= 00, blue= ff, RGB值即为0000ff</FONT> 
+&nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT>黑色的组成是 
+red=00, green=00, blue=00, RGB 值即为 000000<FONT color=#339966> &nbsp; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp; </FONT>应用时常在每个 RGB 
+值之前加上“ # “ 符号，如：bgcolor="#336699" 用英文名字表示颜色时直接写名字。如 bgcolor=green </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RGB颜色可以有四种表达形式:： </P>
+<UL>
+  <LI><STRONG class=CSS>#rrggbb</STRONG> (<I>如</I>，<STRONG 
+  class=CSS>#00cc00</STRONG>) 
+  <LI><STRONG class=CSS>#rgb</STRONG> (<I>如</I>，<STRONG class=CSS>#0c0</STRONG>) 
+  <LI><STRONG class=CSS>rgb(x,x,x)</STRONG> <STRONG 
+  class=CSS>x</STRONG>是一个介乎0到255之间的整数 (<I>如</I>，<STRONG 
+  class=CSS>rgb(0,204,0)</STRONG>) 
+  <LI><STRONG class=CSS>rgb(y%,y%,y%)</STRONG> <STRONG 
+  class=CSS>y</STRONG>是一个介乎0.0到100.0之间的整数 (<EM>如</EM>，
+  rgb(0%,80%,0%)<BR></LI></UL>
+<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;Windows VGA(视频图像阵列)形成了16各关键字:&nbsp; <FONT 
+color=#00ffff>aqua，</FONT>black， <FONT color=#0000ff>blue</FONT>，<FONT 
+color=#ff00ff>fuchsia</FONT>, <FONT color=#808080>gray</FONT>，<FONT 
+color=#008000>green</FONT>， <FONT color=#99cc00>lime</FONT>，<FONT 
+color=#800000>maroon</FONT>，<FONT color=#000080>navy</FONT>，<FONT 
+color=#808000>olive</FONT>， <FONT color=#800080>purple</FONT>，<FONT 
+color=#ff0000>red</FONT>，<FONT color=#c0c0c0>silver</FONT>，<FONT 
+color=#008080>teal</FONT>，<FONT color=#ffffff>white</FONT>，and <FONT 
+color=#ffff00>yellow</FONT></P>
+<P align=center>下面是部分颜色的RGB代码图表:<BR>
+<IMG 
+src="./image/hexchar.gif" align=baseline></P>
+<P align=center><font size="+3"><b>&nbsp; <a href="./1.htm">上一页</a>&nbsp; <a href="./3.htm">下一页</a></b></font></P>
+</BODY>
+</HTML>
