@@ -1,0 +1,429 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>文字版面的编辑</title>
+<link rel="stylesheet" href="aa.css" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {color: #339933}
+.STYLE4 {font-size: 16px}
+.STYLE6 {font-size: 18px}
+-->
+</style>
+</head>
+
+<body text=#000000 vLink=#800080 aLink=#0000ff link=#0000ff background="imge/aki-5.gif" leftmargin="20" rightmargin="20">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h1 align="center"><span class="STYLE1"><FONT color=#ff0000>第三章 文字版面的编辑 </FONT>
+ </span></h1>
+<P align=left>
+  <FONT color=#ff0000 size="5"><strong>3-1 
+换行标签<a name="换行标签" id="换行标签"></a>&lt;br&gt;</strong></FONT> 
+<BR>
+  </STRONG> 
+&nbsp;&nbsp;&nbsp; 换行标签是个单标签，也叫空标签，不包含任和内容，在html文件中的任何位置只要使用了&lt;br&gt;标签，当文件显示在浏览器中时，该标签之后的内容将显示下一行。</P>
+<p class="STYLE4">请看下面的例子：<A 
+href="./shili/3-1.htm">3-1html</A></p>
+<p class="STYLE4">&lt;html&gt;<br >
+  <br >  &lt;head&gt;<br >
+&lt;title&gt;无换行示例&lt;/title&gt;<br >
+&lt;/head&gt;</p>
+<p class="STYLE4">&lt;body&gt;<br >
+    无换行标记：登鹳雀楼　白日依山尽，黄河入海流。欲穷千里目，更上一层楼。<br >
+  &lt;br&gt;有换行标记：&lt;br&gt;登鹳雀楼&lt;br&gt;白日依山尽，&lt;br&gt;黄河入海流。&lt;br&gt;欲穷千里目，&lt;br&gt;更上一层楼。<br >
+  <span class="STYLE4">&lt;/body&gt;</span></p>
+<p class="STYLE4">&lt;/html&gt;</p>
+<P align="left" class=STYLE4><FONT size=5 color=#ff0000>3-2 
+换段落标签<font size=5 color=#ff0000><a name="换段落" id="换段落"></a></font>&lt;p&gt;及属性：</FONT> <BR></P>
+<p class="STYLE4">&nbsp;&nbsp;&nbsp; 
+由&lt;p&gt;标签所标识的文字，代表同一个段落的文字。不同段落间的间距等于连续加了两个换行符，也就是要隔一行空白行，用以区别文字的不同段落。它可以单独使用，也可以成对使用。单独使用时，下一个&lt;P&gt;的开始就意味着上一个&lt;P&gt;的结束。良好的习惯是成对使用。</p>
+<p class="STYLE4">格式：<br >
+  <br >
+   &lt;P&gt;<br >&lt;P ALIGN= 
+参数&gt;<br ><BR>
+其中,ALIGN是&lt;p&gt;标签的属性,属性有三个参数left,center,right.这三个参数设置段落文字的左,中,右位置的对齐方式.  <br >
+</p>
+<p class="STYLE4">实例<a name="例3-2" id="例3-2"></a>:<A 
+href="./shili/3-2.htm">3-2html</A></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;测试分段控制标签&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+&lt;p&gt;花儿什么也没有。它们只有凋谢在风中的轻微、凄楚而又无奈的吟怨，<br>
+就像那受到了致命伤害的秋雁，悲哀无助地发出一声声垂死的鸣叫。&lt;/p&gt;<br>
+&lt;p align=&quot;right&quot;&gt;或许，这便是花儿那短暂一生最凄凉、最伤感的归宿。&lt;/p&gt;<br>
+&lt;p align=center&gt;而美丽苦短的花期&lt;/p&gt;<br>
+&lt;p align=&quot;left&quot;&gt;却是那最后悲伤的秋风挽歌中的瞬间插曲。&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p><FONT size=5><STRONG><FONT color=#ff0000>3-3 
+  原样显示文字标签<a name="原样显示文字" id="原样显示文字"></a>&lt;pre&gt;</FONT> 
+</STRONG></FONT></p>
+<p class="STYLE4">&nbsp;&nbsp; 
+要保留原始文字排版的格式,就可以通过&lt;pre&gt;标签来实现,方法是把制作好的文字排版内容前后分别加上始标签&lt;pre&gt;和尾标签&lt;/pre&gt;.</p>
+<P class=STYLE4>实例<a name="例3-3" id="例3-3"></a>:<A href="./shili/3-3.htm">3-3html</A></P>
+<P class=STYLE4>&lt;HTML&gt;<br >
+  &lt;HEAD&gt;<br >
+  &lt;TITLE&gt;原样显示文字标签&lt;/TITLE&gt;<br >
+  &lt;/HEAD&gt;<br >
+  &lt;BODY&gt;<br >
+  &lt;PRE&gt;<br >&nbsp;&nbsp;&nbsp; 
+白日依山尽，</P>
+<p class="STYLE4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 黄河入海流。</p>
+<p class="STYLE4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 欲穷千里目，</p>
+<p class="STYLE4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 更上一层楼。<br >
+  &lt;/PRE&gt;<br >
+  &lt;/BODY&gt;<br >
+  &lt;/HTML&gt;</p>
+<p align="left" class="STYLE4"><FONT size=5 color=#ff0000>3-4 
+居中对齐标签<a name="居中对齐" id="居中对齐"></a>&lt;center&gt;</FONT> 
+<BR> </p>
+<p class="STYLE4">&nbsp;&nbsp; 
+文本在页面中使用&lt;center&gt;标签进行居中显示,&lt;center&gt;是成对标签,在需要居中的内容部分开头处加&lt;center&gt;,结尾处加&lt;/center&gt;</p>
+<p class="STYLE4">&nbsp;实例<a name="例3-4" id="例3-4"></a>：<A 
+href="./shili/3-4.htm">3-4html</A></p>
+<P 
+class=STYLE4>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;居中对齐标签&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;</P>
+<P class=STYLE4><SPAN lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">《送孟浩然之廣陵》&lt;p&gt;</SPAN></P>
+<P class=STYLE4><SPAN lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"></SPAN><SPAN 
+lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">故人西辭黃鶴樓，</SPAN></P>
+<P class=STYLE4><SPAN lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">煙花三月下揚州。</SPAN></P>
+<P class=STYLE4><SPAN lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">孤帆遠影碧山盡，</SPAN></P>
+<P class=STYLE4><SPAN lang=ZH-TW 
+style="FONT-SIZE: 12pt; FONT-FAMILY: MingLiU; mso-bidi-font-size: 10.0pt; mso-bidi-font-family: 'Times New Roman'; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA">惟見長江天際流。</SPAN><BR>&lt;/CENTER&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+<P align="left" class=STYLE4><FONT size=5 color=#ff0000>3-5 引文标签<a name="引文" id="引文"></a> (缩排标签）&lt;blockquote&gt;</FONT> 
+ <BR></P>
+<p class="STYLE4">&nbsp;&nbsp;&nbsp; 
+&lt;blockquote&gt;标签可以用来建立一个引文，他特别适合较长文本的引用，引文显示时将会自动右移，左边空出几个格，加以区别。</p>
+<p class="STYLE4">实例<a name="例3-5" id="例3-5"></a>：<A 
+href="./shili/3-5.htm">3-5html</A>
+<P 
+class=STYLE4>&lt;HTML&gt;<br />
+  &lt;HEAD&gt;<br />
+  &lt;TITLE&gt;引文标签&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY&gt;<br />
+  春 &lt;BR&gt;<br />
+  &lt;PRE&gt;<br />
+  &lt;BLOCKQUOTE&gt;<br />
+  盼望着，盼望着，东风来了，春天脚步近了。&lt;br&gt;<br />
+  一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。<br />
+  小草偷偷地从土里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球,赛几趟跑，捉几<br />
+  回迷藏。风轻悄悄的，草软绵绵的。<br />
+  &lt;/BLOCKQUOTE&gt;<br />
+  &lt;BLOCKQUOTE&gt;&lt;BLOCKQUOTE&gt;<br />
+  桃树、杏树、梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味儿；闭了眼，村上仿佛已<br />
+  经满是桃儿、杏儿、梨儿。花下成千成百的蜜蜂嗡嗡地闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草<br />
+  丛里像眼睛，像星星，还眨呀眨的。<br />
+  “吹面不寒杨柳风”，不错的，像母亲的手抚摸着你。风里带来些新翻的泥土的气息，混着青草味儿，还有各种花的香，都在微微润湿的<br />
+  空气里酝酿。鸟儿将巢安在繁花嫩叶当中，高兴起来了，呼朋引伴地卖弄清脆的喉咙，唱出宛转的曲子，跟轻风流水应和着。牛背上牧童<br />
+  的短笛，这时候也成天嘹亮地响着。<br />
+  雨是最寻常的，一下就是三两天。可别恼。看，像牛毛，像花针，像细丝，密密地斜织着，人家屋顶上全笼着一层薄烟。树叶儿却绿得发<br />
+  亮。小草儿也青得逼你的眼。傍晚时候，上灯了，一点点黄晕的光，烘托出一片安静而和平的夜。在乡下，小路上，石桥边，有撑着伞慢<br />
+  慢走着的人；地里还有工作的农民，披着蓑戴着笠。他们的房屋，稀稀疏疏的，在雨里静默着。<br />
+  &lt;/BLOCKQUOTE&gt;&lt;/BLOCKQUOTE&gt;<br />
+  &lt;BLOCKQUOTE&gt;&lt;BLOCKQUOTE&gt;&lt;BLOCKQUOTE&gt;<br />
+  天上风筝渐渐多了，地上孩子也多了。城里乡下，家家户户，老老小小，也都赶趟儿似的，一个个都出来了。舒活舒活筋骨，抖擞<br />
+  抖擞精神，各做各的一份事儿去。<br />
+  “一年之计在于春”，刚起头儿，有的是工夫，有的是希望。<br />
+  春天像刚落地的娃娃，从头到脚都是新的，它生长着。<br />
+  春天像小姑娘，花枝招展的，笑着，走着。<br />
+  春天像健壮的青年，有铁一般的胳膊和腰脚，他领着我们上前去。<br />
+  &lt;/BLOCKQUOTE&gt;&lt;/BLOCKQUOTE&gt;&lt;/BLOCKQUOTE&gt;<br />
+  &lt;/PRE&gt;<br />
+  &lt;/BODY&gt;<br />
+&lt;/HTML&gt;</P>
+<P 
+class=STYLE4><STRONG><FONT 
+size=5 color=#ff0000>3-6水平分隔线标签<a name="水平分隔线" id="水平分隔线"></a>&lt;hr&gt;</FONT></STRONG></P>
+<P 
+class=STYLE4>&nbsp;&nbsp;&nbsp; 
+&lt;hr&gt;标签是单独使用的标签，是水平线标签，用于段落与段落之间的分隔，使文档结构清晰明了，使文字的编排更整齐。通过设置&lt;hr&gt;标签的属性值，可以控制水平分隔线的样式。</P>
+<P 
+class=STYLE4 align=center>&lt;hr&gt;标签的属性<BR></P>
+<P 
+class=STYLE4 align=center>
+<TABLE style="WIDTH: 612px; HEIGHT: 249px" borderColor=#003366 cellSpacing=0 
+width=612 border=3>
+  
+  <TR>
+    <TD>
+      <P align=center>属性</P></TD>
+    <TD>
+      <P align=center>参数</P></TD>
+    <TD>
+      <P align=center>功能</P></TD>
+    <TD>
+      <P align=center>单位</P></TD>
+    <TD>
+      <P align=center>默认值</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>size</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>设置水平分隔线的粗细</P></TD>
+    <TD>
+      <P align=center>pixel(像素）</P></TD>
+    <TD>
+      <P align=center>2</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>width</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>设置水平分隔线的宽度</P></TD>
+    <TD>
+      <P align=center>pixel(像素）、%</P></TD>
+    <TD>
+      <P align=center>100%</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>align</P></TD>
+    <TD>
+      <P align=center>left enter right</P></TD>
+    <TD>
+      <P align=center>设置水平分隔线的对齐方式</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>center</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>color</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>设置水平分隔线的颜色</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>black</P></TD></TR>
+  <TR>
+    <TD>
+      <P align=center>noshade</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>取消水平分隔线的3d阴影</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD>
+    <TD>
+      <P align=center>&nbsp;</P></TD></TR></TABLE></P>
+<P 
+class=STYLE4>实例<a name="例3-6" id="例3-6"></a>：<A 
+href="./shili/3-6.htm">3-6html</A></P>
+<P 
+class=STYLE4>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;测试水平分隔线标签&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;<BR>春&nbsp; 
+晓<BR>&lt;HR &gt;<BR>
+春眠不觉晓，<BR>&lt;hr 
+size="6"&gt;<BR>处处闻啼鸟。<BR>&lt;hr width="40%"&gt;<BR>夜来风雨声，<BR>&lt;hr width="60" 
+align="left"&gt;<BR>花落知多少？<BR>&lt;hr size="6" width="30%" align="center"&nbsp; 
+noshade&nbsp;color=red 
+&gt;<br>
+&lt;/CENTER&gt;<BR>
+&lt;/BODY&gt;<BR>
+&lt;/HTML&gt;<BR>
+  <BR>
+<FONT 
+size=5 color=#ff0000><STRONG>3-7署名标签<a name="署名" id="署名"></a>&lt;address&gt;</STRONG></FONT></P>
+<P class=STYLE4>&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;address&gt;署名标签一般用于说明这个网页是由谁或是由哪个公司编写的，以及其它相关信息。在&lt;address&gt;&lt;/address&gt;标签之间的文字显示效果是斜体字。</P>
+<P class=STYLE4>实例<a name="例3-7" id="例3-7"></a>：<A 
+href="./shili/3-7.htm">3-7html</A></P>
+<P 
+class=STYLE4>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;署名标签&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;<BR>乐 
+游 原<BR>&lt;HR WIDTH="50%" SIZE="5" COLOR="FFCC00" 
+ALIGN=CENTER&gt;<BR>&lt;PRE&gt;<BR>向晚意不适，<BR>驱车登古原。<BR>夕阳无限好，<BR>只是近黄昏。<BR>&lt;/PRE&gt;<BR>&lt;HR 
+WIDTH="50%" SIZE="5" COLOR="FFCC00" ALIGN=CENTER&gt;<BR>&lt;ADDRESS&gt;<BR>[唐] 
+李商隐<BR>&lt;/ADDRESS&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;<BR></P>
+<P class=STYLE4><FONT 
+size=5 color=#ff0000><STRONG>3-8特殊字符<a name="特殊字符" id="特殊字符"></a></STRONG></FONT></P>
+<P class=STYLE4>&nbsp;&nbsp;&nbsp; 
+在HTML文档中，有些字符没办法直接显示出来，例如?. 
+使用特殊字符可以将键盘上没有的字符表达出来，而有些HTML文档的特殊字符在键盘上虽然可以得到，但浏览器在解析HTML文当时会报错，例如"&lt;"等，为防止代码混淆，必须用一些代码来表示它们。</P>
+<P class=STYLE4 align=center>HTML几种常见特殊字符及其代码表</P>
+<P class=STYLE4 align=center>
+<TABLE style="WIDTH: 488px; HEIGHT: 158px" borderColor=#003366 width=488 
+border=3>
+  
+  <TR>
+    <TD>
+    <P align=center class="STYLE6">特殊或专用字符</P></TD>
+    <TD><span class="STYLE6">字符代码</span></TD>
+    <TD>
+    <P align=center class="STYLE6">特殊或专用字符</P></TD>
+    <TD><span class="STYLE6">字符代码</span></TD>
+  </TR>
+  <TR>
+    <TD><span class="STYLE6">&lt;</span></TD>
+    <TD><span class="STYLE6">&amp;lt;</span></TD>
+    <TD><span class="STYLE6">&copy;</span></TD>
+    <TD><span class="STYLE6">&amp;copy;</span></TD>
+  </TR>
+  <TR>
+    <TD><span class="STYLE6">&gt;</span></TD>
+    <TD><span class="STYLE6">&amp;gt;</span></TD>
+    <TD><span class="STYLE6">×</span></TD>
+    <TD><span class="STYLE6">&amp;times;</span></TD>
+  </TR>
+  <TR>
+    <TD><span class="STYLE6">&amp;</span></TD>
+    <TD><span class="STYLE6">&amp;amp;</span></TD>
+    <TD><span class="STYLE6">&reg;</span></TD>
+    <TD><span class="STYLE6">&amp;reg;</span></TD>
+  </TR>
+  <TR>
+    <TD><span class="STYLE6">"</span></TD>
+    <TD><span class="STYLE6">&amp;quot;</span></TD>
+    <TD><span class="STYLE6">空格</span></TD>
+    <TD><span class="STYLE6">&amp;nbsp;</span></TD>
+  </TR></TABLE>
+</P>
+<P class=STYLE4 align=left>实例<a name="例3-8" id="例3-8"></a>：<A 
+href="./shili/3-8.htm">3-8html</A></P>
+<P class=STYLE4 
+align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;特殊字符&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;<BR>&amp;lt;赋得古原草送别&amp;gt;<BR>&lt;HR 
+WIDTH="49%" SIZE="5" ALIGN=CENTER 
+NOSHADE&gt;<BR>&lt;PRE&gt;<BR>离离原上草，<BR>一岁一枯荣。<BR>野火烧不尽，<BR>春风吹又生。<BR>&lt;/PRE&gt;<BR>&lt;HR 
+WIDTH="49%" SIZE="5" ALIGN=CENTER NOSHADE&gt;<BR>&lt;ADDRESS&gt;<BR>白居易 
+&amp;copy;<BR>&lt;/ADDRESS&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+<P class=STYLE4 align=left><FONT size=5 color=#ff0000><STRONG>3-9注释标签<a name="注释" id="注释"></a></STRONG></FONT></P>
+<P class=STYLE4 
+align=left>&nbsp;&nbsp;&nbsp;&nbsp;在HTML文档中可以加入相关的注释标记，便于查找和记忆有关的文件内容和标识，这些注释内容并不会在浏览器中显示出来。</P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 注释标签的格式有如下：</P>
+<P class=STYLE4 
+align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;!--注释的内容--&gt;<BR> 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+<P class=STYLE4 align=left>实例<a name="例3-9" id="例3-9"></a>:<A 
+href="./shili/3-9.htm">3-9html</A></P>
+<P class=STYLE4 align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;注释标签&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;!--body标签是主体内容--&gt;<BR>&lt;CENTER&gt;<BR>&amp;lt;赋得古原草送别&amp;gt;<BR>&lt;HR 
+WIDTH="49%" SIZE="5" ALIGN=CENTER 
+NOSHADE&gt;<BR>&lt;PRE&gt;<BR>&lt;! pre代表原样显示排版格式&gt;<BR>离离原上草，<BR>一岁一枯荣。<BR>野火烧不尽，<BR>春风吹又生。<BR>&lt;/PRE&gt;<BR>&lt;HR 
+WIDTH="49%" SIZE="5" ALIGN=CENTER NOSHADE&gt;<BR>&lt;ADDRESS&gt;<BR>白居易 
+&amp;copy;<BR>&lt;/ADDRESS&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+<P class=STYLE4 align=left><FONT size=5 color=#ff0000><STRONG>3-10字体属性<a name="字体属性" id="字体属性"></a></STRONG></FONT></P>
+<P class=STYLE4 align=left><STRONG><FONT 
+size=4 color=#ff6600>3-10-1标题文字标签&lt;hn&gt;</FONT></STRONG></P>
+<P class=STYLE4 align=left><FONT 
+size=2>&nbsp;&nbsp;&nbsp; <FONT 
+size=3>&lt;hn&gt;标签用于设置网页中的标题文字，被设置的文字将以黑体或粗体的方式显示在网页中。</FONT></FONT></P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 
+标题标签的格式：&lt;hn 
+align=参数〉标题内容&lt;/hn&gt;</P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 
+说明：&lt;hn&gt;标签是成对出现的，&lt;hn&gt;标签共分为六级，在&lt;h1&gt;...&lt;/h1&gt;之间的文字就是第一级标题，是最大最粗的标题；&lt;h6&gt;...&lt;/h6&gt;之间的文字是最后一级，是最小最细的标题文字。align属性用于设置标题的对齐方式，其参数为 
+left（左）， enter（中)， right (右）。&lt;hn&gt;标签本身具有换行的作用，标题总是从新的一行开始。</P>
+<P class=STYLE4 align=left>实例<a name="例3-10-1" id="例3-10-1"></a> <A 
+href="./shili/3-10-1.htm">3-10-1html</A></P>
+<P class=STYLE4 
+align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;设定各级标题&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;H1 
+ALIGN="CENTER"&gt;一级标题。&lt;/H1&gt;<BR>&lt;H2&gt;二级标题。&lt;/H2&gt;<BR>&lt;H3&gt;三级标题。&lt;/H3&gt;<BR>&lt;H4&gt;四级标题。&lt;/H4&gt;<BR>&lt;H5 
+ALIGN="RIGHT"&gt;五级标题。&lt;/H5&gt;<BR>&lt;H6 
+ALIGN="LEFT"&gt;六级标题。&lt;/H6&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+<P class=STYLE4 align=left><FONT 
+size=4 color=#ff6600><STRONG>3-10-2文字格式控制标签&lt;FONT&gt;</STRONG></FONT></P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 
+&lt;FONT&gt;标签用于控制文字的字体，大小和颜色。控制方式是利用属性设置得以实现的。</P>
+<P class=STYLE4 align=center>FONT标签的属性
+<TABLE style="WIDTH: 412px; HEIGHT: 108px" borderColor=#003366 width=412 
+border=3>
+  
+  <TR>
+    <TD>
+      <P align=center>属性</P></TD>
+    <TD>
+      <P align=center>使用功能</P></TD>
+    <TD>默认值</TD></TR>
+  <TR>
+    <TD>
+      <P align=left>face</P></TD>
+    <TD>
+      <P align=left>设置文字使用的字体</P></TD>
+    <TD>宋体</TD></TR>
+  <TR>
+    <TD>
+      <P align=left>size</P></TD>
+    <TD>
+      <P align=left>设置文字的大小</P></TD>
+    <TD>3</TD></TR>
+  <TR>
+    <TD>
+      <P align=left>color</P></TD>
+    <TD>
+      <P align=left>设置文字的颜色</P></TD>
+    <TD>黑色</TD></TR></TABLE></P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 格式：&lt;font face=值1 size=值2 color=值3〉文字 
+&lt;/font&gt;</P>
+<P class=STYLE4 
+align=left>&nbsp;&nbsp;&nbsp; 
+说明：如果用户的系统中没有face属性所指的字体，则将使用默认字体。size属性的取值为1~7。也可以用"+"或"-"来设定字号的相对值。color属性的值为：rgb颜色"#nnnnnn"或颜色的名称</P>
+<P class=STYLE4 align=left>实例<a name="例3-10-2" id="例3-10-2"></a>：<A 
+href="./shili/3-10-2.htm">3-10-2html</A></P>
+<P class=STYLE4 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;控制文字的格式&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;center&gt;<BR>&lt;font 
+face=黑体 size=6 color="red" &gt;盼望着，盼望着，东风来了，春天脚步近了。&lt;/font&gt; 
+&lt;p&gt;<BR>&lt;font&nbsp; face=隶书 size=+3 
+color="green"&gt;<BR>一切都像刚睡醒的样子，欣欣然张开了眼。&lt;p&gt;山朗润起来了，水涨起来了，太阳的脸红起来了。<BR>&lt;/font&gt;&lt;p&gt;<BR>&lt;font&nbsp; 
+face=楷体 size=4 
+color="#ff00ff"&gt;<BR>小草偷偷地从土里钻出来，嫩嫩的，绿绿的。&lt;p&gt;园子里，田野里，瞧去一大片一大片满是的。&lt;p&gt;坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。&lt;p&gt;风轻悄悄的，草软绵绵的。<BR>&lt;/font&gt;<BR>&lt;/center&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<P class=STYLE4 align=left><STRONG><FONT 
+size=4 color=#ff6600>3-10-3特定文字样式标签</FONT></STRONG></P>
+<P class=STYLE4 align=left>&nbsp;&nbsp;&nbsp; 
+在有关文字的显示中，常常会使用一些特殊的字形或字体来强调、突出、区别以达到提示的效果。在html中用于这种功能的标签可以分为两类，物理类型和逻辑类型。</P>
+<P class=STYLE4 align=left><FONT 
+color=#ff6600><STRONG>1、物理类型</STRONG></FONT></P>
+<P class=STYLE4 align=left>(1)&nbsp; 
+粗体标签&lt;b&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+放在&lt;b&gt;与&lt;/b&gt;标签之间的文字将以粗体方式显示。<BR><BR>(2)&nbsp;&nbsp;斜体标签&lt;i&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;放在&lt;i&gt;与&lt;/i&gt;标签之间的文字将以斜体方式显示。<BR><BR>(3)&nbsp;&nbsp;下划线标签&lt;u&gt; 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+放在&lt;u&gt;与&lt;/u&gt;标签之间的文字将以下划线方式显示。</P>
+<P class=STYLE4 align=left>实例<a name="例3-10-31" id="例3-10-31"></a><A 
+href="./shili/3-10-31.htm">3-10-31html</A></P>
+<P class=STYLE4 
+align=left>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;字体的物理类型&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  &lt;center&gt;<br>
+  &lt;font color=&quot;#FF0000&quot; size=&quot;+2&quot;&gt;&lt;b&gt;这些文字是粗体的&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;<br>
+  &lt;i&gt;这些文字是斜体的&lt;/i&gt; &lt;br&gt;&lt;br&gt; <br>
+  &lt;u&gt;这些文字带有下划线&lt;/u&gt;<br>
+  &lt;/center&gt;  <br>
+  &lt;/body&gt;<br>
+&lt;/html&gt;</P>
+<P class=STYLE4 align=left><FONT 
+color=#ff6600><STRONG>2、逻辑类型</STRONG></FONT></P>
+<P class=STYLE4 
+align=left>&nbsp;&nbsp;&nbsp; 
+逻辑类型是使用一些标签来改变字体的形态和式样，以便产生一些浏览者习惯的或约定的显示效果，常用的逻辑类型标签有八种，放在标签之间的文字受其控制。下面请看常用逻辑标签的实例</P>
+<P class=STYLE4 align=left>实例<a name="例3-10-32" id="例3-10-32"></a><A 
+href="./shili/3-10-32.htm">3-10-32htrml</A></P>
+<P class=STYLE4 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;字体的逻辑类型&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;pre&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;em标签：&lt;em&gt;用于强调的文本，一般显示为斜体字&lt;/em&gt;<BR>&nbsp; 
+strong标签：&lt;strong&gt;用于特别强调的文本，显示为粗体字&lt;/strong&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;cite标签：&lt;cite&gt;用于引证和举例，通常是斜体字&lt;/cite&gt;<BR>&nbsp;&nbsp;&nbsp; 
+code标签：&lt;code&gt;用来指出这是一组代码&lt;/code&gt;<BR>&nbsp;&nbsp; 
+small标签：&lt;small&gt;规定文本以小号字显示&lt;/small&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+big标签：&lt;big&gt;规定文本以大号字显示&lt;/big&gt;<BR>&nbsp;&nbsp;&nbsp; 
+samp标签：&lt;samp&gt;显示一段计算机常用的字体，即宽度相等的字体&lt;/samp&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+kbd标签：&lt;kbd&gt;由用户输入文本，通常显示为较粗的宽体字&lt;/kbd&gt;<BR>&nbsp;&nbsp;&nbsp; 
+&nbsp;var标签：&lt;var&gt;用来表示变量，通常显示为斜体字&lt;/var&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+dfn标签：&lt;dfn&gt;表示一个定义或说明，通常显示为斜体字&lt;/dfn&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+sup标签：12&lt;sup&gt;2&lt;/sup&gt;=144<BR>&nbsp;&nbsp;&nbsp; 
+&nbsp;sub标签：硫酸亚铁的分子式是Fe&lt;sub&gt;2&lt;/sub&gt;SO&lt;sub&gt;4&lt;/sub&gt;<BR>&lt;/pre&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<P 
+align=center><font size="+3"><b>&nbsp; <a href="2.htm">上一页</a>&nbsp; <a href="4.htm">下一页</a></b></font></P>
+</body>
+</html>
