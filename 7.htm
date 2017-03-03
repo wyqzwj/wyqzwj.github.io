@@ -1,0 +1,664 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>第七章 TABLE表格</title>
+<link rel="stylesheet" href="aa.css" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.STYLE3 {
+	color: #FF3300;
+	font-weight: bold;
+	font-size: 18px;
+}
+.STYLE4 {
+	font-size: 18px;
+	color: #FF3300;
+}
+.STYLE5 {
+	color: #9900FF;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body background="imge/aki-5.gif" leftmargin="20" rightmargin="20">
+<h1 align="center"><br />
+  <span class="STYLE1">第七章
+TABLE表格</span></h1>
+<p align="left">&nbsp;&nbsp;&nbsp; 表格在网站应用中非常广泛,可以方便灵活的排版,很多动态大型网站也都是借助表格排版,表格可以把相互关联的信息元素集中定位,使浏览页面的人一目了然.所以说要制作好网页,就要学好表格</p>
+<p align="left" class="STYLE3">7-1 定义表格<a name="定义表格" id="定义表格"></a>的基本语法</p>
+<p align="left">&nbsp;&nbsp;&nbsp; 在html文档中，表格是通过&lt;table&gt;,&lt;th&gt;,&lt;tr&gt;,&lt;td&gt;标签来完成的，如下表所示：</p>
+<p align="center">表格标记
+<table width="719" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366">
+  <tr>
+    <td width="126"><div align="center">标 签</div></td>
+    <td width="502"><div align="center">描 述</div></td>
+  </tr>
+  <tr>
+    <td>&lt;table&gt;...&lt;/table&gt;</td>
+    <td>用于定义一个表格开始和结束</td>
+  </tr>
+  <tr>
+    <td>&lt;th&gt;...&lt;/th&gt;</td>
+    <td>定义表头单元格。表格中的文字将以粗体显示，在表格中也可以不用此标签，&lt;th&gt;标签必须放在&lt;tr&gt;标签内</td>
+  </tr>
+  <tr>
+    <td>&lt;tr&gt;...&lt;/tr&gt;</td>
+    <td><p>定义一行标签，一组行标签内可以建立多组由&lt;td&gt;或&lt;th&gt;标签所定义的单元格</p>
+    </td>
+  </tr>
+  <tr>
+    <td>&lt;td&gt;...&lt;/td&gt;</td>
+    <td>定义单元格标签，一组&lt;td&gt;标签将将建立一个单元格，&lt;td&gt;标签必须放在&lt;tr&gt;标签内</td>
+  </tr>
+</table>
+</center>
+<p align="left">&nbsp;&nbsp;&nbsp; 在一个最基本的表格中，必须包含一组&lt;table&gt;标签，一组标签&lt;tr&gt;和一组&lt;td&gt;标签或&lt;th&gt;。</p>
+<p align="left">实例：<a href="./shili/7-1.htm">7-1.html</a></p>
+<p align="left">&lt;HEAD&gt;<br />
+  &lt;TITLE&gt;一个简单的表格&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY&gt;<br />
+  &lt;center&gt;<br />
+ &nbsp; &lt;table&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt; <br />
+&nbsp;&nbsp;&nbsp; &nbsp; &lt;td&gt;第1行中的第1列&lt;/td&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;第1行中的第2列&lt;/td&gt; <br />
+&nbsp;&nbsp;&nbsp; &nbsp; &lt;td&gt;第1行中的第3列&lt;/td&gt; <br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt; <br />
+  &nbsp;&nbsp;&nbsp; &nbsp; &lt;td&gt;第2行中的第1列&lt;/td&gt; <br />
+  &nbsp;&nbsp;&nbsp; &nbsp; &lt;td&gt;第2行中的第2列&lt;/td&gt; <br />
+  &nbsp;&nbsp;&nbsp; &nbsp; &lt;td&gt;第2行中的第3列&lt;/td&gt; <br />
+  &nbsp; &nbsp; &lt;/tr&gt; <br />
+  &nbsp; &lt;/table&gt;<br />
+&lt;/center&gt;<br />
+&lt;/BODY&gt;<br />
+&lt;/HTML&gt;</p>
+<p align="left" class="STYLE3">7-2（1)表格&lt;table&gt;标签的属<a name="表格lttablegt" id="表格lttablegt"></a>性</p>
+<p align="left">&nbsp;&nbsp;&nbsp; 表格标签&lt;table&gt;有很多属性，最常用的属性有：</p>
+<p align="center">&lt;table&gt;标签的属性
+<table width="588" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366">
+  <tr>
+    <td>属 性</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>表格的宽度</td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>表格的高度</td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>表格在页面的水平摆放位置</td>
+  </tr>
+  <tr>
+    <td>background</td>
+    <td>表格的背景图片</td>
+  </tr>
+  <tr>
+    <td>bgcolor</td>
+    <td>表格的背景颜色</td>
+  </tr>
+  <tr>
+    <td>border</td>
+    <td>表格边框的宽度（以像素为单位）</td>
+  </tr>
+  <tr>
+    <td>bordercolor</td>
+    <td>表格边框颜色</td>
+  </tr>
+  <tr>
+    <td>bordercolorlight</td>
+    <td>表格边框明亮部分的颜色</td>
+  </tr>
+  <tr>
+    <td>bordercolordark</td>
+    <td>表格边框昏暗部分的颜色</td>
+  </tr>
+  <tr>
+    <td>cellspacing</td>
+    <td>单元格之间的间距</td>
+  </tr>
+  <tr>
+    <td>cellpadding</td>
+    <td>单元格内容与单元格边界之间的空白距离的大小</td>
+  </tr>
+</table>
+<p>实例：<a href="./shili/7-2-1.htm">7-2-1.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;无标题文档&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  &lt;table border=10 bordercolor=&quot;#006803&quot; align=&quot;center&quot; bgcolor=&quot;#DDFFDD&quot; width=500  height=&quot;200&quot;bordercolorlight=&quot;#FFFFCC&quot; bordercolordark=&quot;#660000&quot; background=&quot;../../imge/b0024.gif&quot; cellspacing=&quot;2&quot; cellpadding=&quot;8&quot;&gt;<br />
+  <br>
+  &lt;tr&gt; <br />
+&lt;td&gt;第1行中的第1列&lt;/td&gt; <br />
+&lt;td&gt;第1行中的第2列&lt;/td&gt; <br />
+&lt;td&gt;第1行中的第3列&lt;/td&gt; <br />
+&lt;/tr&gt; </p>
+<p> &lt;tr&gt; <br />
+  &lt;td&gt;第2行中的第1列&lt;/td&gt; <br />
+  &lt;td&gt;第2行中的第2列&lt;/td&gt; <br />
+  &lt;td&gt;第2行中的第3列&lt;/td&gt; <br />
+  &lt;/tr&gt; <br />
+  &lt;/table&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p><strong><span class="STYLE4">7-2（2） 表格的边框显示状态 frame</span></strong></p>
+<p>&nbsp;&nbsp;&nbsp; 表格的边框分别有上边框、下边框、左边框、右边框。这四个边框都可以设置为显示或隐藏状态</p>
+<p>&nbsp;&nbsp;&nbsp; 语法格式：&lt;table frame=&quot;边框显示值&quot;&gt; </p>
+<p align="center">表格边框显示状态frame的值的设定</p>
+<table width="500" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366" align="center">
+  <tr>
+    <td>frame的值</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>box</td>
+    <td>显示整个表格边框</td>
+  </tr>
+  <tr>
+    <td>void</td>
+    <td>不显示表格边框</td>
+  </tr>
+  <tr>
+    <td>hsides</td>
+    <td>只显示表格的上下边框</td>
+  </tr>
+  <tr>
+    <td>vsides</td>
+    <td>只显示表格的左右边框</td>
+  </tr>
+  <tr>
+    <td>alove</td>
+    <td>只显示表格的上边框</td>
+  </tr>
+  <tr>
+    <td>below</td>
+    <td>只显示表格的下边框</td>
+  </tr>
+  <tr>
+    <td>lhs</td>
+    <td>只显示表格的左边框</td>
+  </tr>
+  <tr>
+    <td>rhs</td>
+    <td>只显示表格的右边框</td>
+  </tr>
+</table>
+<p>实例：<a href="./shili/7-2-2.htm">7-2-2.html</a></p>
+<p>&lt;HTML&gt;<br />
+  &lt;HEAD&gt;<br />
+  &lt;TITLE&gt;表格边框的显示状态&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY &gt;<br />
+  &lt;TABLE border=6 bgcolor=&quot;#FFFFCC&quot; frame=&quot;hsides&quot; bordercolor=&quot;#9900FF&quot; width=&quot;400&quot; height=&quot;160&quot;&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TH&gt;姓名&lt;/TH&gt;<br />
+  &lt;TH&gt;性别&lt;/TH&gt;<br />
+  &lt;TH&gt;年龄&lt;/TH&gt;<br />
+  &lt;TH&gt;专业&lt;/TH&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD&gt;卡卡&lt;/TD&gt;<br />
+  &lt;TD&gt;男&lt;/TD&gt;<br />
+  &lt;TD&gt;50&lt;/TD&gt;<br />
+  &lt;TD&gt;计算机&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/TABLE&gt;<br />
+  &lt;/BODY&gt;<br />
+&lt;/HTML&gt;</p>
+<p class="STYLE3">7-4（3） 设置分隔线的显示状态 rules</p>
+<p>&nbsp; 语法格式：&lt;table rules=&quot;值&quot;&gt;</p>
+<p align="center">分隔线的显示状态rules的值的设定</p>
+<table width="459" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366" align="center">
+  <tr>
+    <td>rules的值</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>all</td>
+    <td>显示所有分隔线</td>
+  </tr>
+  <tr>
+    <td>groups</td>
+    <td>只显示组与组的分隔线</td>
+  </tr>
+  <tr>
+    <td>rows</td>
+    <td>只显示行与行的分隔线</td>
+  </tr>
+  <tr>
+    <td>cols</td>
+    <td><p>只显示列与列的分隔线</p>
+    </td>
+  </tr>
+  <tr>
+    <td>none</td>
+    <td>所有分隔线都不显示</td>
+  </tr>
+</table>
+<p>实例:<a href="./shili/7-2-3.htm">7-2-3.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;无标题文档&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;TABLE border=6 bgcolor=&quot;#FFFFCC&quot; rules=&quot;cols&quot; bordercolor=&quot;#9900FF&quot; width=&quot;400&quot; height=&quot;160&quot; align=&quot;center&quot;&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TH&gt;姓名&lt;/TH&gt;<br />
+  &lt;TH&gt;性别&lt;/TH&gt;<br />
+  &lt;TH&gt;年龄&lt;/TH&gt;<br />
+  &lt;TH&gt;专业&lt;/TH&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD&gt;笨笨猫&lt;/TD&gt;<br />
+  &lt;TD&gt;女&lt;/TD&gt;<br />
+  &lt;TD&gt;99&lt;/TD&gt;<br />
+  &lt;TD&gt;计算机&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/TABLE&gt;&lt;p&gt;<br />
+&lt;TABLE border=6 bgcolor=&quot;#FFFFCC&quot; rules=&quot;rows&quot; bordercolor=&quot;#9900FF&quot; width=&quot;400&quot; height=&quot;160&quot; align=&quot;center&quot;&gt;<br />
+&lt;TR&gt;<br />
+&lt;TH&gt;姓名&lt;/TH&gt;<br />
+&lt;TH&gt;性别&lt;/TH&gt;<br />
+&lt;TH&gt;年龄&lt;/TH&gt;<br />
+&lt;TH&gt;专业&lt;/TH&gt;<br />
+&lt;/TR&gt;<br />
+&lt;TR&gt;<br />
+&lt;TD&gt;笨笨猫&lt;/TD&gt;<br />
+&lt;TD&gt;女&lt;/TD&gt;<br />
+&lt;TD&gt;99&lt;/TD&gt;<br />
+&lt;TD&gt;计算机&lt;/TD&gt;<br />
+&lt;/TR&gt;<br />
+&lt;/TABLE&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p class="STYLE3">7-3 表格行的设定<a name="行的设定" id="行的设定"></a></p>
+<p>表格是按行和列（单元格）组成的，一个表格有几行组成就要有几个行标签&lt;tr&gt;，行标签用它的属性值来修饰，属性都是可选的。</p>
+<p align="center">&lt;tr&gt;标签的属性</p>
+<table width="446" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366" align="center">
+  <tr>
+    <td>属 性</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>行内容的水平对齐</td>
+  </tr>
+  <tr>
+    <td>valign</td>
+    <td>行内容的垂直对齐</td>
+  </tr>
+  <tr>
+    <td>bgcolor</td>
+    <td>行的背景颜色</td>
+  </tr>
+  <tr>
+    <td> bordercolo</td>
+    <td>行的边框颜色</td>
+  </tr>
+  <tr>
+    <td>bordercolorlight</td>
+    <td>行的亮边框颜色</td>
+  </tr>
+  <tr>
+    <td>bordercolordark</td>
+    <td>行的暗边框颜色</td>
+  </tr>
+</table>
+<p>&lt;TR&gt; 的参数设定（常用）： <br />          
+  &nbsp; &lt;tr align=&quot;RIGHT&quot; valign=&quot;MIDDLE&quot;   bgcolor=&quot;#0000FF&quot; bordercolor=&quot;#FF00FF&quot; bordercolorlight=&quot;#808080&quot; bordercolordark=&quot;#FF0000&quot;&gt;</p>
+<p>实例：<a href="./shili/7-3.htm">7-3.html</a></p>
+<p>&lt;HTML&gt;<br />
+  &lt;HEAD&gt;<br />
+  &lt;TITLE&gt;表格行的控制&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY&gt;<br />
+  &lt;TABLE border=1 align=&quot;center&quot; width=&quot;80%&quot; height=&quot;150&quot;&gt;<br />
+  &lt;TR ALIGN=&quot;CENTER&quot;&gt;<br />
+  &lt;TH&gt;姓 名&lt;/TH&gt;<br />
+  &lt;TH&gt;性 别&lt;/TH&gt;<br />
+  &lt;TH&gt;年 龄&lt;/TH&gt;<br />
+  &lt;TH&gt;专 业&lt;/TH&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR ALIGN=CENTER bordercolor=&quot;#336600&quot; bgcolor=&quot;#C1FFC1&quot;&gt;<br />
+  &lt;TD&gt;咚 咚&lt;/TD&gt;<br />
+  &lt;TD&gt;男&lt;/TD&gt;<br />
+  &lt;TD&gt;18&lt;/TD&gt;<br />
+  &lt;TD&gt;学 生&lt;/TD&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr align=center height=50 bordercolor=navy bgcolor=&quot;#86B8E1&quot; valign=bottom bordercolorlight=&quot;#E1F0FD&quot; bordercolordark=&quot;#002346&quot;&gt;<br />
+  &lt;TD&gt;楠 楠&lt;/TD&gt;<br />
+  &lt;TD&gt;女&lt;/TD&gt;<br />
+  &lt;TD&gt;17&lt;/TD&gt;<br />
+  &lt;TD&gt;学 生&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/TABLE&gt;<br />
+  &lt;/BODY&gt;<br />
+&lt;/HTML&gt;</p>
+<p class="STYLE3">7-4 单元格<a name="单元格" id="单元格"></a>的设定</p>
+<p>&lt;th&gt;和&lt;td&gt;都是插入单元格的标签，这两个标签必须嵌套在&lt;tr&gt;标签内。是成对出现的。&lt;th&gt;用于表头标签，表头标签一般位于首行或首列，标签之间的内容就是位于该单元格内的标题内容，其中的文字以粗体居中显示。数据标签&lt;td&gt;就是该单元格中的具体数据内容,&lt;th&gt;和&lt;td&gt;标签的属性都是一样的，属性设定如下：</p>
+<p align="center">&lt;th&gt;和&lt;td&gt;的属性</p>
+<table width="665" border="3" align="center" cellpadding="1" cellspacing="1" bordercolor="#003366">
+  <tr>
+    <td>属 性</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>width/height</td>
+    <td>单元格的宽和高，接受绝对值（如 80）及相对值（如 80%）。 </td>
+  </tr>
+  <tr>
+    <td>colspan</td>
+    <td>单元格向右打通的栏数</td>
+  </tr>
+  <tr>
+    <td>rowspan</td>
+    <td>单元格向下打通的列数</td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>单元格内字画等的摆放贴，位置（水平），可选值为： left, center, right。</td>
+  </tr>
+  <tr>
+    <td>valign</td>
+    <td>单元格内字画等的摆放贴　位置（垂直），可选值为： top, middle, bottom。</td>
+  </tr>
+  <tr>
+    <td>bgcolor</td>
+    <td>单元格的底色</td>
+  </tr>
+  <tr>
+    <td>bordercolor</td>
+    <td>单元格边框颜色</td>
+  </tr>
+  <tr>
+    <td>bordercolorlight</td>
+    <td>单元格边框向光部分的颜色</td>
+  </tr>
+  <tr>
+    <td height="21">bordercolordark</td>
+    <td>单元格边框背光部分的颜色</td>
+  </tr>
+  <tr>
+    <td>background</td>
+    <td>单元格　背景图片 </td>
+  </tr>
+</table>
+<p><br />
+&lt;TD&gt; 的参数设定格式： <br />
+例如：&lt;td width=&quot;48%&quot; height=&quot;400&quot; colspan=&quot;5&quot; rowspan=&quot;4&quot; align=&quot;RIGHT&quot; valign=&quot;BOTTOM&quot;   bgcolor=&quot;#FF00FF&quot; bordercolor=&quot;#808080&quot; bordercolorlight=&quot;#FF0000&quot; bordercolordark=&quot;#00FF00&quot; background=&quot;myweb.gif&quot;&gt; </p>
+<p>实例：<a href="./shili/7-4.htm">7-4.html</a></p>
+<p>&lt;HTML&gt;<br />
+  &lt;HEAD&gt;<br />
+  &lt;TITLE&gt;单元格的设定&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY&gt;<br />
+  &lt;TABLE border=1 align=&quot;center&quot; height=&quot;150&quot; width=&quot;80%&quot;&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TH width=70 bgcolor=&quot;#FFCC00&quot;&gt;姓 名&lt;/TH&gt;<br />
+  &lt;TH bgcolor=&quot;#FFCCFF&quot;&gt;性 别&lt;/TH&gt;<br />
+  &lt;TH background=&quot;../../imge/b0024.gif&quot;&gt;年 龄&lt;/TH&gt;<br />
+  &lt;TH background=&quot;../../imge/aki-5.gif&quot;&gt;专 业&lt;/TH&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD bordercolor=red align=&quot;left&quot;&gt;笨笨猫&lt;/TD&gt;<br />
+  &lt;TD bordercolorlight=&quot;#FFCCFF&quot; bordercolordark=&quot;#FF0000&quot; align=&quot;center&quot;&gt;女&lt;/TD&gt;<br />
+  &lt;TD bgcolor=&quot;#FFFFCC&quot; valign=&quot;bottom&quot; align=&quot;center&quot;&gt;18&lt;/TD&gt;<br />
+  &lt;TD bgcolor=&quot;#CCFFFF&quot; align=&quot;right&quot;&gt;学生&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/TABLE&gt;<br />
+  &lt;/BODY&gt;<br />
+&lt;/HTML&gt;</p>
+<p class="STYLE3">7-5 设定跨多行<a name="跨多行" id="跨多行"></a>多列单元格</p>
+<p>&nbsp;&nbsp;&nbsp; 要创建跨多行、多列的单元格，只需在&lt;TH&gt;或&lt;TD&gt;中加入ROWSPAN或COLSPAN属性的属性值，默认值为1。表明了表格中要跨越的行或列的个数。 </p>
+<p>　&nbsp; 跨多列的语法： &lt;th colspan=#&gt;　&lt;td   colspan=#&gt;<br />
+  <br />
+　　colspan表示跨越的列数，例如colspan=2表示这一格的宽度为两个列的宽度。</p>
+<p>　&nbsp; 跨多行的语法： &lt;th rowspan=#&gt;　&lt;td   rowspan=#&gt;<br />　
+  <br />
+  　&nbsp; rowspan所要表示的意义是指跨越的行数，例如rowspan=2就表示这一格跨越表格两个行的高度。</p>
+<p>实例：<a href="./shili/7-5.htm>7-5.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;跨多行跨多列的单元格&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+&lt;table border=10 width=80% align=&quot;center&quot; height=&quot;150&quot; background=&quot;../../imge/b0024.gif&quot; bordercolorlight=&quot;#9999FF&quot; bordercolordark=&quot;#9900CC&quot;&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TH colspan=3&gt; 学生基本信息&lt;/TH&gt;<br />
+  &lt;TH colspan=2&gt;成 绩&lt;/TH&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TH&gt;姓 名&lt;/TH&gt;<br />
+  &lt;TH&gt;性 别&lt;/TH&gt;<br />
+  &lt;TH&gt;专 业&lt;/TH&gt;<br />
+  &lt;TH&gt;课 程&lt;/TH&gt;<br />
+  &lt;TH&gt;分 数&lt;/TH&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TD&gt;咚 咚&lt;/TD&gt;<br />
+  &lt;TD&gt;男&lt;/TD&gt;<br />
+  &lt;TD rowspan=2&gt;计算机&lt;/TD&gt;&lt;TD rowspan=2&gt;程序设计&lt;/TD&gt;<br />
+  &lt;TD&gt;68&lt;/TD&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TD&gt;喃 喃&lt;/TD&gt;<br />
+  &lt;TD&gt;女&lt;/TD&gt;<br />
+  &lt;TD&gt;89&lt;/TD&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;/table&gt;<br />
+  &lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p class="STYLE3">7-6 表格的分<a name="格的分" id="格的分"></a>组</p>
+<p class="STYLE5">7-6-1 表格的行分组&lt;thead&gt;/&lt;tbody&gt;/&lt;tfoot&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; html文档的表格按行分组是由表头标签&lt;thead&gt;、表格主体标签&lt;tbody&gt;和尾注标签&lt;tfoot&gt;三个部分组成的。其中尾注标签很少用。&lt;thead&gt;标签是成对标签，其标签内是由表头标签标识的表头元素。&lt;tbody&gt;标签用于规定表格主体部分的元素。&lt;thead&gt;和&lt;tbody&gt;标签的属性和&lt;th&gt;&lt;td&gt;标签是一样的。</p>
+<p>实例：<a href="./shili/7-6-1.htm">7-6-1.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;表格按行分组&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+  &lt;table border=3 width=60% align=&quot;center&quot; height=&quot;150&quot;&gt;<br />
+  &lt;thead bgcolor=&quot;#CCFFCC&quot;&gt;<br />
+  &lt;TR ALIGN=center&gt;<br />
+  &lt;TH&gt;姓 名&lt;/TH&gt;<br />
+  &lt;TH&gt;性 别&lt;/TH&gt;<br />
+  &lt;TH&gt;专 业&lt;/TH&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/thead&gt;<br />
+  &lt;tbody bgcolor=&quot;#448FBD&quot;&gt;<br />
+  &lt;TR ALIGN=center&gt;<br />
+  &lt;TD&gt;咚 咚&lt;/TD&gt;&lt;TD&gt;男&lt;/TD&gt;&lt;TD&gt;计算机&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR ALIGN=center&gt;<br />
+  &lt;TD&gt;喃 喃&lt;/TD&gt;&lt;TD&gt;女&lt;/TD&gt;&lt;TD&gt;园 林&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/tbody&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p class="STYLE5">7-6-2 表格按列分组&lt;colgroup&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; html使用&lt;colgroup&gt;标签来将表格分组。</p>
+<p>&nbsp;&nbsp;&nbsp; 语法格式：<strong>&lt;colgroup span=&quot;数值&quot; align=&quot;参数&quot;&gt;</strong></p>
+<p>&nbsp;&nbsp;&nbsp;说明：&lt;colgroup&gt;标签有两个属性，span和align, 他们都是可选的。span属性的值是数字，表示该组包含的列数，默认值为1。align属性用以规定该组所跨列中所有单元格中内容在水平方向上的位置。该属性的值为left,center,right之一。它们表示单元格的内容是左对齐，水平居中还是右对齐。</p>
+<p>实例：<a href="./shili/7-6-2.htm">7-6-2.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;表格按列分组&lt;/title&gt;<br />
+&lt;/head&gt;<br>
+&lt;body&gt;<br />
+&lt;center&gt;<br />
+&lt;table border=10 width=80% height=&quot;160&quot; align=&quot;center&quot; bordercolorlight=&quot;#CCCCFF&quot; bordercolordark=&quot;#9900FF&quot;&gt;<br />
+&lt;tr&gt;<br />
+&lt;th&gt;姓名&lt;/th&gt;&lt;th&gt;性别&lt;/th&gt;&lt;th&gt;专业&lt;/th&gt;&lt;th&gt;分数&lt;/th&gt;<br />
+&lt;/tr&gt;<br />
+&lt;colgroup span=2 align=center&gt;<br />
+&lt;colgroup align =left&gt;<br />
+&lt;colgroup align=right&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;咚 咚&lt;/td&gt;&lt;td&gt;男&lt;/td&gt;&lt;td&gt;计算机&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;喃 喃&lt;/td&gt;&lt;td&gt;女&lt;/td&gt;&lt;td&gt;园  林&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;依 依&lt;/td&gt;&lt;td&gt;女&lt;/td&gt;&lt;td&gt;微波通信&lt;/td&gt;&lt;td&gt;76&lt;td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p class="STYLE5">7-6-3 表格的行列分组</p>
+<p>实例：<a href="./shili/7-6-3.htm">7-6-3.html</a>&nbsp; </p>
+<p>&lt;HTML&gt;<br />
+  &lt;HEAD&gt;<br />
+  &lt;TITLE&gt;同时进行行列分组&lt;/TITLE&gt;<br />
+  &lt;/HEAD&gt;<br />
+  &lt;BODY&gt;<br />
+  &lt;CENTER&gt;<br />
+  &lt;TABLE BORDER=10 WIDTH=80% height=&quot;200&quot; align=&quot;center&quot; bordercolor=&quot;#9900FF&quot;&gt; <br />
+  &lt;THEAD bgcolor=&quot;#FFFFCC&quot;&gt;<br />
+  &lt;TR&gt;&lt;TH&gt;姓名&lt;/TH&gt;&lt;TH&gt;性别&lt;/TH&gt;&lt;TH&gt;专业&lt;/TH&gt;&lt;TH&gt;分数&lt;/TH&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;/THEAD&gt;<br />
+  &lt;COLGROUP SPAN=2 ALIGN=CENTER&gt;<br />
+  &lt;COLGROUP ALIGN=LEFT&gt;<br />
+  &lt;COLGROUP ALIGN=RIGHT&gt;<br />
+  &lt;TBODY bgcolor=&quot;#FFCCFF&quot;&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD&gt;咚 咚&lt;/TD&gt;&lt;TD&gt;男&lt;/TD&gt;&lt;TD&gt;计算机&lt;/TD&gt;&lt;TD&gt;85&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD&gt;喃 喃&lt;/TD&gt;&lt;TD&gt;女&lt;/TD&gt;&lt;TD&gt;园  林&lt;/TD&gt;&lt;TD&gt;94&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;TR&gt;<br />
+  &lt;TD&gt;依 依&lt;/TD&gt;&lt;TD&gt;女&lt;/TD&gt;&lt;TD&gt;微波通信&lt;/TD&gt;&lt;TD&gt;87&lt;/TD&gt;<br />
+  &lt;/TR&gt;<br />
+  &lt;/TBODY&gt;<br />
+  &lt;/TABLE&gt;<br />
+  &lt;/BODY&gt;<br />
+&lt;/HTML&gt;</p>
+<p class="STYLE3">7-7 表格的标题标<a name="标题标" id="标题标"></a>签&lt;caption&gt;</p>
+<p> 表格标题的位置，可由ALIGN属性和VALIGN属性来设置，ALIGN属性设置标题位于文档的左，中，右。 VALIGN属性设置标题位于表格的上方和表格的下方。下面为表格标题位置的设置格式。</p>
+<p>　　语法格式：</p>
+　　　　<strong>&lt;caption align=&quot;值&quot; valign=&quot;值&quot; &gt;表哥标题&lt;/caption&gt;</strong>
+<p>　&nbsp; &lt;caption&gt;应放在&lt;table&gt;标签内，在表格行标签&lt;tr&gt;标签之前。</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;caption&gt;标签的默认属性是标题位于表格的上方中间<a name="方中间" id="方中间"></a>位置。</p>
+<p>实例：<a href="./shili/7-7.htm">7-7.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;表格的标题标签&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+&lt;table border=10 width=80% align=&quot;center&quot; height=&quot;150&quot; background=&quot;../../imge/b0024.gif&quot; bordercolorlight=&quot;#9999FF&quot; bordercolordark=&quot;#9900CC&quot;&gt;</p>
+<p>&lt;caption&gt;学生信息表&lt;/caption&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TH colspan=3&gt; 学生基本信息&lt;/TH&gt;<br />
+  &lt;TH colspan=2&gt;成 绩&lt;/TH&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TH&gt;姓 名&lt;/TH&gt;<br />
+  &lt;TH&gt;性 别&lt;/TH&gt;<br />
+  &lt;TH&gt;专 业&lt;/TH&gt;<br />
+  &lt;TH&gt;课 程&lt;/TH&gt;<br />
+  &lt;TH&gt;分 数&lt;/TH&gt;<br />
+  &lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+  &lt;TD&gt;咚 咚&lt;/TD&gt;<br />
+  &lt;TD&gt;男&lt;/TD&gt;<br />
+  &lt;TD rowspan=2&gt;计算机&lt;/TD&gt;&lt;TD rowspan=2&gt;程序设计&lt;/TD&gt;<br />
+  &lt;TD&gt;68&lt;/TD&gt;<br />
+&lt;/TR&gt;</p>
+<p>&lt;TR ALIGN=center&gt;<br />
+&lt;TD&gt;喃 喃&lt;/TD&gt;<br />
+&lt;TD&gt;女&lt;/TD&gt;<br />
+&lt;TD&gt;89&lt;/TD&gt;<br />
+&lt;/TR&gt;</p>
+<p>&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p class="STYLE3">7-8 表格的嵌<a name="格的嵌" id="格的嵌"></a>套</p>
+<p>&nbsp;&nbsp;&nbsp; 在html页面中，使用表格排版是通过嵌套来完成的，即一个表格内部可以嵌套另一个表格，用表格来排版页面的思路是：由总表格规划整体的结构，由嵌套的表格负责各个子栏目的排版，并插入到表格的相应位置，这样就可以使页面的各个部分有条不紊，互不冲突，看上去清晰整洁。在实际做网页时一般不显示边框,边框的显示可根据自己的爱好来设定。在实例中为了让大家能够看清楚，都设置了有边框。</p>
+<p>实例<a href="./shili/7-8.htm">7-8.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;表格嵌套&lt;/title&gt;<br />
+&lt;/head&gt;</p>
+<p>&lt;body bgcolor=&quot;#555555&quot; text=&quot;#FFFFFF&quot;&gt;<br />
+  &lt;table width=&quot;560&quot; border=&quot;3&quot; cellspacing=&quot;1&quot; cellpadding=&quot;1&quot; align=&quot;center&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td width=&quot;100&quot; height=&quot;69&quot;&gt;网页标志&lt;/td&gt;<br />
+  &lt;td colspan=&quot;2&quot;&gt;&lt;div align=&quot;center&quot;&gt;广告条&lt;/div&gt;&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td height=&quot;330&quot;&gt;&lt;table width=&quot;100&quot; height=&quot;321&quot; border=&quot;3&quot; align=&quot;center&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;标题栏&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td height=&quot;90&quot;&gt;内容六&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;&lt;/td&gt;<br />
+  &lt;td width=&quot;275&quot;&gt;&lt;table width=&quot;275&quot; height=&quot;325&quot; border=&quot;3&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td width=&quot;263&quot;&gt;内容一&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td&gt;内容二&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;&lt;/td&gt;<br />
+  &lt;td width=&quot;163&quot;&gt;&lt;table width=&quot;157&quot; height=&quot;320&quot; border=&quot;3&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; align=&quot;center&quot;&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td width=&quot;136&quot; height=&quot;94&quot;&gt;内容三&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td height=&quot;62&quot;&gt;内容四&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;tr&gt;<br />
+  &lt;td height=&quot;160&quot;&gt;内容五&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;&lt;/td&gt;<br />
+  &lt;/tr&gt;<br />
+  &lt;/table&gt;<br />
+  &lt;/body&gt;<br />
+  &lt;/html&gt;</p>
+<p align="center"><font size="+3"><b>&nbsp; <a href="6.htm">上一页</a>&nbsp; <a href="8.htm">下一页</a></b></font></p>
+</body>
+</html>
