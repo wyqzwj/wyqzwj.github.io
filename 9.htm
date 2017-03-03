@@ -1,0 +1,327 @@
+<html>
+<head>
+<title>第九章 多视窗口</title>
+<link rel="stylesheet" href="../aa.css" type="text/css">
+<style type="text/css">
+<!--
+table{border:outset; background-color:#D2ECD3;}
+a{border:outset; text-decoration:none;}
+.STYLE3 {color: #FF0000}
+.STYLE6 {color: #9900FF; font-weight: bold; }
+.STYLE7 {
+	color: #FF6600;
+	font-size: 18px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body leftmargin="30" rightmargin="30">
+<h1 align="center" class="STYLE3"><br>
+第九章 多视窗口框架</h1>
+<p><strong><font color="#FF0000" size="5">9-1 框架的含义和基本构成<a name="sda"></a></font></strong></p>
+<p>&nbsp;&nbsp;&nbsp; 框架就是把一个浏览器窗口划分为若干个小窗口，每个窗口可以显示不同的 URL 网页。使用框架可以非常方便的在浏览器中同时浏览不同的页面效果，也可以非常方便的完成导航工作。</p>
+<p>&nbsp;&nbsp;&nbsp; 而所有的框架标记　要放在一个 html 文档中。html页面的文档体标签&lt;body&gt;被框架集标签&lt;frameset&gt;所取代，然后通过&lt;frameset&gt;的子窗口标签&lt;frame&gt;定义每一个子窗口和子窗口的页面属性。</p>
+<p>&nbsp;&nbsp;&nbsp;语法格式：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;html&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frameset&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame src="url地址1"&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame src="url地址2"&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frameset&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/html&gt;</p>
+<p>Frame子框架的src属性的每个URL值指定了一个html文件（这个文件必须事先做好）地址，地址路径可使用绝对路径或相对路径，这个文件将载入相应的窗口中。</p>
+<p>框架结构可以根据框架集标签&lt;frameset&gt;的分割属性分为3种：</p>
+<ol>
+  <li>左右分割窗口</li>
+  <li>上下分割窗口</li>
+  <li>嵌套分割窗口</li>
+</ol>
+<p><strong><font color="#FF6600" size="4">9-2 框架集&lt;frameset&gt;控制<a name="ffddf"></a></font></strong></p>
+<p align="center">&lt;frameset&gt;的属性</p>
+<table width="617" border="10"align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td width="149">属 性</td>
+    <td width="214">描 述</td>
+  </tr>
+  <tr>
+    <td>border</td>
+    <td>设置边框粗细,默认是5象素.</td>
+  </tr>
+  <tr>
+    <td>bordercolor</td>
+    <td>设置边框颜色</td>
+  </tr>
+  <tr>
+    <td>frameborder</td>
+    <td>指定是否显示边框 ：&quot;0&quot;代表不显示边框，&quot;1&quot;代表显示边框</td>
+  </tr>
+  <tr>
+    <td>cols</td>
+    <td>用&quot;象素数&quot; 和 &quot;%&quot;分割左右窗口,&quot;*&quot;表示剩余部分</td>
+  </tr>
+  <tr>
+    <td>rows</td>
+    <td>用&quot;象素数&quot; 和 &quot;%&quot;分割上下窗口,&quot;*&quot;表示剩余部分</td>
+  </tr>
+  <tr>
+    <td>framespacing=&quot;5&quot;</td>
+    <td>表示框架与框架间的保留空白的距离</td>
+  </tr>
+  <tr>
+    <td>noresize</td>
+    <td><p>设定框架不能够调节，只要设定了前面的，后面的将继承</p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+<ol>
+  <li> 左右分割窗口属性：cols</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp; 如果想要在水平方向将浏览器分割多个窗口，这需要使用到框架集的左右分割窗口属性cols.分割几个窗口其cols的值就有几个，值的定义为宽度，可以是数字(单位为像素)，也可以是百分比和剩余值。各值之间用逗号分开。其中剩余值用&quot;*&quot;号表示，剩余值表示所有窗口设定之后的剩余部分，当&quot;*&quot;只出现一次时，表示该子窗口的大小将根据浏览器窗口的大小自动调整，当&quot;*&quot;出现一次以上时，表示按比例分割剩余的窗口空间。cols的默认值为一个窗口</p>
+<p> 如：&nbsp; &lt;frameset cols=&quot;40%,2*,*&quot;&gt;&nbsp;&nbsp;&nbsp; 将窗口分为40%，40%，20%<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frameset cols="100,200,*"&gt;  <BR>
+  　　　&lt;frameset cols="100,*,*"&gt;   　　将100像素以外的窗口平均分配<BR>
+　　　&lt;frameset cols="*,*,*"&gt; 　　　将窗口分为三等份</p>
+<p>&nbsp; 2.&nbsp;上下分割窗口属性：rows
+</p>
+<p>&nbsp;&nbsp;&nbsp;
+上下分割窗口的属性设置和左右窗口的属性设定是一样的，参照上面所述就可以了。
+<p><font color="#FF6600" size="4"><B>9-3  子窗口&lt;frame&gt;标签的设定<a name="ccccc"></a></B></font><br>
+  <br>
+&nbsp;&nbsp;&lt;frame&gt;是个单标签,&lt;frame&gt;标签要放在框架集frameset中,&lt;frameset&gt;设置了几个子窗口就必须对应几个&lt;frame&gt;标签，而且每一个&lt;frame&gt;标签内还必须设定一个网页文件（src=&quot;*.html&quot;,其常用属性有:
+<p align="center">&lt;frame&gt;常用属性
+<table width="570" border="10" align="center" cellpadding="1" cellspacing="1">
+  <tr>
+    <td>属 性</td>
+    <td>描 述</td>
+  </tr>
+  <tr>
+    <td>src</td>
+    <td>指示加载的url文件的地址</td>
+  </tr>
+  <tr>
+    <td>bordercolor</td>
+    <td>设置边框颜色</td>
+  </tr>
+  <tr>
+    <td>frameborder</td>
+    <td>指示是否要边框,1显示边框，0不显示（不提倡用 yes 或 no）</td>
+  </tr>
+  <tr>
+    <td>border</td>
+    <td>设置边框粗细 </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>指示框架名称,是连结标记的 target所要的参数</td>
+  </tr>
+  <tr>
+    <td>noresize</td>
+    <td>指示不能调整窗口的大小,省略此项时就可调整,</td>
+  </tr>
+  <tr>
+    <td>scorlling</td>
+    <td>指示是否要滚动条,auto根据需要自动出现,Yes有,No无</td>
+  </tr>
+  <tr>
+    <td>marginwidth</td>
+    <td>设置内容与窗口左右边缘的距离，默认为1</td>
+  </tr>
+  <tr>
+    <td>marginheight</td>
+    <td>设置内容与窗口上下边缘的边距，默认为1</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>框窗的宽及高 默认为width=&quot;100&quot; height=&quot;100&quot;</td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>可选值为 left, right, top, middle, bottom</td>
+  </tr>
+</table>
+<p>子窗口的排列遵循从左到右，从上到下的次序规则。</p>
+<p class="STYLE6">一、窗口的左右设定：</p>
+<p><a href="./shili/sl9-1.htm">实例一 sl9-1.html</a></p>
+<p>首先我们新建一个文件夹，然后做四个要放到子窗口中的页面，sl1.html、sl2.html、sl3.html、sl4.html。</p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;frameset rows=&quot;20%,2*,*&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl1.html&quot;&gt;<br>
+  &lt;frame src=&quot;sl2.html&quot;&gt;<br>
+  &lt;frame src=&quot;sl3.html&quot;&gt;<br>
+  &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+  &lt;/html&gt;</p>
+<p class="STYLE6">二、窗口的上下设定</p>
+<p><a href="./shili/sl9-2.htm">实例二 sl9-2.html</a></p>
+<p>&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;/head&gt;<br>
+&lt;frameset rows=&quot;20%,*,200&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+&lt;frame src=&quot;sl1.html&quot;&gt;<br>
+&lt;frame src=&quot;sl2.html&quot;&gt;<br>
+&lt;frame src=&quot;sl3.html&quot; noresize=&quot;noresize&quot;&gt;<br>
+&lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+&lt;/html&gt;</p>
+<p class="STYLE6">三、窗口的嵌套设定</p>
+<p><a href="./shili/sl9-3.htm">实例三 sl9-3.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;frameset cols=&quot;20%,*&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl1.html&quot;&gt;<br>
+  &lt;frameset rows=&quot;300,500&quot;framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl2.html&quot;&gt;<br>
+  &lt;frame src=&quot;sl3.html&quot;&gt;<br>
+  &lt;/frameset&gt;<br>
+  &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+&lt;/html&gt;</p>
+<p><a href="./shili/sl9-4.htm">实例四 sl9-4.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;frameset rows=&quot;20%,*&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl1.html&quot;&gt;<br>
+  &lt;frameset cols=&quot;20%,*&quot;framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl2.html&quot;&gt;<br>
+  &lt;frame src=&quot;sl3.html&quot;&gt;<br>
+  &lt;/frameset&gt;<br>
+  &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+&lt;/html&gt;</p>
+<p><a href="./shili/sl9-5.htm">实例五 sl9-5.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;frameset rows=&quot;20%,*,15%&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl1.html&quot;&gt;<br>
+  &lt;frameset cols=&quot;20%,*&quot;framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#FF00FF&quot;&gt;<br>
+  &lt;frame src=&quot;sl2.html&quot;&gt;<br>
+  &lt;frame src=&quot;sl3.html&quot;&gt;<br>
+  &lt;/frameset&gt;<br>
+  &lt;frame src=&quot;sl4.html&quot;&gt;<br>
+  &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+&lt;/html&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; 大家看到上面的文件中还有一对&lt;noframes&gt;&lt;/noframes&gt;标签，即使在做框架集网页时没有这对标签，文件在很多浏览器解析时也会自动生成&lt;noframes&gt;标签，这对标签的作用是当浏览者使用的浏览器太旧，不支援框架这个功能时，他看到的将会是一片空白。为了避免这种情况，可使用 &lt;NOFRAMES&gt; 这个标记，当使用的浏览器看不到框架时，他就会看到 &lt;NOFRAMES&gt;你的浏览器不支持框架网页&lt;/NOFRAMES&gt;之间的内容，而不是一片空白。这些内容可以是提醒   浏览转用新的浏览器的字句，甚至是一个没有框架的网页或能自动切换至没有框架的版本。</p>
+<p class="STYLE7">9-4 窗口的名称和链接<a name="ffffff"></a></p>
+<p>&nbsp;&nbsp;&nbsp; 如果在窗口中要做链接，就必须对每一个子窗口命名，以便于被用于窗口间的链接，窗口命名要有一定的规则，名称必须是单个英文单词，允许使用下滑线，但不允许使用&quot;—&quot;,&quot;句点&quot;和空格等，名称必须以字母开头，不能使用数字，还不能使用网页脚本中保留的关键字，在窗口的链接中还要用到一个新的属性&quot;targe&quot;,用这个属性就可以将被链接的内容放置到想要放置的窗口内。</p>
+<p>下面的实例就是窗口内的命名和链接方法</p>
+<p>&nbsp;&nbsp;&nbsp; 文件一中的片断代码格式为：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;sl1.html&quot; target=&quot;aa2&quot;&gt;爱在深秋&lt;/a&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;sl2.html&quot; target=&quot;aa3&quot;&gt;图像对文字的水平居中&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;sl3.html&quot; target=&quot;aa2&quot;&gt;图像与文本之间的距离&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;sl4.html&quot; target=&quot;aa3&quot;&gt;图像大小的设定&lt;/a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;http://www.sina.com.cn&quot; target=&quot;aa3&quot;&gt;新浪网站&lt;/a&gt;</p>
+<p>&nbsp;&nbsp; 文件二的片断代码格式为：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame src=&quot;ml.html&quot; name=&quot;aa1&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame src=&quot;sl1.html&quot; name=&quot;aa3&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame src=&quot;sl2.html&quot; name=&quot;aa2&quot; noresize=&quot;noresize&quot;&gt;</p>
+<p>文件一：</p>
+<p><a href="./shili/ml.htm">ml.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;无标题文档&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  &lt;center&gt;<br>
+  &lt;h2&gt;目录&lt;/h2&gt;<br>
+  &lt;hr&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl1.html&quot; target=&quot;aa2&quot;&gt;爱在深秋&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl2.html&quot; target=&quot;aa3&quot;&gt;图像对文字的水平居中&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl3.html&quot; target=&quot;aa2&quot;&gt;图像与文本之间的距离&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl4.html&quot; target=&quot;aa3&quot;&gt;图像大小的设定&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;http://www.sina.com.cn&quot; target=&quot;aa3&quot;&gt;新浪网站&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;/center&gt;<br>
+  &lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p>文件二：</p>
+<p><a href="./shili/sl94.htm">sl94.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;frameset cols=&quot;20%,*,200&quot; framespacing=&quot;1&quot; frameborder=&quot;yes&quot; border=&quot;1&quot; bordercolor=&quot;#99CCFF&quot;&gt;<br>
+  &lt;frame src=&quot;ml.html&quot; name=&quot;aa1&quot;&gt;<br>
+  &lt;frame src=&quot;sl1.html&quot; name=&quot;aa3&quot;&gt;<br>
+  &lt;frame src=&quot;sl2.html&quot; name=&quot;aa2&quot; noresize=&quot;noresize&quot;&gt;<br>
+  &lt;/frameset&gt;&lt;noframes&gt;&lt;/noframes&gt;<br>
+&lt;/html&gt;</p>
+<p class="STYLE7">9-5 浮动窗口&lt;iframe&gt;<a name="rrrrr"></a></p>
+<p>&nbsp;&nbsp;&nbsp; &lt;iframe&gt;这标记只适用於IE浏览器。 它的作用是在浏览器窗口中可以嵌入一个框窗以显示另一个文件。它是   一个围堵标记，但围著的字句只有在浏览器不支援 iframe 标记时才会显示，如&lt;noframes&gt; 一样，可以放些提醒字句之类。通常 iframe   配合一个辨认浏览器的 Java Script 会较好，若 JavaScript 认出该浏览器并非 Internet Explorer 便会切换至另一版本。</p>
+<p>&lt;iframe&gt; 的参数设定格式： <BR>
+  &nbsp;&nbsp;&nbsp;
+&lt;iframe src="iframe.html" name="test"   align="MIDDLE" width="300"   height="100" marginwidth="1" marginheight="1"   frameborder="1" scrolling="Yes"&gt; </p>
+<p align="center">&lt;iframe&gt;属性的含义
+<table width="616" border="3" cellspacing="1" cellpadding="1">
+  <tr>
+    <td>属 性</td>
+    <td>含 义</td>
+  </tr>
+  <tr>
+    <td>src</td>
+    <td>浮动窗框中的要显示的页面文件的路径，可以是相对或绝对。</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>此框窗名称，这是连结标记的 target   参数所　要的，</td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>可选值为 left, right, top,   middle, bottom，作用不大 </td>
+  </tr>
+  <tr>
+    <td>height</td>
+    <td>框窗的高，以 pixels 为单位。</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>框窗的宽，以 pixels 为单位。</td>
+  </tr>
+  <tr>
+    <td>marginwidth</td>
+    <td>该插入的文件与框边所保留的空间。</td>
+  </tr>
+  <tr>
+    <td> marginheight</td>
+    <td>该插入的文件与框边所保留的空间。</td>
+  </tr>
+  <tr>
+    <td>frameborder</td>
+    <td>使用 1 表示显示边框， 0   则不显示。（可以是 yes 或 no）</td>
+  </tr>
+  <tr>
+    <td>scrolling</td>
+    <td>使用 Yes 表示容许卷动（内定）， No   则不容许卷动。</td>
+  </tr>
+</table>
+<p><a href="./shili/sl95.htm">sl95.html</a></p>
+<p>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;浮动框架&lt;/title&gt;  <br>
+  &lt;/head&gt;<br>
+  &lt;body bgcolor=&quot;#E1FFE1&quot;&gt;<br>
+  &lt;center&gt;<br>
+  &lt;iframe src=&quot;ml1.html&quot; name=&quot;aa&quot; width=&quot;600&quot; height=&quot;400&quot; marginwidth=&quot;30&quot; marginheight=&quot;20&quot; align=&quot;middle&quot; allowtransparency=&quot;true&quot;&gt;<br>
+  这是一个浮动窗口<br>
+  &lt;/iframe&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl1.html&quot; target=&quot;aa&quot;&gt;爱在深秋&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl2.html&quot; target=&quot;aa&quot;&gt;图像对文字的水平居中&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl3.html&quot; target=&quot;aa&quot;&gt;图像与文本之间的距离&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;sl4.html&quot; target=&quot;aa&quot;&gt;图像大小的设定&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;http://www.sina.com.cn&quot; target=&quot;aa3&quot;&gt;新浪网站&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;/center&gt;<br>
+  &lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p>注意: Internet Explorer 5.5   支持浮动框架的内容透明。如果想要为浮动框架定义透明内容，则必须满足下列条件。 <BR>
+  <BR>
+  与 IFRAME 元素一起使用的   ALLOWTRANSPARENCY 标签属性必须设置为 true。 <BR>
+  在 IFRAME 内容源文档，background-color 或 BODY 元素的   BGCOLOR 标签属性必须设置为 transparent。 
+  <BR>
+</p>
+<p>&nbsp; </p>
+<P align="center"><font size="+3"><b>&nbsp; <a href="8.htm">上一页</a>&nbsp; <a href="10.htm">下一页</a></font></p>
+</body>
+</html>
