@@ -1,0 +1,361 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>第六章 图像的处理</title>
+<link rel="stylesheet" href="aa.css" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #9900FF;
+}
+-->
+</style>
+<body background="imge/aki-5.gif" leftmargin="20" rightmargin="20">
+<P align=center><BR><FONT color=#ff0000 size=6><STRONG>第六章 
+图像的处理</STRONG></FONT></P>
+<P>&nbsp;&nbsp;&nbsp; 
+图像可以使html页面美观生动且富有生机。浏览器可以显示的图像格式有jpeg，bmp，gif。其中bmp文件存储空间大，传输慢，不提倡用，常用的jpeg和gif格式的图像相比较，jpeg图像支持数百万种颜色，即使在传输过程中丢失数据，也不会在质量上有明显的不同，占位空间比gif大，gif图像仅包括265色彩，虽然质量上没有jpeg图像高，但占位储存空间小，下载速度最快、支持动画效果及背景色透明等特点。因此使用图像美画页面可视情况而决定使用那种格式。</P>
+<P><FONT color=#ff0000 size=4><STRONG>6-1<a name="61" id="61"></a> 背景图像的设定<a name="背景" id="背景"></a></STRONG></FONT> </P>
+<P>&nbsp;&nbsp;&nbsp; 在网页中除了可以用单一的颜色做背景外，还可用图像设置背景。</P>
+<P>&nbsp;&nbsp;&nbsp; 设置背景图像的格式：</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;body background=  "image-url"&gt;</P>
+<P>&nbsp;&nbsp;&nbsp; 其中 "image-url" 指图像的位置。</P>
+<P>实例：<a href="./shili/6-1.htm">6-1.html</a></P>
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;设置背景图像&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body background=&quot;imge/11.gif&quot;&gt;<br />
+  &lt;center&gt;<br />
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br />
+&lt;p&gt;&lt;font color=&quot;#006600&quot; size=&quot;+6&quot;&gt;盼望着，盼望着，东风来了，春天脚步近了.&lt;/font&gt;<br />
+&lt;/p&gt;<br />
+&lt;/center&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</P>
+<P><strong><font color="#FF0000" size="4">6-2 网页中插入<a name="网页中插入" id="网页中插入"></a>图片标签&lt;img&gt;</font></strong></P>
+<P>&nbsp;&nbsp;&nbsp; 
+网页中插入图片用单标签&lt;img&gt;，当浏览器读取到&lt;img&gt;标签时，就会显示此标签所设定的图像。如果要对插入的图片进行修饰时，仅仅用这一个属性是不够的，还要配合其它属性来完成。</P>
+<P align=center>&nbsp;&nbsp;&nbsp; 插入图片标签&lt;img&gt;的属性
+<TABLE width=606 
+border=3 cellpadding="0" cellspacing="0" borderColor=#003366 style="WIDTH: 606px; HEIGHT: 360px">
+  
+  <TR>
+    <TD>属 性</TD>
+    <TD>描 述</TD></TR>
+  <TR>
+    <TD>src</TD>
+    <TD>图像的url的路径</TD></TR>
+  <TR>
+    <TD>alt</TD>
+    <TD>提示文字</TD></TR>
+  <TR>
+    <TD>width</TD>
+    <TD>宽度 通常只设为图片的真实大小以免失真,改变图片大小最好用图像工具.</TD>
+  </TR>
+	<TR>
+    <TD>height</TD>
+    <TD>高度 通常只设为图片的真实大小以免失真,改变图片大小最好用图像工具.</TD>
+	</TR>
+  <TR>
+    <TD>dynsrc</TD>
+    <TD>avi文件的url的路径</TD></TR>
+  <TR>
+    <TD>loop</TD>
+    <TD>设定avi文件循环播放的次数</TD></TR>
+  <TR>
+    <TD>loopdelay</TD>
+    <TD>设定avi文件循环播放延迟</TD></TR>
+  <TR>
+    <TD>start</TD>
+    <TD>设定avi文件的播放方式</TD></TR>
+  <TR>
+    <TD>lowsrc</TD>
+    <TD>设定低分辨率图片,若所加入的是一张很大的图片，可先显示图片。</TD>
+  </TR>
+  <TR>
+    <TD>usemap</TD>
+    <TD>映像地图</TD></TR>
+	<TR>
+    <TD>align</TD>
+    <TD>图像和文字之间的排列属性</TD></TR>
+  <TR>
+    <TD>border</TD>
+    <TD>边框</TD></TR>
+  <TR>
+    <TD>hspace</TD>
+    <TD>水平间距</TD></TR>
+  <TR>
+    <TD>vlign</TD>
+<TD>垂直间距</TD></TR></TABLE></P>
+<P align=left><SPAN>&nbsp;&nbsp;&nbsp; &lt;IMG&gt; 的格式及一般属性设定：</SPAN></P>
+<P align=left>&nbsp;&nbsp;&nbsp; <font>&lt;img src="logo.gif" width=100 height=100 hspace=5 vspace=5 border=2 align="top" alt="Logo of PenPals 
+Garden" lowsrc="pre_logo.gif"&gt;</font><SPAN><BR>
+</SPAN></P>
+<p><strong><font color="#FF6600" size="4">6-1-1 普通<a name="普通" id="普通"></a>插入图片</font> </strong></p>
+<SPAN>
+<P><SPAN>实例：<a href="./shili/6-2-1.htm">6-2-1.html</a></SPAN>
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;普通插入图片&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;BODY&gt;<br />
+  &lt;CENTER&gt;<br />
+  &lt;H2&gt;爱在深秋&lt;/H2&gt;<br />
+  &lt;IMG src=&quot;../../imge/6-5.gif&quot;&gt;<br />
+  &lt;/CENTER&gt;<br />
+  &lt;WBR&gt;<br />
+  &lt;p&gt;秋雨无声无息地下着。&lt;BR&gt;<br />
+飒飒的秋风不可一世地横行在萧条的郊外。无力与秋风抗争的枯叶，只能带着丝丝牵挂，无可奈何地飘离留恋的枝头。秋蝉哀弱的残声逐渐地少了，地上落叶多了……&lt;BR&gt;<br />
+黄昏，我漫步在郊外的林间，想细细地品味秋雨的凄冷。&lt;BR&gt;<br />
+然而，“雨到深秋易作霖，萧萧难会此时心”，此时，又有谁能听我诉说心中的那份情怀呢？&lt;BR&gt;<br />
+&lt;/p&gt;<br />
+&lt;/WBR&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</SPAN>
+<P><font color="#FF6600" size="4"><strong>6-2-2 
+  设定<a name="设定" id="设定"></a>上下左右空白位置 hspace/vspace</strong></font>
+
+<P>实例：<a href="./shili/6-2-2.htm">6-2-2.html</a>
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;设定图像与文本之间的距离&lt;/title&gt;<br />
+  &lt;body&gt;<br />
+  &lt;img src=&quot;../../imge/6-5.gif&quot; align=&quot;left&quot; hspace=&quot;20&quot; vspace=&quot;20&quot;&gt;  <br />
+  &lt;font size=&quot;+3&quot;&gt;秋雨无声无息地下着。&lt;BR&gt;<br />
+  飒飒的秋风不可一世地横行在萧条的郊外。无力与秋风抗争的枯叶，只能带着丝丝牵挂，无可奈何地飘离留恋的枝头。秋蝉哀弱的残声逐渐地少了，地上落叶多了……&lt;BR&gt;<br />
+  黄昏，我漫步在郊外的林间，想细细地品味秋雨的凄冷。<br />
+  然而，“雨到深秋易作霖，萧萧难会此时心”，此时，又有谁能听我诉说心中的那份情怀呢？&lt;/font&gt;&lt;BR&gt;  <br />
+  &lt;/body&gt;<br />
+  &lt;/html&gt;
+<P><strong><font color="#FF6600" size="4">6-2-3 
+<span style="FONT-FAMILY: 新细明体">设定字<a name="设定字" id="设定字"></a>画对其方式</span></font></strong> 
+<P> &nbsp;&nbsp;&nbsp;图像和文字的之间的对齐是通过align属性来设定的，
+align的对齐方式有两种：即绝对对齐和相对对齐。绝对对齐方式的效果和文字一样，只有三种：居中（middle）、居左（left）、居右（right）。相对文字对齐方式是指图像与一行文字的相对位置。
+
+<P align="center">对其属性align的设定
+<div align="center">
+  <table width="566" border="3" cellpadding="1" cellspacing="1" bordercolor="#003366">
+    <tr>
+      <td width="153"><div align="center">属 性 值</div></td>
+      <td width="396"><div align="center">对 齐 方 式</div></td>
+    </tr>
+    <tr>
+      <td>top</td>
+      <td>上对齐</td>
+    </tr>
+    <tr>
+      <td>middle</td>
+      <td>居中对齐</td>
+    </tr>
+    <tr>
+      <td>bottom</td>
+      <td>下对齐</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td>左对齐</td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td>右对齐</td>
+    </tr>
+  </table>
+</div>
+<P align="left">实例：<a href="./shili/6-2-3.htm">6-2-3.html</a>
+<P align="left">&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;控制图像相对于文字基准线的水平对齐方式&lt;/title&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  &lt;img src=&quot;../../imge/6-2.jpg&quot; align=&quot;left&quot;&gt;<br>
+  此图像相对于文字基准线为靠上对齐的多行文字&lt;br&gt;试想在圆月朦胧之夜，海棠是这样的妩媚而嫣润；枝头的好鸟为什么却双栖而各梦呢？在这夜深人静的当儿，那高踞着的一只八哥儿，又为何尽撑着眼皮儿不肯睡去呢？他到底等什么来着？舍不得那淡淡的月儿么？舍不得那疏疏的帘儿么？不，不，不，您得到帘下去找，您得向帘中去找——您该找着那卷帘人了？他的情韵风怀，原是这样这样的哟！朦胧的岂独月呢；岂独鸟呢？但是，咫尺天涯，教我如何耐得？&lt;br&gt;我拚着千呼万唤；你能够出来么？<br>
+  &lt;br&gt;这页画布局那样经济，设色那样柔活，故精采足以动人。虽是区区尺幅，而情韵之厚，已足沦肌浃髓而有余。我看了这画。瞿然而惊：留恋之怀，不能自已。故将所感受的印象细细写出，以志这一段因缘。但我于中西的画都是门外汉，所说的话不免为内行所笑。——那也只好由他了。<br>
+  &lt;p&gt;<br>
+  &lt;hr color=&quot;#00ff00&quot;&gt;<br>
+  &lt;img src=&quot;../../imge/6-2.jpg&quot; align=&quot;right&quot;&gt;<br>
+  此图像相对于文字基准线为靠上的多行文字对齐&lt;br&gt;试想在圆月朦胧之夜，海棠是这样的妩媚而嫣润；枝头的好鸟为什么却双栖而各梦呢？在这夜深人静的当儿，那高踞着的一只八哥儿，又为何尽撑着眼皮儿不肯睡去呢？他到底等什么来着？舍不得那淡淡的月儿么？舍不得那疏疏的帘儿么？不，不，不，您得到帘下去找，您得向帘中去找——您该找着那卷帘人了？他的情韵风怀，原是这样这样的哟！朦胧的岂独月呢；岂独鸟呢？但是，咫尺天涯，教我如何耐得？&lt;br&gt;我拚着千呼万唤；你能够出来么？<br>
+  &lt;br&gt;这页画布局那样经济，设色那样柔活，故精采足以动人。虽是区区尺幅，而情韵之厚，已足沦肌浃髓而有余。我看了这画。瞿然而惊：留恋之怀，不能自已。故将所感受的印象细细写出，以志这一段因缘。但我于中西的画都是门外汉，所说的话不免为内行所笑。——那也只好由他了。<br>
+  &lt;p&gt;<br>
+  &lt;hr color=&quot;#00ff00&quot;&gt;<br>
+  &lt;img src=&quot;../../imge/6-2.jpg&quot; align=&quot;top&quot;&gt;<br>
+  此图像相对于文字基准线为顶部单行对齐&lt;p&gt;<br>
+  &lt;hr color=&quot;#00ff00&quot;&gt;<br>
+  &lt;img src=&quot;../../imge/6-2.jpg&quot; align=bottom&gt;<br>
+  此图像相对于文字基准线为底线单行对齐&lt;/p&gt;<br>
+  &lt;p&gt;<br>
+  &lt;hr color=&quot;#00ff00&quot;&gt;<br>
+  &lt;p&gt;&lt;img src=&quot;../../imge/6-2.jpg&quot; align=&quot;middle&quot;&gt;<br>
+此图像相对于文字基准线为置中单行对齐&lt;/p&gt;<br>
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+&lt;p&gt;&lt;a href=&quot;#&quot; onClick=&quot;javascript:window.history.back()&quot;&gt;返回&lt;/a&gt;&lt;/p&gt;<br>
+&lt;p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+<P><font color="#FF6600"><strong><font size="4">6-2-4 图片大小<a name="图片大小" id="图片大小"></a>设定</font>
+</strong></font>
+<P>实例：<a href="./shili/6-2-4.htm">6-2-4.html</a>
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;图像大小的设定&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+&lt;p&gt;<br />
+缩小图像<br />
+&lt;p&gt;&lt;img src=&quot;../../imge/6-3.gif&quot; width=&quot;350&quot; height=&quot;200&quot;&gt;<br />
+&lt;p&gt;原图显示 <br />
+&lt;p&gt;<br />
+&lt;img src=&quot;../../imge/6-3.gif&quot; width=&quot;400&quot; height=&quot;236&quot;&gt;<br />
+&lt;p&gt;放大图像 <br />
+&lt;p&gt;<br />
+&lt;img src=&quot;../../imge/6-3.gif&quot; width=&quot;500&quot; height=&quot;250&quot;&gt;<br />
+&lt;/p&gt;<br />
+&lt;/center&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+<P><strong><font color="#FF6600" size="4">6-2-5 图像边框<a name="图像边框" id="图像边框"></a>的设定</font></strong>
+<P>实例：<a href="./shili/6-2-5.htm">6-2-5.html</a> 
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;设定图像的边框&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+  &lt;div align=&quot;center&quot;&gt;<br />
+&lt;pre&gt;&lt;img src=&quot;../../imge/xjbjtp22.jpg&quot; border=&quot;10&quot;&gt;&lt;/pre&gt;<br />
+&lt;/div&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+<P><strong><font color="#FF0000" size="+1">6-3 图像的<a name="图像的" id="图像的"></a>超链接<a name="超" id="超"></a></font>
+</strong>
+<P class="STYLE1">6-3-1 图像的超链接
+
+<P>&nbsp;&nbsp;&nbsp; 图像的链接和文字的链接方法是一样的，都是用&lt;a&gt;标签来完成，只要将&lt;img&gt;标签放在&lt;a&gt;和&lt;/a&gt;只见就可以了。用图像链接的图片的上有蓝色的边框，这个边框颜色也可以在&lt;body&gt;标签中设定。
+<P>实例：<a href="./shili/6-3-1.htm">6-3-1.html</a>
+<P>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;使用图像为选取的对象&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;p align=&quot;center&quot;&gt;&amp;nbsp;&lt;/p&gt;<br />
+  &lt;h1 align=&quot;center&quot;&gt;图片的超链接&lt;/h1&gt;<br />
+  &lt;P&gt;<br />
+  &lt;center&gt;<br />
+  &lt;a href=&quot;http://www.sohu.com/&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;搜狐网站&quot; src=&quot;../../imge/logo[1].gif&quot;&gt;&lt;/a&gt;&lt;p&gt;<br />
+  &lt;a href=&quot;http://www.baidu.com/&quot;&gt;&lt;img alt=&quot;百度搜索&quot; src=&quot;../../imge/logo[2].gif&quot;&gt;&lt;/a&gt;&lt;p&gt;<br />
+  &lt;a href=&quot;http://www.sina.com.cn&quot;&gt;&lt;img alt=&quot;新浪网站&quot; src=&quot;../../imge/logo(3).gif&quot;&gt;&lt;/a&gt;<br />
+  &lt;/center&gt;<br />
+  &lt;/body&gt;<br />
+  &lt;/html&gt;
+<P><span class="STYLE1">6-3-2 图像的影像地图超链接</span>
+<P> &nbsp;&nbsp;&nbsp;在HTML中还可以把图片划分成多个热点区域，每一个热点域链接到不同网页的资源。这种效果的实质是把一幅图片划分为不同的热点区域，再让不同的区域进行超链接。这就是影像地图。要完成地图区域超链接要用到三种标签：&lt;img&gt;&lt;map&gt;&lt;area&gt;下面分别介绍这些标签的用法：
+
+<P>&nbsp;&nbsp;&nbsp;影像地图（Image Map）标签的使用格式： 
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src=&quot;图形文件名&quot; usemap=&quot;#图的名称&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!--&nbsp;插入图片时要在&lt;img&gt;标记中设置参数usemap="#图的名称"，以表示对图像地图（图的名称）的引用；--&gt;<BR>
+  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;map name=&quot;图的名称&quot;&gt;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--用&lt;map&gt;标记设定图像地图的作用区域，并用name属性爲图像起一个名字--&gt;<BR>
+   <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;area shape=形状 coords=区域座标列表 href=&quot;URL资源地址&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;......可根据需要定义多少个热点区域<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;area shape=形状 coords=区域座标列表 href=&quot;URL资源地址&quot;&gt;<br>    <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/map&gt; <br>
+<P>【1】shape -- 定义热点形状<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape=rect： &nbsp;矩形<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape=circle：圆形 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shape=poly： &nbsp;多边形 <br>
+  <br>
+  【2】coords -- 定义区域点的坐标<br>
+  <br>
+ &nbsp;&nbsp;&nbsp; a.矩形：必须使用四个数字，前两个数字为左上角座标，后两个数字为右下角座标<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例：&lt;area shape=rect coords=100,50,200,75 href=&quot;URL&quot;&gt;<br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;b.圆形：必须使用三个数字，前两个数字为圆心的座标，最后一个数字为半径长度<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 例：&lt;area shape=circle coords=85,155,30 href=&quot;URL&quot;&gt; <br>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;c.任意图形（多边形）：将图形之每一转折点座标依序填入<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例：&lt;area shape=poly coords=232,70,285,70,300,90,250,90,200,78 href=&quot;URL&quot;&gt; 
+<P>在制作本文介绍的效果时应注意的几点：<BR>
+  　　
+  1、在&lt;img&gt;标记不要忘记设置usemap参数，且usemap的参数值必须与&lt;map&gt;标记中的name参数值相同，也就是说，“图像地图名称”要一致；<BR>
+  　　
+  2、同一“图像地图”中的所有热点区域都要在图像地图的范围内，即所有&lt;area&gt;标记均要在&lt;map&gt;与&lt;/map&gt;之间；<BR>
+  　　
+3、在&lt;area&gt;标记中的   cords 参数设定的坐标格式要与shape参数设定的作用区域形状配套，避免出现在shape参数设置的矩形作用区域，而在cords   中设置的却是多边形区域顶点坐标的现象出现。
+<P>实例<a href="./shili/6-3-2.htm"> 6-3-2.html</a> 
+<P><br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;影像地图&lt;/title&gt;<br>
+&lt;/head&gt;
+
+<p>&lt;body&gt;<br>
+  &lt;img src=&quot;../../imge/yxlj.jpg&quot; alt=&quot;影像地图&quot; hspace=&quot;10&quot; align=&quot;left&quot; usemap=&quot;#yxdt&quot; border=&quot;0&quot;&gt;<br>
+  &lt;map name=&quot;yxdt&quot;&gt;<br>
+  &lt;area shape=&quot;rect&quot; coords=&quot;80,69,180,120&quot; href=&quot;http://www.baidu.com/&quot; target=&quot;_blank&quot; alt=&quot;点击链接到百度搜索&quot;&gt;<br>
+  &lt;area shape=&quot;circle&quot; coords=&quot;283,95,45&quot; href=&quot;http://www.sina.com.cn&quot; target=&quot;_blank&quot; alt=&quot;点击链接到新浪网站&quot;&gt;<br>
+  &lt;/map&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&amp;nbsp;&lt;/p&gt;<br>
+  &lt;p&gt;&lt;a href=&quot;#&quot; onClick=&quot;javascript:window.history.back()&quot;&gt;返回&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;<br>
+</p>
+<P><strong><font color="#FF0000" size="+1">6-4 用<a name="用" id="用"></a>&lt;img&gt;标签插入avi文件<a name="插入" id="插入"></a></font>
+  </strong>
+<P>格式：&lt;img dynsrc=&quot;avi文件地址&quot;&gt;
+<P align="center">&lt;img&gt;标签插入avi文件的属性
+<table width="658" border="3" cellspacing="1" cellpadding="1">
+  <tr>
+    <td width="93">属 性</td>
+    <td width="548">描 述</td>
+  </tr>
+  <tr>
+    <td>dynsrc</td>
+    <td>指定avi文件所在路径</td>
+  </tr>
+  <tr>
+    <td>loop</td>
+    <td>设定avi文件循环次数</td>
+  </tr>
+  <tr>
+    <td>loopdelay</td>
+    <td>设定avi文件循环延迟</td>
+  </tr>
+  <tr>
+    <td>start</td>
+    <td>设定文件播放方式fileopen/mouseover(网页打开时即播放/当鼠标滑到avi文件时播放）</td>
+  </tr>
+</table>
+<p>实例：<a href="./shili/6-4.htm">6-4.html</a></p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;设定图像的边框&lt;/title&gt;<br />
+  &lt;/head&gt;<br />
+  &lt;body&gt;<br />
+  &lt;center&gt;<br />
+  &lt;p align=&quot;center&quot;&gt;<br />
+  &lt;img dynsrc=&quot;../../imge/mmm.avi&quot; loop=&quot;-1&quot; start=&quot;mouseover&quot;&gt;<br />
+  &lt;/p&gt;<br />
+  &lt;/center&gt;<br />
+  &lt;/body&gt;<br />
+  &lt;/html&gt; </p>
+<p align="center">&nbsp;</p>
+<P align="center"><font size="+3"><b>&nbsp; <a href="5.htm">上一页</a>&nbsp; <a href="7.htm">下一页</a></b></font></p>
+</body>
+</html>

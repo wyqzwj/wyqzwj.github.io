@@ -1,0 +1,169 @@
+<HTML>
+<HEAD>
+<TITLE>第五章建立列表</TITLE>
+<link rel="stylesheet" href="aa.css" type="text/css">
+</HEAD>
+<BODY text=#000000 vLink=#800080 aLink=#0000ff link=#0000ff 
+background=imge/aki-5.gif leftmargin="20" rightmargin="20"><FONT color=#ff0000 size=6>
+<P align=center><BR><STRONG>第五章 建立列表</STRONG> </P></FONT>
+<P align=left><FONT size=3>&nbsp;&nbsp; 在html页面中，合理的使用列表标签可以起到提纲和格式排序文件的作用。</P>
+<P align=left>&nbsp;&nbsp; 
+列表分为两类，一是无序列表，一是有序列表，无序列表就是项目各条列间并无顺序关系，纯粹只是利用条列来呈现资料而已，此种无序标签，在各条列前面均有一符号以示区隔。而有序条列就是指各条列之间是有顺序的，比如从1、2、3…一直延伸下去。</P>
+<P align=center>列表的主要标签
+<TABLE style="WIDTH: 470px; HEIGHT: 208px" borderColor=#000080 width=470 
+border=3>
+  
+  <TR>
+    <TD>标 签</TD>
+    <TD>
+      <P>描 述</P></TD></TR>
+  <TR>
+    <TD>&lt;UL&gt;</TD>
+    <TD>无序列表</TD></TR>
+  <TR>
+    <TD>&lt;OL&gt;</TD>
+    <TD>有序列表</TD></TR>
+  <TR>
+    <TD>
+      <P>&lt;DIR&gt;</P></TD>
+    <TD>目录列表</TD></TR>
+  <TR>
+    <TD>&lt;DL&gt;</TD>
+    <TD>定义列表</TD></TR>
+  <TR>
+    <TD>&lt;MENU&gt;</TD>
+    <TD>菜单列表</TD></TR>
+  <TR>
+    <TD>&lt;DL&gt;/&lt;DT&gt;/&lt;DD&gt;</TD>
+    <TD>定义列表的标记</TD></TR>
+  <TR>
+    <TD>&lt;LI&gt;</TD>
+    <TD>列表项目的标记</TD></TR></TABLE> 
+</P>
+<P align=left>&nbsp;&nbsp;&nbsp;<FONT color=#ff0000 
+size=4><STRONG>5-1 无序列表<a name="无序列表"></a>&lt;UL&gt;</STRONG></FONT></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+无序列表使用的一对标签是&lt;ul&gt;&lt;/ul&gt;，无序列表指没有进行编号的列表,&nbsp; 
+每一个列表项前使用&lt;LI&gt;。&lt;LI&gt;的属性type有三个选项,这三个选项都必须小写:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disc实心园<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+circle空心园<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;square小方块<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+<BR>
+&lt;ul&gt;如果不使用其项目&lt;li&gt;的属性值,即默认情况下的&lt;ul&gt;会加"实心园"。</P>
+<P align=left>&nbsp;&nbsp;&nbsp; 格式1:</P>
+<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;UL&gt;<BR>　　　　　　　&lt;LI&gt;第一项<BR>
+　　　　　　　&lt;LI&gt;第二项<BR>　　　　　　　&lt;LI&gt;第三项<BR>　　　&nbsp;&nbsp; 
+&lt;/UL&gt;</P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+格式2<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;ul&gt;<BR>　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li 
+type=disc&gt;第一项<BR>　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li 
+type=circle&gt;第二项<BR>　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li 
+type=square&gt;第三项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt;</P>
+<P align=left>示例<a name="例5-1" id="例5-1"></a> <A href="./shili/5-1.htm">5-1.html</A></P>
+<P 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;无序列表&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;ul&gt;<BR>　　&lt;li&gt;默认的无序列表加"实心园"<BR>　　&lt;li&gt;默认的无序列表"实心园"<BR>　　&lt;li&gt;默认的无序列表"实心园"<BR>&lt;/ul&gt;<BR>&lt;ul&gt;<BR>&nbsp;&nbsp;&nbsp; 
+&lt;li type=square&gt;无序列表square加方块<BR>　　&lt;li 
+type=square&gt;无序列表square加方块<BR>　　&lt;li 
+type=square&gt;无序列表square加方块<BR>&lt;/ul&gt;<BR>&lt;ul&gt;<BR>&nbsp;&nbsp;&nbsp; 
+&lt;li type=circle&gt;无序列表circle加空心园<BR>　　&lt;li 
+type=circle&gt;无序列表circle加空心园<BR>　　&lt;li 
+type=circle&gt;无序列表circle加空心园<BR>&lt;/ul&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<P align=left>&nbsp;<FONT color=#ff0000 size=4><STRONG>5-2 
+有序列表<a name="有序" id="有序"></a>&lt;OL&gt;</STRONG></FONT></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+有序列表和无序列表的使用格式基本相同，它使用标签&lt;ol&gt;&lt;/ol&gt;，每一个列表项前使用&lt;li&gt;。&lt;ol&gt;列表的结果是带有前后顺序之分的编号。如果插入和删除一个列表项，编号会自动调整。</P>
+<P 
+align=left>&nbsp;&nbsp;&nbsp;顺序编号的设置是由&lt;ol&gt;的两个属性type和start来完成的。start=编号开始的数字，如start=2则编号从2开始，如果从1开始可以省略，或是在&lt;li&gt;标签中设定value＝"n"改变列表行项目的特定编号，例如&lt;li value="7"&gt;。type=用于编号的数字,字母等的类型，如type=a，则编号用英文字母。为了使用这些属性，把它们放在&lt;ol&gt;或&lt;li&gt;的的初始标签中。<BR>
+</P>
+<P align=center>有序列表type的属性
+<TABLE style="WIDTH: 558px; HEIGHT: 158px" borderColor=#003366 width=558 
+border=3>
+  
+  <TR>
+    <TD>type 类 型</TD>
+    <TD>描 述</TD></TR>
+  <TR>
+    <TD>type=1</TD>
+    <TD>表示列表项目用数字标号（1,2,3...）</TD></TR>
+  <TR>
+    <TD>type=A</TD>
+    <TD>表示列表项目用大写字母标号（A,B,C...）</TD></TR>
+  <TR>
+    <TD>type=a</TD>
+    <TD>表示列表项目用小写字母标号（a,b,c...）</TD></TR>
+  <TR>
+    <TD>type=I</TD>
+    <TD>表示列表项目用大写罗马数字标号（Ⅰ,Ⅱ,Ⅲ...）</TD></TR>
+  <TR>
+    <TD>type=i</TD>
+    <TD>表示列表项目用小写罗马数字标号（i,ii,iii...）</TD></TR></TABLE></P>
+<P align=left>格式1<BR>
+&nbsp;&nbsp;&nbsp; 
+&lt;ol type=编号类型 
+start=value&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第1项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第2项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第3项<BR>&nbsp;&nbsp;&nbsp; &lt;/ol&gt;</P>
+<P 
+align=left>格式2<BR>&nbsp;&nbsp;&nbsp; 
+&lt;ol&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;第1项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;第2项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;第3项<BR>&nbsp;&nbsp;&nbsp; &lt;/ol&gt;</P>
+<P 
+align=left>实例<a name="例5-2" id="例5-2"></a>：<A href="./shili/5-2.htm">5-2.html</A><BR>
+  <BR>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;有序列表&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&nbsp;&nbsp;&nbsp; &lt;ol&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;默认的有序列表<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;默认的有序列表<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;默认的有序列表<BR>&nbsp;&nbsp;&nbsp; &lt;/ol&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol&nbsp; type=a 
+start=5&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;第1项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;第2项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第3项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li value=  
+ 20&gt;第4项<BR>&nbsp;&nbsp;&nbsp; &lt;/ol&gt;<BR>&nbsp;&nbsp;&nbsp; &lt;ol&nbsp; type= I 
+start=2&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第1项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;第2项<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;li&gt;第3项<BR>&nbsp;&nbsp;&nbsp; &lt;/ol&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<P align=left><STRONG><FONT color=#ff0000 size="4">5-3 嵌套列表<a name="嵌套" id="嵌套"></a></FONT></STRONG></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+将一个列表嵌入到另一个列表中，作为另一个列表的一部分，叫嵌套列表。无论是有序列表和无序列表的嵌套，浏览器都可以自动地分成排列。</P>
+<P align=left>实列<a name="列5-3" id="列5-3"></a>：<A href="./shili/5-3.htm">5-3.html</A></P>
+<P 
+align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;嵌套列表&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;h3&gt;目录&lt;/h3&gt;<BR>&nbsp;&lt;ol 
+type=a&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号类型a开头第一行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号类型a开头第二行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol 
+type=A 
+start=3&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号A类型C开头第一行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号A类型C开头第二行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol 
+type=1 
+start=51&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号数字51开头第一行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号数字51开头第二行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号数字51开头第三行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号A类型C开头第三行内容&lt;/li&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;这是以序号类型a开头第三行内容&lt;/li&gt;<BR>&nbsp;&lt;/ol&gt;<BR>&lt;HR&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+<P align=left><FONT color=#ff0000 size=4><STRONG>5-4 
+定义列表<a name="定义" id="定义"></a>的标记&lt;DL&gt;/&lt;DT&gt;/&lt;DD&gt;</STRONG></FONT></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+定义列表的标记也叫描述性列表，定义列表默认为两个层次，第一层为列表项标签&lt;DT&gt;，第二层为注释项标签&lt;DD&gt;。&lt;DT&gt;和&lt;DD&gt;标签通常是成对使用的。也可以一个列表项对应于几个解释项，这种方式很少用。&lt;DD&gt;默认的注释是显示在另一行中,当使用&lt;dl compact=&quot;compact&quot;&gt;后,注释项和列表项将显示在同一行。其格式为：</P>
+<P align=left>&nbsp;&nbsp;&nbsp; 
+&lt;dl&gt;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dt&gt;第1项 
+&lt;dd&gt;注释1<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dt&gt;第2项 
+&lt;dd&gt;注释2<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dt&gt;第3项 
+&lt;dd&gt;注释3<BR>&nbsp;&nbsp;&nbsp; &lt;/dl&gt;</P>
+<P align=left>实例<a name="例5-4" id="例5-4"></a>：<A href="./shili/5-4.htm">5-4.html</A><BR>
+  &lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;定义性列表&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>定义性列表&lt;P&gt;<BR>&lt;dl&gt;<BR> 
+　&lt;dt&gt;&nbsp; WWW：&lt;dd&gt; WWW是(World wide web)的缩写，也可简写web;<BR> &nbsp; &lt;dt&gt; WWW：&lt;dd&gt; 
+WWW又叫万维网;<BR> &nbsp; &lt;dt&gt; WWW：&lt;dd&gt; 
+internet提供的最常用的服务是WWW;<BR>&lt;/dl&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<P 
+align=left><FONT color=#ff0000 size=4><STRONG>5-5 
+目录列表<a name="目录" id="目录"></a>&lt;DIR&gt;和菜单列表&lt;MENU&gt;</STRONG></FONT></P>
+<P 
+align=left>&lt;dir&gt;为目录列表标签,&lt;menu&gt;为菜单列表标签,它们的格式和无序列表&lt;ul&gt;是一样的,例如:<BR>格式1:<BR>&lt;dir&gt;<BR>　　&lt;li&gt;第一项<BR>　　&lt;li&gt;第二项<BR>　　&lt;li&gt;第三项<BR>&lt;/dir&gt;</P>
+<P 
+align=left>格式2<BR>&lt;menu&gt;<BR>　　&lt;li 
+type=disc&gt;第一项<BR>　　&lt;li type=circle&gt;第二项<BR>　　&lt;li 
+type=square&gt;第三项<BR>&lt;/menu&gt;</P>
+<P 
+align=left>实例<a name="例5-5" id="例5-5"></a>：<A href="./shili/5-5.htm">5-5.HTML</A><BR>
+<BR>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;无序列表&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;ul&gt;<BR>　　&lt;li&gt;默认的无序列表加"实心园"<BR>　　&lt;li&gt;默认的无序列表"实心园"<BR>　　&lt;li&gt;默认的无序列表"实心园"<BR>&lt;/ul&gt;<BR>&lt;dir&gt;<BR>　　&lt;li&gt;默认的目录列表加"实心园"<BR>　　&lt;li&gt;默认的目录列表"实心园"<BR>　　&lt;li&gt;默认的目录列表"实心园"<BR>&lt;/dir&gt;<BR>&lt;menu&gt;<BR>　　&lt;li&gt;默认的菜单列表加"实心园"<BR>　　&lt;li&gt;默认的菜单列表"实心园"<BR>　　&lt;li&gt;默认的菜单列表"实心园"<BR>&lt;/menu&gt;</P>
+<P 
+align=left>&lt;dir&gt;<BR>&nbsp;&nbsp;&nbsp; &lt;li 
+type=square&gt;目录列表square加方块<BR>　　&lt;li 
+type=square&gt;目录列表square加方块<BR>　　&lt;li 
+type=square&gt;目录列表square加方块<BR>&lt;/dir&gt;<BR>&lt;menu&gt;<BR>&nbsp;&nbsp;&nbsp; 
+&lt;li type=circle&gt;菜单列表circle加空心园<BR>　　&lt;li 
+type=circle&gt;菜单列表circle加空心园<BR>　　&lt;li 
+type=circle&gt;菜单列表circle加空心园<BR>&lt;/menu&gt;<BR>&lt;/body&gt;<BR>&lt;/html&gt;</P>
+<p align="center"><font size="+3"><b>&nbsp; <a href="4.htm">上一页</a>&nbsp; <a href="6.htm">下一页</a></b></font></p>
+</BODY>
+</HTML>
