@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>��ʮ�±��������</title>
+<title>第十章表单的设计</title>
 <link rel="stylesheet" type="text/css" href="aa.css">
 <style type="text/css">
 <!--
@@ -17,201 +17,200 @@ a{border:outset; text-decoration:none;}
 
 <body leftmargin="30" rightmargin="30">
 <div align="center">
-  <p><b><font size="+3" color="#FF0000">��ʮ�±��������</font></b> </p>
+  <p><b><font size="+3" color="#FF0000">第十章表单的设计</font></b> </p>
 </div>
-
-<p class="STYLE3"><font color="#FF0000">10-1 �������&lt;form&gt;<a name="fotmm"></a></font></p>
-<p>&nbsp;&nbsp;&nbsp; ������Web��ҳ����������������д��Ϣ���Ӷ��ܲɼ��ͻ�����Ϣ��ʹ��ҳ���н����Ĺ��ܡ�һ���ǽ����������һ��Html�ĵ��У����û���д����Ϣ�����ύ(submit)���������Ǳ��������ݾʹӿͻ��˵���������͵��������ϣ������������ϵ� ASP �� CGI �ȴ������������ٽ��û�������Ϣ���ͻؿͻ��˵�������ϣ�������ҳ�;����˽����ԡ���������ֻ������ʹ��Html��־����Ʊ�����</p>
-<p>&nbsp;&nbsp;&nbsp; �������ɴ���Ϳؼ���ɵ�,һ������һ��Ӧ�ð����û���д��Ϣ�������,�ύ�Ͱ�ť�ȣ���Щ�����,��ť�����ؼ�,������������,���ܹ����ɸ��ָ����Ŀؼ���</p>
-<p> &nbsp;&nbsp;&nbsp; һ��������&lt;form&gt;&lt;/form&gt;��־��������Ҳ����������Ŀ�ʼ�ͽ���λ�ã��ڿ�ʼ�ͽ�����־֮���һ�ж��嶼���ڱ��������ݡ�&lt;form&gt;��־����action��method��target���ԡ�action��ֵ�Ǵ�������ĳ�����(����  ����·��:��ַ�����·��)���磺&lt;form action=&quot;�������ձ�����Ϣ��url&quot;&gt;�������������ǿ�ֵ(&quot;&quot;)��ǰ�ĵ���url����ʹ��.���û��ύ����ʱ����������ִ����ַ����ĳ���һ����CGI���򣩡�method�����������崦������ӱ����л����Ϣ�ķ�ʽ����ȡֵΪ GET �� POST ������һ����GET��ʽ�Ǵ�������ӵ�ǰHtml�ĵ��л�ȡ���ݣ�Ȼ�����ַ�ʽ���͵����������������Ƶģ�һ��������1KB��255���ֽڣ����¡�POST��ʽ���͵Ĕ������^�����ǵ�ǰ��Html�ĵ������ݴ��͸��������򣬴��͵�������Ҫ��ʹ��GET��ʽ�Ĵ�Ķࡣtarget��������ָ��Ŀ�괰�ڻ�Ŀ��֡����ѡ��ǰ����_self,��������_parent,���㴰��_top,�հ״���_blank��</p>
-<p>������ǩ�ĸ�ʽ: &lt;FORM action��&quot;url&quot; method=get|post name=&quot;myform&quot; target=&quot;_blank&quot;&gt;... &lt;/FORM&gt;</p>
-<p class="STYLE3"><font color="#FF0000">10-2 д����&lt;input&gt;<a name="inpu"></a></font></p>
-<p>&nbsp;&nbsp;&nbsp; ��html������,���&lt;input&gt;������Ҫ�ĵ�λ�����ܹ���������еĿؼ����ص�html�ĵ��У��ñ���ǵ�����ǣ�û�н�����ǡ�&lt;input type=&quot;&quot;&gt;��־��������һ���û����������û���������������Ϣ���˱�־�������  &lt;form&gt;&lt;/form&gt;��־��֮�䡣&lt;input type=&quot;&quot;&gt;��־�й��ṩ�˾������͵��������򣬾�������һ��������type�������������뿴�±��б���</p>
-<p align="center">type����ֵ���� </p>
+<p class="STYLE3"><font color="#FF0000">10-1 表单标记&lt;form&gt;<a name="fotmm"></a></font></p>
+<p>&nbsp;&nbsp;&nbsp; 表单在Web网页中用来给访问者填写信息，从而能采集客户端信息，使网页具有交互的功能。一般是将表单设计在一个Html文档中，当用户填写完信息后做提交(submit)操作，于是表单的内容就从客户端的浏览器传送到服务器上，经过服务器上的 ASP 或 CGI 等处理程序处理后，再将用户所需信息传送回客户端的浏览器上，这样网页就具有了交互性。这里我们只讲怎样使用Html标志来设计表单。</p>
+<p>&nbsp;&nbsp;&nbsp; 表单是由窗体和控件组成的,一个表单一般应该包含用户填写信息的输入框,提交和按钮等，这些输入框,按钮叫做控件,表单很像容器,它能够容纳各种各样的控件。</p>
+<p> &nbsp;&nbsp;&nbsp; 一个表单用&lt;form&gt;&lt;/form&gt;标志来创建。也即定义表单的开始和结束位置，在开始和结束标志之间的一切定义都属于表单的内容。&lt;form&gt;标志具有action、method和target属性。action的值是处理程序的程序名(包括  网络路径:网址或相对路径)，如：&lt;form action=&quot;用来接收表单信息的url&quot;&gt;，如果这个属性是空值(&quot;&quot;)则当前文档的url将被使用.当用户提交表单时，服务器将执行网址里面的程序（一般是CGI程序）。method属性用来定义处理程序从表单中获得信息的方式，可取值为 GET 和 POST 的其中一个。GET方式是处理程序从当前Html文档中获取数据，然而这种方式传送的数据量是有所限制的，一般限制在1KB（255个字节）以下。POST方式傳送的數據比較大，它是当前的Html文档把数据传送给处理程序，传送的数据量要比使用GET方式的大的多。target属性用来指定目标窗口或目标帧。可选当前窗口_self,父级窗口_parent,顶层窗口_top,空白窗口_blank。</p>
+<p>表单标签的格式: &lt;FORM action＝&quot;url&quot; method=get|post name=&quot;myform&quot; target=&quot;_blank&quot;&gt;... &lt;/FORM&gt;</p>
+<p class="STYLE3"><font color="#FF0000">10-2 写入标记&lt;input&gt;<a name="inpu"></a></font></p>
+<p>&nbsp;&nbsp;&nbsp; 在html语言中,标记&lt;input&gt;具有重要的地位，它能够将浏览器中的控件加载到html文档中，该标记是单个标记，没有结束标记。&lt;input type=&quot;&quot;&gt;标志用来定义一个用户输入区，用户可在其中输入信息。此标志必须放在  &lt;form&gt;&lt;/form&gt;标志对之间。&lt;input type=&quot;&quot;&gt;标志中共提供了九种类型的输入区域，具体是哪一种类型由type属性来决定。请看下边列表：</p>
+<p align="center">type属性值定义 </p>
 <table width="699" border="1" align="center">
   <tr>
-    <td width="188"><p align="center">type����ȡֵ</p></td>
-    <td width="241"><p align="center">������������</p></td>
-    <td width="242"><p align="center">�ؼ������Լ�˵��</p></td>
+    <td width="188"><p align="center">type属性取值</p></td>
+    <td width="241"><p align="center">输入区域类型</p></td>
+    <td width="242"><p align="center">控件的属性及说明</p></td>
   </tr>
   <tr>
     <td>&lt;input type="TEXT" size=""   maxlength=""&gt;</td>
-    <td>���е��ı���������,size��maxlength�������������������������ʾ�ĳߴ��С�����������ַ���</td>
-    <td>(1)name ����ؼ�����<br>
-(2)value ָ���ؼ���ʼֵ,��ֵ�������������ʱ���ı����е�����<br>
-(3)size ָ���ؼ�����,��ʾ���ı������������ʾ������ַ�����<br>
-(4)maxlength ��ʾ���ı�����������û����������ַ�����<br>
-(5)onchang ���ı��ı�ʱҪִ�еĺ���<br>
-(6)onselect ���ؼ���ѡ��ʱҪִ�еĺ���<br>
-(7)onfocus ���ı����ܽ���ʱҪִ�еĺ���</td>
+    <td>单行的文本输入区域,size与maxlength属性用来定义此种输入区域显示的尺寸大小与输入的最大字符数</td>
+    <td>(1)name 定义控件名称<br>
+(2)value 指定控件初始值,该值就是浏览器被打开时在文本框中的内容<br>
+(3)size 指定控件宽度,表示该文本输入框所能显示的最大字符数。<br>
+(4)maxlength 表示该文本输入框允许用户输入的最大字符数。<br>
+(5)onchang 当文本改变时要执行的函数<br>
+(6)onselect 当控件被选中时要执行的函数<br>
+(7)onfocus 当文本接受焦点时要执行的函数</td>
   </tr>
   <tr>
     <td width="188"><p align="left">&lt;input type="button"&gt;</p></td>
-    <td width="241">��ͨ��ť,�������ť�����ʱ,�ͻ��������onclickָ���ĺ���;��ʹ�������ťʱ,һ�����ʹ��valueָ������������ʾ������,��onclickָ��һ������,һ��ΪJavaScript��һ���¼���</td>
-    <td width="242" rowspan="3">��������ť�����湲ͬ�����ԣ�<br>
-(1)name ָ����ť����<br>
-(2)value ָ����ť������ʾ������<br>
-(3)onclick ָ��������ť��Ҫ���õĺ���<br>
-(4)onfocus ָ����ť���ܽ���ʱҪ���õĺ���</td>
+    <td width="241">普通按钮,当这个按钮被点击时,就会调用属性onclick指定的函数;在使用这个按钮时,一般配合使用value指定在它上面显示的文字,用onclick指定一个函数,一般为JavaScript的一个事件。</td>
+    <td width="242" rowspan="3">这三个按钮有下面共同的属性：<br>
+(1)name 指定按钮名称<br>
+(2)value 指定按钮表面显示的文字<br>
+(3)onclick 指定单击按钮后要调用的函数<br>
+(4)onfocus 指定按钮接受焦点时要调用的函数</td>
   </tr>
   <tr>
     <td>&lt;input type="SUBMIT"&gt;</td>
-    <td>�ύ���������İ�ť,�������ť�����ʱ,�ͻ����ӵ�����form����actionָ����url��ַ��</td>
+    <td>提交到服务器的按钮,当这个按钮被点击时,就会连接到表单form属性action指定的url地址。</td>
   </tr>
   <tr>
     <td>&lt;input type="RESET"&gt;</td>
-    <td>���ð�ť,�����ð�ť�ɽ���������ȫ�����,�����������ݡ�</td>
+    <td>重置按钮,单击该按钮可将表单内容全部清除,重新输入数据。</td>
   </tr>
   <tr>
     <td>&lt;input type="CHECKBOX" checked&gt;</td>
-    <td>һ����ѡ��,checked�����������øø�ѡ��ȱʡʱ�Ƿ�ѡ��,�ұ�ʾ����ʹ����������ѡ��</td>
-    <td>checkbox���ڶ�ѡ,����������:<br>
-(1) name ����ؼ�����<br>
-(2) value ����ؼ���ֵ<br>
-(3) checked �趨�ؼ���ʼ״̬�Ǳ�ѡ�е�<br>
-(4) onclick ����ؼ���ѡ��ʱҪִ�еĺ���<br>
-(5) onfocus ����ؼ�Ϊ����ʱҪִ�еĺ���</td>
+    <td>一个复选框,checked属性用来设置该复选框缺省时是否被选中,右边示例中使用了三个复选框</td>
+    <td>checkbox用于多选,有以下属性:<br>
+(1) name 定义控件名称<br>
+(2) value 定义控件的值<br>
+(3) checked 设定控件初始状态是被选中的<br>
+(4) onclick 定义控件被选中时要执行的函数<br>
+(5) onfocus 定义控件为焦点时要执行的函数</td>
   </tr>
   <tr>
     <td>&lt;input type="HIDDEN"&gt;</td>
-    <td>��������,�û���������������,����Ԥ��ĳЩҪ���͵���Ϣ</td>
-    <td> hidden ���ؿؼ�,���ڴ�������,���û���˵�ǲ��ɼ���;������:<br>
-(1)name �ؼ�����,<br>
-(2)value �ؼ�Ĭ��ֵ<br>
-(3)hidden���ؿؼ���Ĭ��ֵ�������һ���͸�������,����:<br>
+    <td>隐藏区域,用户不能在其中输入,用来预设某些要传送的信息</td>
+    <td> hidden 隐藏控件,用于传递数据,对用户来说是不可见的;属性有:<br>
+(1)name 控件名称,<br>
+(2)value 控件默认值<br>
+(3)hidden隐藏控件的默认值会随表单一起发送给服务器,例如:<br>
 &lt;input type=&quot;Hidden&quot; name=&quot;ss&quot; value=&quot;688&quot;&gt; <br>
-�ؼ�����������Ϊss,����������Ϊ&quot;688&quot;,���������͸���������,�������Ϳ��Ը���hidden������ss,��ȡvalue��ֵ688;</td>
+控件的名称设置为ss,设置其数据为&quot;688&quot;,当表单发送给服务器后,服务器就可以根据hidden的名称ss,读取value的值688;</td>
   </tr>
   <tr>
     <td>&lt;input type="IMAGE" src="URL"&gt;</td>
-    <td>ʹ��ͼ��������Submit��ť,ͼ���Դ�ļ�����src����ָ��,�û������,�����е���Ϣ�͵��λ�õ�X��Y����һ���͸�������</td>
-    <td>(1)name ָ��ͼ��ť����<br>
-(2)src ָ��ͼ���url��ַ</td>
+    <td>使用图像来代替Submit按钮,图像的源文件名由src属性指定,用户点击后,表单中的信息和点击位置的X、Y坐标一起传送给服务器</td>
+    <td>(1)name 指定图像按钮名称<br>
+(2)src 指定图像的url地址</td>
   </tr>
   <tr>
     <td>&lt;input type="PASSWARD"&gt;</td>
-    <td>�������������,���û���������ʱ,�����ڽ�����ʾ"*"��</td>
-    <td>password ����ؼ�<br>
-��ʾ���������������Ϣ������,���ı����������ʾ&quot;*&quot;,������:<br>
-(1)name ����ؼ�����<br>
-(2)value ָ���ؼ���ʼֵ,��ֵ�������������ʱ���ı����е�����<br>
-(3)size ָ���ؼ�����,��ʾ���ı������������ʾ������ַ�����<br>
-(4)maxlegnth ��ʾ���ı�����������û����������ַ�����<br></td>
+    <td>输入密码的区域,当用户输入密码时,区域内将会显示"*"号</td>
+    <td>password 口令控件<br>
+表示该输入项的输入信息是密码,在文本输入框中显示&quot;*&quot;,属性有:<br>
+(1)name 定义控件名称<br>
+(2)value 指定控件初始值,该值就是浏览器被打开时在文本框中的内容<br>
+(3)size 指定控件宽度,表示该文本输入框所能显示的最大字符数。<br>
+(4)maxlegnth 表示该文本输入框允许用户输入的最大字符数。<br></td>
   </tr>
   <tr>
     <td>&lt;input type="RADIO"&gt;</td>
-    <td>��ѡ��ť����,checked�����������øõ�ѡ��ȱʡʱ�Ƿ�ѡ��,�ұ�ʾ����ʹ����������ѡ��</td>
-    <td><p>radio���ڵ�ѡ������������:<br>
-      (1) name ����ؼ�����<br>
-      (2) value ����ؼ���ֵ<br>
-      (3) checked �趨�ؼ���ʼ״̬�Ǳ�ѡ�е�<br>
-      (4) onclick ����ؼ���ѡ��ʱҪִ�еĺ���<br>
-      (5) onfocus ����ؼ�Ϊ����ʱҪִ�еĺ���</p>
-    <p>��Ϊ��ѡ��ʱ,���а�ť��name���Ա�����ͬ,��:������Ϊmy_radio��</p></td>
+    <td>单选按钮类型,checked属性用来设置该单选框缺省时是否被选中,右边示例中使用了三个单选框</td>
+    <td><p>radio用于单选，有以下属性:<br>
+      (1) name 定义控件名称<br>
+      (2) value 定义控件的值<br>
+      (3) checked 设定控件初始状态是被选中的<br>
+      (4) onclick 定义控件被选中时要执行的函数<br>
+      (5) onfocus 定义控件为焦点时要执行的函数</p>
+    <p>当为单选项时,所有按钮的name属性必需相同,如:都设置为my_radio。</p></td>
   </tr>
 </table>
-<p align="left"> &nbsp;&nbsp;&nbsp; �������͵�����������һ������������name�������Ը�ÿһ����������һ�����֡��������������������һһ��Ӧ�ģ���һ�����������Ӧһ�����֡�����������ͨ������ĳһ������������ֵ�valueֵ����ø���������ݵġ���value��������һ���������ԣ���������ָ�����������ȱʡֵ��
+<p align="left"> &nbsp;&nbsp;&nbsp; 以上类型的输入区域有一个公共的属性name，此属性给每一个输入区域一个名字。这个名字与输入区域是一一对应的，即一个输入区域对应一个名字。服务器就是通过调用某一输入区域的名字的value值来获得该区域的数据的。而value属性是另一个公共属性，它可用来指定输入区域的缺省值。
   <br>
 </p>
-<p>Ӧ�ø�ʽ</p>
-<p>&lt;input ����1 ����2......&gt;</p>
-<p>�������ԣ�</p>
-<p>1 name �ؼ�����</p>
-<p>2 type�ؼ����� �磺botton ��ͨ��ť��texe �ı����</p>
-<p>3 align ָ�����뷽ʽ,��ȡtop, bottom, middl</p>
-<p>4 size ָ���ؼ��Ŀ���</p>
-<p>5 value �����趨����Ĭ��ֵ</p>
-<p>6 maxlength�ڵ����ı���ʱ���������������ַ���</p>
-<p>7 src ����ͼ��ĵ�ַ</p>
-<p>8 event ָ���������¼�</p>
-<p>ʵ����<a href="./shili/10-2.htm">10-2.html</a></p>
+<p>应用格式</p>
+<p>&lt;input 属性1 属性2......&gt;</p>
+<p>常用属性：</p>
+<p>1 name 控件名称</p>
+<p>2 type控件类型 如：botton 普通按钮，texe 文本框等</p>
+<p>3 align 指定对齐方式,可取top, bottom, middl</p>
+<p>4 size 指定控件的宽度</p>
+<p>5 value 用于设定输入默认值</p>
+<p>6 maxlength在单行文本的时候允许输入的最大字符数</p>
+<p>7 src 插入图像的地址</p>
+<p>8 event 指定激发的事件</p>
+<p>实例：<a href="./shili/10-2.htm">10-2.html</a></p>
 <p>&lt;html&gt;<br>
   &lt;head&gt;<br>
-  &lt;title&gt;&amp;lt;input&amp;gt;�Ŀؼ�&lt;/title&gt;<br>
+  &lt;title&gt;&amp;lt;input&amp;gt;的控件&lt;/title&gt;<br>
   &lt;/head&gt;<br>
 &lt;body&gt;</p>
 <p>&lt;center&gt;<br>
-  &lt;h2&gt;&lt;font color=&quot;#339933&quot;&gt;&amp;lt;input&amp;gt;�ؼ���ʹ��&lt;/font&gt;&lt;/h2&gt;&lt;/center&gt;</p>
+  &lt;h2&gt;&lt;font color=&quot;#339933&quot;&gt;&amp;lt;input&amp;gt;控件的使用&lt;/font&gt;&lt;/h2&gt;&lt;/center&gt;</p>
 <p>&lt;pre&gt;</p>
 <p>&lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;_parent&quot;&gt;<br>
-  ���е��ı��������� &lt;INPUT name=T1 type=text&gt;<br>
-  ��ͨ��ť�� &lt;INPUT name=B1 type=button value=button&gt;<br>
-  �ύ��ť�� &lt;INPUT name=B1 type=submit value=Submit&gt;<br>
-  ���ð�ť�� &lt;INPUT name=B1 type=reset value=Reset&gt; <br>
-  ��ѡ�� ��ϲ����Щ�̳̣�&lt;INPUT name=C1 type=checkbox value=ON&gt; Html���� &lt;INPUT CHECKED name=C2 type=checkbox value=ON&gt; ��̬Html &lt;INPUT name=C3 type=checkbox value=ON&gt; ASP<br>
-  ͼ��������Submit��ť�� &lt;INPUT border=0 name=I2 height=20 src=&quot;../../imge/nnn.gif&quot; type=image width=65&gt; <br>
-  ��������� &lt;INPUT name=p1 <br>
+  单行的文本输入区域： &lt;INPUT name=T1 type=text&gt;<br>
+  普通按钮： &lt;INPUT name=B1 type=button value=button&gt;<br>
+  提交按钮： &lt;INPUT name=B1 type=submit value=Submit&gt;<br>
+  重置按钮： &lt;INPUT name=B1 type=reset value=Reset&gt; <br>
+  复选框： 你喜欢哪些教程：&lt;INPUT name=C1 type=checkbox value=ON&gt; Html入门 &lt;INPUT CHECKED name=C2 type=checkbox value=ON&gt; 动态Html &lt;INPUT name=C3 type=checkbox value=ON&gt; ASP<br>
+  图像来代替Submit按钮： &lt;INPUT border=0 name=I2 height=20 src=&quot;../../imge/nnn.gif&quot; type=image width=65&gt; <br>
+  密码的区域： &lt;INPUT name=p1 <br>
   type=password&gt; &lt;/P&gt;<br>
-  ��ѡ��ť:  ������а�����ʲô��&lt;INPUT CHECKED name=R1 type=radio value=V1&gt; ���� &lt;INPUT name=R1 type=radio value=V2&gt;  ���� &lt;INPUT name=R1 type=radio value=V3&gt; ����<br>
+  单选按钮:  你的休闲爱好是什么：&lt;INPUT CHECKED name=R1 type=radio value=V1&gt; 音乐 &lt;INPUT name=R1 type=radio value=V2&gt;  体育 &lt;INPUT name=R1 type=radio value=V3&gt; 旅游<br>
   &lt;/form&gt; <br>
   &lt;/pre&gt; <br>
-  &lt;a href=&quot;#&quot; onClick=&quot;javascript:window.history.back()&quot;&gt;&lt;FONT size=4&gt;����&lt;/FONT&gt;&lt;/A&gt;&lt;/SUB&gt;<br>
+  &lt;a href=&quot;#&quot; onClick=&quot;javascript:window.history.back()&quot;&gt;&lt;FONT size=4&gt;返回&lt;/FONT&gt;&lt;/A&gt;&lt;/SUB&gt;<br>
   &lt;/PRE&gt;<br>
   &lt;/body&gt;<br>
   &lt;/html&gt;</p>
-<p class="STYLE3"><font color="#FF0000">10-3 �˵������б���&lt;select&gt;&lt;/select&gt;&lt;option&gt;<a name="iongt" id="iongt"></a></font></p>
-<p>&nbsp;&nbsp;&nbsp; &lt;select&gt;&lt;/select&gt;��־����������һ���˵������б��򡣴˱�־������&lt;form&gt;&lt;/form&gt;��־��֮�䡣&lt;select&gt;����multiple��name��size���ԡ�multiple���Բ��ø�ֵ��ֱ�Ӽ����־�м���ʹ�ã������˴����Ժ��б���ͳ��˿ɶ�ѡ���ˣ�name�Ǵ��б�������֣������ϱ߽���name����������һ���ģ�size�������������б��ĸ߶ȣ�ȱʡʱֵΪ1����û������(����)multiple���ԣ���ʾ�Ľ���һ������ʽ���б���<BR>
-&nbsp;&nbsp;&nbsp; &lt;option&gt;��־����ָ���б����е�һ��ѡ�������&lt;select&gt;&lt;/select&gt;��־��֮�䡣�˱�־����selected��value���ԣ�selected����ָ��Ĭ�ϵ�ѡ�value����������&lt;option&gt;ָ������һ��ѡ�ֵ�����ֵ��Ҫ���͵��������ϵģ�����������ͨ������&lt;select&gt;��������ֵ�value��������ø�����ѡ�е�������ġ�</p>
-<p>ʵ����<a href="./shili/10-3-1.htm">10-3-1.html</a></p>
+<p class="STYLE3"><font color="#FF0000">10-3 菜单下拉列表框&lt;select&gt;&lt;/select&gt;&lt;option&gt;<a name="iongt" id="iongt"></a></font></p>
+<p>&nbsp;&nbsp;&nbsp; &lt;select&gt;&lt;/select&gt;标志对用来创建一个菜单下拉列表框。此标志对用于&lt;form&gt;&lt;/form&gt;标志对之间。&lt;select&gt;具有multiple、name和size属性。multiple属性不用赋值，直接加入标志中即可使用，加入了此属性后列表框就成了可多选的了；name是此列表框的名字，它与上边讲的name属性作用是一样的；size属性用来设置列表的高度，缺省时值为1，若没有设置(加入)multiple属性，显示的将是一个弹出式的列表框。<BR>
+&nbsp;&nbsp;&nbsp; &lt;option&gt;标志用来指定列表框中的一个选项，它放在&lt;select&gt;&lt;/select&gt;标志对之间。此标志具有selected和value属性，selected用来指定默认的选项，value属性用来给&lt;option&gt;指定的那一个选项赋值，这个值是要传送到服务器上的，服务器正是通过调用&lt;select&gt;区域的名字的value属性来获得该区域选中的数据项的。</p>
+<p>实例：<a href="./shili/10-3-1.htm">10-3-1.html</a></p>
 <p>&lt;html&gt;<br>
   &lt;head&gt;  <br>
-  &lt;title&gt;�����б���&lt;/title&gt;<br>
+  &lt;title&gt;下拉列表框&lt;/title&gt;<br>
   &lt;/head&gt;<br>
   &lt;body&gt;<br>
   &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;<br>
-  &lt;p&gt;��ѡ����ϲ�����и���:<br>
+  &lt;p&gt;请选择最喜欢的男歌星:<br>
   &lt;select name=&quot;gx1&quot; size=&quot;1&quot;&gt;<br>
-  &lt;option value=&quot;ldh&quot;&gt;���»�<br>
-  &lt;option value=&quot;zhxy&quot; selected&gt;��ѧ��<br>
-  &lt;option value=&quot;gfch&quot;&gt;������<br>
-  &lt;option value=&quot;lm&quot;&gt;����<br>
+  &lt;option value=&quot;ldh&quot;&gt;刘德华<br>
+  &lt;option value=&quot;zhxy&quot; selected&gt;张学友<br>
+  &lt;option value=&quot;gfch&quot;&gt;郭富城<br>
+  &lt;option value=&quot;lm&quot;&gt;黎明<br>
   &lt;/select&gt;<br>
   &lt;/form&gt;<br>
   &lt;/body&gt;<br>
 &lt;/html&gt;</p>
-<p>ʵ����<a href="./shili/10-3-2.htm">10-3-2.html</a></p>
+<p>实例：<a href="./shili/10-3-2.htm">10-3-2.html</a></p>
 <p>&lt;html&gt;<br>
   &lt;head&gt;  <br>
-  &lt;title&gt;��ѡ���б���&lt;/title&gt;<br>
+  &lt;title&gt;复选的列表框&lt;/title&gt;<br>
   &lt;/head&gt;<br>
   &lt;body&gt;<br>
   &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;<br>
-&lt;p&gt;��ѡ����ϲ����Ů����:<br>
+&lt;p&gt;请选择最喜欢的女歌星:<br>
 &lt;select name=&quot;gx2&quot; multiple size=&quot;4&quot;&gt;<br>
-&lt;option value=&quot;zhmy&quot;&gt;������<br>
-&lt;option value=&quot;wf&quot; selected&gt;����<br>
-&lt;option value=&quot;tzh&quot;&gt;����<br>
-&lt;option value=&quot;ny&quot;&gt;��Ӣ<br>
+&lt;option value=&quot;zhmy&quot;&gt;张曼玉<br>
+&lt;option value=&quot;wf&quot; selected&gt;王菲<br>
+&lt;option value=&quot;tzh&quot;&gt;田震<br>
+&lt;option value=&quot;ny&quot;&gt;那英<br>
 &lt;/select&gt;<br>
 &lt;/form&gt;<br>
 &lt;/body&gt;<br>
 &lt;/html&gt;</p>
-<p><span class="STYLE3"><font color="#FF0000">10-4 ���е��ı���.&lt;textarea&gt;&lt;/textarea&gt;<a name="xtare"></a></font></span></p>
-<p>&nbsp;&nbsp;&nbsp; &lt;textarea&gt;&lt;/textarea&gt;��������һ������������е��ı��򣬴˱�־������&lt;form&gt;&lt;/form&gt;��־��֮�䡣&lt;textarea&gt;�����������ԣ�</p>
-<p>(1)onchangeָ���ؼ��ı�ʱҪ���õĺ���<br>
-  (2)onfocus���ؼ����ܽ���ʱҪִ�еĺ���<br>
-  (3)onblur���ؼ�ʧȥ����ʱҪִ�еĺ���<br>
-  (4)onselect���ؼ����ݱ�ѡ��ʱҪִ�еĺ���<br>
-  (5)name��������������ƣ���ʶ��֮�ã����ᴫ�� CGI�� <br>
-  (6)cols����������Ŀ��ȡ� <br>
-  (7)rows���������������������߶ȡ� <br>
-  (8)wrap���� �����������ݴ����ı���ʱ��ʾ�ķ�ʽ����ѡֵ���£� <br>
-  *Ĭ��ֵ���ı��Զ����У����������ݳ����ı�����ұ߽�ʱ���Զ�ת����һ�У��������ڱ��ύ����ʱ�Զ����еĵط������л��з����֣� <br>
-  *Off�����������ı����У�����������ݳ����ı����ұ߽�ʱ���ı������������ <br>
-  *Virtual�������ı��Զ����С����������ݳ����ı�����ұ߽�ʱ���Զ�ת����һ�У��������ڱ��ύ����ʱ�Զ����еĵط������л��з����֣� <br>
-  *Physical,���ı�����,�����ݱ��ύ����ʱ���з�Ҳ����һ���ύ������ <br>
-���������������ַ���Ϊ��λ�ġ�</p>
-<p>ʵ����<a href="./shili/10-4.htm">10-4.html</a><br>
+<p><span class="STYLE3"><font color="#FF0000">10-4 多行的文本框.&lt;textarea&gt;&lt;/textarea&gt;<a name="xtare"></a></font></span></p>
+<p>&nbsp;&nbsp;&nbsp; &lt;textarea&gt;&lt;/textarea&gt;用来创建一个可以输入多行的文本框，此标志对用于&lt;form&gt;&lt;/form&gt;标志对之间。&lt;textarea&gt;具有以下属性：</p>
+<p>(1)onchange指定控件改变时要调用的函数<br>
+  (2)onfocus当控件接受焦点时要执行的函数<br>
+  (3)onblur当控件失去焦点时要执行的函数<br>
+  (4)onselect当控件内容被选中时要执行的函数<br>
+  (5)name这文字区块的名称，作识别之用，将会传及 CGI。 <br>
+  (6)cols这文字区块的宽度。 <br>
+  (7)rows这文字区块的列数，即其高度。 <br>
+  (8)wrap属性 定义输入内容大于文本域时显示的方式，可选值如下： <br>
+  *默认值是文本自动换行；当输入内容超过文本域的右边界时会自动转到下一行，而数据在被提交处理时自动换行的地方不会有换行符出现； <br>
+  *Off，用来避免文本换行，当输入的内容超过文本域右边界时，文本将向左滚动； <br>
+  *Virtual，允许文本自动换行。当输入内容超过文本域的右边界时会自动转到下一行，而数据在被提交处理时自动换行的地方不会有换行符出现； <br>
+  *Physical,让文本换行,当数据被提交处理时换行符也将被一起提交处理。 <br>
+这里列与行是以字符数为单位的。</p>
+<p>实例：<a href="./shili/10-4.htm">10-4.html</a><br>
   <br>
   &lt;html&gt;<br>
 &lt;head&gt;  <br>
-&lt;title&gt;���е��ı���&lt;/title&gt;<br>
+&lt;title&gt;多行的文本框&lt;/title&gt;<br>
 &lt;/head&gt;<br>
 &lt;body&gt;<br>
 &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;<br>
-&lt;p&gt;����������Һ���Ҫ:<br>
+&lt;p&gt;您的意见对我很重要:<br>
 &lt;textarea name=&quot;yj&quot; clos=&quot;20&quot; rows=&quot;5&quot;&gt;<br>
-  �뽫������������<br>
+  请将意见输入此区域<br>
 &lt;/textarea&gt;<br>
 &lt;/form&gt;<br>
 &lt;/body&gt;<br>
@@ -220,6 +219,6 @@ a{border:outset; text-decoration:none;}
 </p>
 <p><br>
 </p>
-<p align="center"><font size="+3"><b>&nbsp; <a href="9.htm">��һҳ</a>&nbsp; </b></font></p>
+<p align="center"><font size="+3"><b>&nbsp; <a href="9.htm">上一页</a>&nbsp; </b></font></p>
 </body>
 </html>
