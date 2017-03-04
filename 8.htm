@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>�ڰ�����ҳ�Ķ�̬����ý��Ч��</title>
+	<title>第八章网页的动态、多媒体效果</title>
 <link rel="stylesheet" type="text/css" href="aa.css">
 <style type="text/css">
 <!--
@@ -19,241 +19,241 @@ a{border:outset; text-decoration:none;}
 <body leftmargin="30" rightmargin="30">
 <center>
   <p><font color="#FF0000" size="+3"><b><br>
-  �ڰ�����ҳ�Ķ�̬����ý��Ч��</b></font></p>
+  第八章网页的动态、多媒体效果</b></font></p>
 </center>
-  <p>&nbsp;&nbsp;&nbsp; ����ҳ����ƹ����У���̬Ч���Ĳ��룬��ʹ��ҳ�����������ḻ��ʡ�</p>
-  <p><span class="STYLE2">8-1 ������Ļ<a name="������Ļ"></a>&lt;marquee&gt;</span></p>
-  <p>&nbsp;&nbsp;&nbsp;&lt;marquee&gt;��ǩ����ʵ��Ԫ������ҳ���ƶ���Ч�����Դﵽ����ʮ����Ӿ�Ч����&lt;marquee&gt;��ǩ��һ���ɶԵı�ǩ��Ӧ�ø�ʽΪ:<br>
+  <p>&nbsp;&nbsp;&nbsp; 在网页的设计过程中，动态效果的插入，会使网页更加生动灵活、丰富多彩。</p>
+  <p><span class="STYLE2">8-1 滚动字幕<a name="滚动字幕"></a>&lt;marquee&gt;</span></p>
+  <p>&nbsp;&nbsp;&nbsp;&lt;marquee&gt;标签可以实现元素在网页中移动的效果，以达到动感十足的视觉效果。&lt;marquee&gt;标签是一个成对的标签。应用格式为:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
 &nbsp;&nbsp;&nbsp; &lt;marquee&gt;...&lt;/marquee&gt;<br>
   <br>
-  &nbsp;&nbsp;&nbsp; &lt;marquee&gt;��ǩ�кܶ����ԣ���������Ԫ�ص��ƶ���ʽ:</p>
-  <p align="center">&lt;marquee&gt;������</p>
+  &nbsp;&nbsp;&nbsp; &lt;marquee&gt;标签有很多属性，用来定义元素的移动方式:</p>
+  <p align="center">&lt;marquee&gt;的属性</p>
   <table width="598" border="3" cellspacing="1" cellpadding="1" align="center">
     <tr>
-      <td>�� ��</td>
-      <td>�� ��</td>
+      <td>属 性</td>
+      <td>描 述</td>
     </tr>
     <tr>
       <td>align</td>
-      <td>ָ�����뷽ʽtop,middle,bottom</td>
+      <td>指定对齐方式top,middle,bottom</td>
     </tr>
     <tr>
       <td>scroll</td>
-      <td>�����˶�</td>
+      <td>单向运动</td>
     </tr>
     <tr>
       <td>slide</td>
-      <td>��õ�Ƭ,һ���ģ�Ч��������һ�Ӵ���߾�ֹͣ��</td>
+      <td>如幻灯片,一格格的，效果是文字一接触左边就停止。</td>
     </tr>
     <tr>
       <td>alternate</td>
-      <td><div align="left">���������˶�</div></td>
+      <td><div align="left">左右往返运动</div></td>
     </tr>
     <tr>
       <td>bgcolor</td>
-      <td>�趨���־�����Χ�ı�����ɫ</td>
+      <td>设定文字卷动范围的背景颜色</td>
     </tr>
     <tr>
       <td>loop</td>
-      <td>�趨���־�����������ֵ�������������� infinite��ʾ���޴� Ĭ��Ϊ����ѭ��</td>
+      <td>设定文字卷动次数，其值可以是正整数或 infinite表示无限次 默认为无限循环</td>
     </tr>
     <tr>
       <td>height</td>
-      <td>�趨��Ļ�߶�</td>
+      <td>设定字幕高度</td>
     </tr>
     <tr>
       <td>width</td>
-      <td>�趨��Ļ����</td>
+      <td>设定字幕宽度</td>
     </tr>
     <tr>
       <td>scrollamount</td>
-      <td>ָ��ÿ���ƶ����ٶ�,��ֵԽ���ٶ�Խ��</td>
+      <td>指定每次移动的速度,数值越大速度越快</td>
     </tr>
     <tr>
       <td>scrolldelay</td>
-      <td>����ÿһ�ι�����ͣ��ʱ�䣬��λ�Ǻ��롣ʱ��Խ�̹���Խ��</td>
+      <td>文字每一次滚动的停顿时间，单位是毫秒。时间越短滚动越快</td>
     </tr>
     <tr>
       <td>hspace</td>
-      <td>ָ����Ļ���ҿհ�����Ĵ�С</td>
+      <td>指定字幕左右空白区域的大小</td>
     </tr>
     <tr>
       <td>vspace</td>
-      <td>ָ����Ļ���¿հ�����Ĵ�С</td>
+      <td>指定字幕上下空白区域的大小</td>
     </tr>
     <tr>
       <td>direction</td>
-      <td>�趨���ֵľ�������,left��ʾ����,right��ʾ����,up��ʾ���Ϲ���</td>
+      <td>设定文字的卷动方向,left表示向左,right表示向右,up表示往上滚动</td>
     </tr>
     <tr>
       <td>behavior</td>
-      <td>ָ���ƶ���ʽ��scroll��ʾ����������slibe��ʾ������һ����ֹͣ��alternate��ʾ������һ�������෴���������</td>
+      <td>指定移动方式，scroll表示滚动播出，slibe表示滚动到一方后停止，alternate表示滚动到一方后向相反方向滚动。</td>
     </tr>
   </table>
-  <p><a href="./shili/h8-1.htm">8-1 ʵ��h8-1.html</a> <br>
+  <p><a href="./shili/h8-1.htm">8-1 实例h8-1.html</a> <br>
     <br>
     &lt;html&gt;<br>
 &lt;body&gt;<br>
 &lt;center&gt;<br>
-&lt;font face=&quot;����2&quot; size=6 color=&quot;#ff0000&quot;&gt;<br>
-    ������Ļ<br>
+&lt;font face=&quot;字体2&quot; size=6 color=&quot;#ff0000&quot;&gt;<br>
+    滚动字幕<br>
 &lt;/font&gt;&lt;br&gt;<br>
-&lt;marquee&gt;������~~~�һ�����&lt;/marquee&gt;<br>
+&lt;marquee&gt;啦啦啦~~~我会跑了&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee height=&quot;200&quot; direction=&quot;up&quot; hspace=&quot;200&quot;&gt;������~~~�һ���������&lt;br&gt;������~~~�һ���������&lt;/marquee&gt;<br>
+&lt;marquee height=&quot;200&quot; direction=&quot;up&quot; hspace=&quot;200&quot;&gt;啦啦啦~~~我会往上跑了&lt;br&gt;啦啦啦~~~我会往上跑了&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee direction=&quot;right&quot;&gt;������~~~�һ���������&lt;/marquee&gt;<br>
+&lt;marquee direction=&quot;right&quot;&gt;啦啦啦~~~我会往右跑了&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee height=&quot;200&quot; direction=&quot;down&quot;&gt;&lt;center&gt;������~~~�һ���������&lt;/center&gt;&lt;/marquee&gt;<br>
+&lt;marquee height=&quot;200&quot; direction=&quot;down&quot;&gt;&lt;center&gt;啦啦啦~~~我会往下跑了&lt;/center&gt;&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee width=&quot;500&quot; behavior=&quot;alternate&quot;&gt;������~~~�����ص���&lt;/marquee&gt;<br>
+&lt;marquee width=&quot;500&quot; behavior=&quot;alternate&quot;&gt;啦啦啦~~~我来回的跑&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee behavior=&quot;slide&quot;&gt;������~~~���ܵ�Ŀ�ĵؾ͸���Ϣ��&lt;/marquee&gt;<br>
+&lt;marquee behavior=&quot;slide&quot;&gt;啦啦啦~~~我跑到目的地就该休息了&lt;/marquee&gt;<br>
 &lt;P&gt;<br>
-&lt;marquee scrollamount=&quot;2&quot;&gt;������~~~�����ˣ�Ҫ���������&lt;/marquee&gt;<br>
+&lt;marquee scrollamount=&quot;2&quot;&gt;啦啦啦~~~我累了，要慢慢的溜达&lt;/marquee&gt;<br>
 &lt;P&gt;<br>
-&lt;marquee scrolldelay=&quot;300&quot;&gt;������~~~�����ˣ���Ҫ����ͣͣ&lt;/marquee&gt;<br>
+&lt;marquee scrolldelay=&quot;300&quot;&gt;啦啦啦~~~我累了，我要走走停停&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee scrollamount=&quot;20&quot;&gt;����~��û�����ܵÿ�&lt;/marquee&gt;<br>
+&lt;marquee scrollamount=&quot;20&quot;&gt;哈哈~都没有我跑得快&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee&gt;&lt;img src=&quot;../../imge/6-2.jpg&quot;&gt;������~~ͼƬҲ���԰�&lt;/marquee&gt;<br>
+&lt;marquee&gt;&lt;img src=&quot;../../imge/6-2.jpg&quot;&gt;啦啦啦~~图片也可以啊&lt;/marquee&gt;<br>
 &lt;p&gt;<br>
-&lt;marquee bgcolor=&quot;#FFFFCC&quot; width=&quot;700&quot; vspace=&quot;30&quot;&gt;&lt;font size=&quot;+3&quot; color=&quot;#FF0000&quot;&gt;������~~���������б�����&lt;/font&gt;&lt;/marquee&gt;<br>
+&lt;marquee bgcolor=&quot;#FFFFCC&quot; width=&quot;700&quot; vspace=&quot;30&quot;&gt;&lt;font size=&quot;+3&quot; color=&quot;#FF0000&quot;&gt;啦啦啦~~滚动文字有背景了&lt;/font&gt;&lt;/marquee&gt;<br>
 &lt;/center&gt;<br>
 &lt;/body&gt;<br>
 &lt;/html&gt;</p>
-  <p><font color="#FF0000" size="+2"><b>8-2 �����ý���ļ�<a name="gdsdsa"></a></b></font></p>
-  <p>&nbsp; ����ҳ�п�����&lt;embed&gt;��ǩ����ý���ļ����룬������Բ������ֺ���Ƶ�ȡ� ����������Բ��ŵ����ָ�ʽ�У�MIDI���֡�WAV���֡�mp3��AIFF��AU��ʽ�ȡ������������������صĸ������ָ�ʽ�У�MP3��ѹ������ߣ�������õ��ļ���ʽ����Ҫ˵��һ�㣬��Ȼ�����ô����ǩ�����˶�ý���ļ�����IE�����ͨ�����Զ�����ĳЩ��ʽ��������Ӱ�񣬵������ܲ���ʲô����ʽ���ļ���ȡ�������ü�����������Լ�����������ã������ʹ��Hn7��n7Э���ȡ��ý���ļ���(���ܵû��ܳ�ʱ�䣬��Ϊ��ý���ļ�ͨ���Ƚϴ�)��������Ⱦ;�����β��š�ͨ���ǵ��ó�Ϊ���������ó��������ŵġ���ʵ�ϣ��������������ʾ�����ļ���ʽ����������չ����������������������ֲ�ͬ����������ÿ�ֶ��ܸ��������һ���µ���������ʱ�����ò��ֱ�����ÿ��������Ķ�ý���ʲ����ϵͳ��С���İ�װһ�㲻����������Ӱ�񲥷����������ڲ���Ӱ���ļ�ʱ������ʹ��һС���ִ��ڲ��ţ�������ļ�������ȽϿ졣����ȫ��Ļ���ţ�����Ҫר�õ�Ӳ���������ܺõļ����������IE������Ԥ�Ȱ�װ�õĲ������������ʾ����Ǵ��ļ����Ǳ����ļ�����ȡ�����ء�����δ֪���͵��ļ������������ͼʹ���ⲿ��Ӧ�ó�����ʾ���ļ�������Ҫȡ���ڲ���ϵͳ�����á�</p>
-  <p>&lt;embed&gt;��ǩ��ʹ�ø�ʽ��</p>
-  <p>&lt;EMBED SRC="�����ļ���ַ"&gt;</p>
-  �����������£�
+  <p><font color="#FF0000" size="+2"><b>8-2 插入多媒体文件<a name="gdsdsa"></a></b></font></p>
+  <p>&nbsp; 在网页中可以用&lt;embed&gt;标签将多媒体文件插入，比如可以插入音乐和视频等。 用浏览器可以播放的音乐格式有：MIDI音乐、WAV音乐、mp3、AIFF、AU格式等。另外在利用网络下载的各种音乐格式中，MP3是压缩率最高，音质最好的文件格式。但要说明一点，虽然我们用代码标签插入了多媒体文件，但IE浏览器通常能自动播放某些格式的声音与影像，但具体能播放什么样格式的文件．取决于所用计算机的类型以及浏览器的配置．浏览器使用Hn7或n7协议获取多媒体文件，(可能得花很长时间，因为多媒体文件通常比较大)，浏览器既就决定如何播放。通常是调用称为括件的内置程序来播放的。事实上．浏览器仅仅能显示几种文件格式。是括件扩展了浏览器的能力．有许多种不同的括件程序，每种都能赋予浏览器一种新的能力。有时，不得不分别下栽每个浏览器的多媒体插什程序．系统最小化的安装一般不包括声音与影像播放器。另外在播放影音文件时，若是使用一小部分窗口播放，大多数的计算机还比较快。若是全屏幕播放．就需要专用的硬件或是性能好的计算机．对于IE，若无预先安装好的插件程序，它会提示你或是打开文件或是保存文件或是取消下载。若打开未知类型的文件，浏览器会试图使用外部的应用程序显示此文件．但这要取决于操作系统的配置。</p>
+  <p>&lt;embed&gt;标签的使用格式：</p>
+  <p>&lt;EMBED SRC="音乐文件地址"&gt;</p>
+  常用属性如下：
   <TABLE cellSpacing="0" cellPadding="5" border="1" align="center">
     <BR>
     <TBODY>
       <TR>
         <TD>SRC="FILENAME"</TD>
-        <TD>�趨�����ļ���·��</TD>
+        <TD>设定音乐文件的路径</TD>
       </TR>
       <TR>
         <TD>AUTOSTART=TRUE/FALSE</TD>
-        <TD>�Ƿ�Ҫ�����ļ���������Զ����ţ�TRUE��Ҫ��FALSE�ǲ�Ҫ��Ĭ��ΪFALSE</TD>
+        <TD>是否要音乐文件传送完就自动播放，TRUE是要，FALSE是不要，默认为FALSE</TD>
       </TR>
       <TR>
         <TD>LOOP=TRUE/FALSE</TD>
-        <TD>�趨�����ظ�������LOOP=6��ʾ�ظ�6�Σ�TRUE��ʾ���޴β��ţ�FALSE����һ�μ�ֹͣ��</TD>
+        <TD>设定播放重复次数，LOOP=6表示重复6次，TRUE表示无限次播放，FALSE播放一次即停止。</TD>
       </TR>
       <TR>
-        <TD>STARTIME="��:��"</TD>
-        <TD>�趨�����Ŀ�ʼ����ʱ�䣬��20��󲥷�дΪSTARTIME=00:20</TD>
+        <TD>STARTIME="分:秒"</TD>
+        <TD>设定乐曲的开始播放时间，如20秒后播放写为STARTIME=00:20</TD>
       </TR>
       <TR>
         <TD>VOLUME=0-100</TD>
-        <TD>�趨�����Ĵ�С�����û�趨�Ļ�������ϵͳ��������</TD>
+        <TD>设定音量的大小。如果没设定的话，就用系统的音量。</TD>
       </TR>
       <TR>
         <TD>WIDTH HEIGHT</TD>
-        <TD>�趨���ſؼ����Ĵ�С</TD>
+        <TD>设定播放控件面板的大小</TD>
       </TR>
       <TR>
         <TD>HIDDEN=TRUE</TD>
-        <TD>���ز��ſؼ����</TD>
+        <TD>隐藏播放控件面板</TD>
       </TR>
       <TR>
         <TD>CONTROLS=CONSOLE/SMALLCONSOLE</TD>
-        <TD>�趨���ſؼ���������</TD>
+        <TD>设定播放控件面板的样子</TD>
       </TR>
     </TBODY>
   </TABLE>
   <BR>
-  <p><a href="./shili/h8-2-1.htm">ʵ�� h8-2-1.html</a> </p>
+  <p><a href="./shili/h8-2-1.htm">实例 h8-2-1.html</a> </p>
   <p>&lt;HTML&gt;<br>
     &lt;HEAD&gt;<br>
-    &lt;TITLE&gt;�����ý���ļ�&lt;/TITLE&gt;<br>
+    &lt;TITLE&gt;插入多媒体文件&lt;/TITLE&gt;<br>
     &lt;/HEAD&gt;<br>
     &lt;body&gt;<br>
-    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;��ҳ�еĶ�ý��&lt;/H2&gt;<br>
+    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;网页中的多媒体&lt;/H2&gt;<br>
     &lt;HR&gt;<br>
     &lt;center&gt;<br>
-    &lt;embed src=&quot;../../imge/һǧ��һҹ.mid&quot; height=150 width=400 loop=&quot;false&quot;&gt;<br>
+    &lt;embed src=&quot;../../imge/一千零一夜.mid&quot; height=150 width=400 loop=&quot;false&quot;&gt;<br>
     &lt;/center&gt;<br>
     &lt;/BODY&gt;<br>
   &lt;/HTML&gt;</p>
-  <p><a href="./shili/h8-2-2.htm">ʵ�� h8-2-2.html</a></p>
+  <p><a href="./shili/h8-2-2.htm">实例 h8-2-2.html</a></p>
   <p>&lt;HTML&gt;<br>
     &lt;HEAD&gt;<br>
-    &lt;TITLE&gt;�����ý���ļ�&lt;/TITLE&gt;<br>
+    &lt;TITLE&gt;插入多媒体文件&lt;/TITLE&gt;<br>
     &lt;/HEAD&gt;<br>
     &lt;body&gt;<br>
-    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;��ҳ�еĶ�ý��&lt;/H2&gt;<br>
+    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;网页中的多媒体&lt;/H2&gt;<br>
     &lt;HR&gt;<br>
     &lt;center&gt;<br>
     &lt;embed src=&quot;../../imge/mmm.avi&quot; width=&quot;400&quot; height=&quot;500&quot; loop=&quot;false&quot;&gt;<br>
     &lt;/center&gt;<br>
     &lt;/BODY&gt;<br>
   &lt;/HTML&gt;</p>
-  <p><a href="./shili/h8-2-3.htm">ʵ�� h8-2-3.html</a></p>
+  <p><a href="./shili/h8-2-3.htm">实例 h8-2-3.html</a></p>
   <p>&lt;HTML&gt;<br>
     &lt;HEAD&gt;<br>
-    &lt;TITLE&gt;����flash&lt;/TITLE&gt;<br>
+    &lt;TITLE&gt;插入flash&lt;/TITLE&gt;<br>
     &lt;/HEAD&gt;<br>
     &lt;body&gt;<br>
-    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;��ҳ�еĶ�ý��&lt;/H2&gt;<br>
+    &lt;H2 ALIGN=&quot;CENTER&quot;&gt;网页中的多媒体&lt;/H2&gt;<br>
     &lt;HR&gt;<br>
     &lt;center&gt;<br>
-    &lt;embed src=&quot;../../imge/023.swf&quot; height=&quot;500&quot; width=&quot;550&quot;&gt;&lt;!--����flash--&gt;<br>
-    &lt;embed src=&quot;../../imge/023.swf&quot; height=&quot;500&quot; width=&quot;550&quot; wmode=&quot;transparent&quot;&gt;&lt;!--����͸��flash--&gt;<br>
+    &lt;embed src=&quot;../../imge/023.swf&quot; height=&quot;500&quot; width=&quot;550&quot;&gt;&lt;!--插入flash--&gt;<br>
+    &lt;embed src=&quot;../../imge/023.swf&quot; height=&quot;500&quot; width=&quot;550&quot; wmode=&quot;transparent&quot;&gt;&lt;!--插入透明flash--&gt;<br>
     &lt;/center&gt;<br>
     &lt;/BODY&gt;<br>
   &lt;/HTML&gt;</p>
-  <p><a href="./shili/h8-2-4.htm">ʵ�� h8-2-4.html</a></p>
+  <p><a href="./shili/h8-2-4.htm">实例 h8-2-4.html</a></p>
   <p>&lt;html&gt;<br>
     &lt;head&gt;<br>
-    &lt;title&gt;��ͼƬ�ϲ���͸��flash&lt;/title&gt;<br>
+    &lt;title&gt;在图片上插入透明flash&lt;/title&gt;<br>
     &lt;/head&gt;<br>
     &lt;body bgColor=lightblue&gt;<br>
-    &lt;br&gt;&lt;center&gt;��ͼƬ�ϲ���͸��Flash����&lt;/center&gt;&lt;br&gt;<br>
+    &lt;br&gt;&lt;center&gt;在图片上插入透明Flash动画&lt;/center&gt;&lt;br&gt;<br>
     &lt;center&gt;&lt;TABLE cellSpacing=2 cellPadding=2 border=10 bordercolorlight=&quot;#00CC99&quot; bordercolordark=&quot;#009933&quot; background=&quot;../../imge/hai.jpg&quot;&gt;&lt;TBODY&gt;&lt;TD&gt;&lt;EMBED src=&quot;../../imge/016.swf&quot; width=630 height=480 type=application/x-shockwave-flash quality=&quot;high&quot; wmode=&quot;transparent&quot;&gt;&lt;/embed&gt;&lt;/TD&gt;&lt;/TBODY&gt;&lt;/table&gt;&lt;/center&gt;<br>
     &lt;/body&gt;<br>
   &lt;/html&gt;</p>
-  <p>ע��&nbsp; ���Ϳ����趨Ҫ����ͼƬ��ʵ�ʴ�С���趨</p>
-  <p><font color="#FF0000" size="+2"><b>8-3 Ƕ���ý���ļ�<a name="sassa"></a></b></font></p>
-  <p>&nbsp;&nbsp; ���˿���ʹ���������������ý���ļ��⣬����������ҳ��Ƕ���ý���ļ������ַ�ʽ��������ý�岥����</p>
-  <p>8-3-1 Ƕ�뱳������</p>
-  <p>&nbsp;&lt;bgsound&gt;��ǩ����������ҳ�ı������֡���ֻ����� IE��������趨���ࡣ��ʽ���£�</p>
+  <p>注意&nbsp; 长和宽的设定要根据图片的实际大小来设定</p>
+  <p><font color="#FF0000" size="+2"><b>8-3 嵌入多媒体文件<a name="sassa"></a></b></font></p>
+  <p>&nbsp;&nbsp; 除了可以使用上述方法插入多媒体文件外，还可以在网页中嵌入多媒体文件，这种方式将不调用媒体播放器</p>
+  <p>8-3-1 嵌入背景音乐</p>
+  <p>&nbsp;&lt;bgsound&gt;标签用来设置网页的背景音乐。但只适用於 IE，其参数设定不多。格式如下：</p>
   <p>&nbsp;&lt;BGSOUND src="your.mid" autostart=true loop=infinite&gt; </p>
   <ul>
     <LI>src="your.mid" <BR>
-    �趨 midi ������·������������Ի���ԡ������ļ�������wav,midi,mp3�����͵��ļ�     
+    设定 midi 档案及路径，可以是相对或绝对。声音文件可以是wav,midi,mp3等类型的文件     
     
     <LI>autostart=true <BR>
-      �Ƿ������ֵ�����֮�ᣬ���Զ��������֡�true   �ǣ�false �� (�ڶ�ֵ)��   
+      是否在音乐档传完之後，就自动播放音乐。true   是，false 否 (内定值)。   
     <LI>loop=infinite <BR>
-      �Ƿ��Զ��������š�LOOP=2   ��ʾ�ظ����Σ�Infinite ��ʾ�ظ���Ρ�ֱ����ҳ�ر�Ϊֹ��</LI>
+      是否自动反覆播放。LOOP=2   表示重复两次，Infinite 表示重复多次。直到网页关闭为止。</LI>
   </ul>
-  <p><a href="./shili/h8-3-1.htm">ʵ�� 8-3-1.html</a></p>
+  <p><a href="./shili/h8-3-1.htm">实例 8-3-1.html</a></p>
   <p>&lt;HTML&gt;<br>
     &lt;HEAD&gt;<br>
-    &lt;TITLE&gt;��������&lt;/TITLE&gt;<br>
+    &lt;TITLE&gt;背景声音&lt;/TITLE&gt;<br>
     &lt;/HEAD&gt;<br>
     &lt;body&gt;<br>
-    &lt;H4 ALIGN=&quot;CENTER&quot; &gt;��ҳ�ı�������&lt;H4&gt;<br>
+    &lt;H4 ALIGN=&quot;CENTER&quot; &gt;网页的背景声音&lt;H4&gt;<br>
     &lt;HR&gt;<br>
-    &lt;bgsound src=&quot;../../imge/��������.mp3&quot; LOOP=&quot;3&quot;&gt;<br>
+    &lt;bgsound src=&quot;../../imge/绝不放手.mp3&quot; LOOP=&quot;3&quot;&gt;<br>
     &lt;/BODY&gt;<br>
   &lt;/HTML&gt; </p>
-  <p>�������ֿ��Է���&lt;body&gt;&lt;/body&gt;��&lt;head&gt;&lt;/head&gt;֮��</p>
-  <p>8-3-2 ����ҳ��Ƕ�������ļ�ʹ��ǰ��ѧ���ı�ǩ&lt;img src=&quot;·��&quot;&gt;,�ڴ˾Ͳ������ˡ�</p>
-  <p><font color="#FF0000" size="+2"><b>8-4 �㲥����<a name="dbyy"></a></b></font></p>
-  <p>����������һ�����ӣ�ֻ������������浥�����Ϳ����������˵������ˣ��������ķ����ܼ򵥣�</p>
-  <p>������<strong>&lt;A��HREF="���ֵ�ַ"&gt;������&lt;/A&gt;</strong></p>
-  <p>���磺����һ��MIDI���֣�</p>
-  <p>������&lt;A��HREF=&quot;imge/һǧ��һҹ.mid&quot;&gt;MIDI����&lt;/A&gt;����<A href="image/flourish.mid">MIDI����</A></p>
-  <p>����������һ��AU��ʽ���֣�</p>
-  <p>������&lt;A��HREF=&quot;imge/С������.mp3&quot;&gt;С������-mp3����&lt;/A&gt;��<A href="image/��������.mp3">��������-mp3����</A></p>
-  <p>����������ϲ���������ռ�����������һ�����ֿ⣬��ʱ���������Լ��ͱ������������ֵĺ����У��Ѿ������������ˣ���һ���Ѿ������ܶ࣬�����Լ�Ҳ��������ȥ���ˣ�</p>
+  <p>背景音乐可以放在&lt;body&gt;&lt;/body&gt;或&lt;head&gt;&lt;/head&gt;之间</p>
+  <p>8-3-2 在网页中嵌入视屏文件使用前面学过的标签&lt;img src=&quot;路径&quot;&gt;,在此就不重述了。</p>
+  <p><font color="#FF0000" size="+2"><b>8-4 点播音乐<a name="dbyy"></a></b></font></p>
+  <p>将音乐做成一个链接，只需用鼠标在上面单击，就可以听到动人的音乐了，这样做的方法很简单：</p>
+  <p>　　　<strong>&lt;A　HREF="音乐地址"&gt;乐曲名&lt;/A&gt;</strong></p>
+  <p>例如：播放一段MIDI音乐：</p>
+  <p>　　　&lt;A　HREF=&quot;imge/一千零一夜.mid&quot;&gt;MIDI音乐&lt;/A&gt;　　<A href="image/flourish.mid">MIDI音乐</A></p>
+  <p>　　　播放一段AU格式音乐：</p>
+  <p>　　　&lt;A　HREF=&quot;imge/小三和弦.mp3&quot;&gt;小三和弦-mp3音乐&lt;/A&gt;　<A href="image/绝不放手.mp3">绝不放手-mp3音乐</A></p>
+  <p>　　把我们喜欢的音乐收集起来，作成一个音乐库，随时都可以让自己和别人徜徉在音乐的海洋中，已经有人这样做了，你一定已经遇到很多，而且自己也可以试着去做了！</p>
   <p>&nbsp; </p>
   
-<P align="center"><font size="+3"><b>&nbsp; <a href="7.htm">��һҳ</a>&nbsp; <a href="9.htm">��һҳ</a></b></font></p>
+<P align="center"><font size="+3"><b>&nbsp; <a href="7.htm">上一页</a>&nbsp; <a href="9.htm">下一页</a></b></font></p>
 </body>
 </html>
