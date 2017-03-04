@@ -1,103 +1,103 @@
 <HTML>
 <HEAD>
-<TITLE>������ ����������</TITLE>
+  <TITLE>第四章 建立超连接</TITLE>
 <link rel="stylesheet" href="aa.css" type="text/css">
 </HEAD>
 <BODY text=#000000 vLink=#800080 aLink=#0000ff link=#0000ff bgColor=#ffffff 
 background=imge/aki-5.gif leftmargin="20" rightmargin="20">
 <H1 align=center><FONT color=#008000><FONT color=#000000 size=3></FONT><FONT color=#000000 
-size=3></FONT><FONT size=5></FONT><BR> </FONT><FONT color=#ff0000>������ 
-����������</FONT></H1>
+size=3></FONT><FONT size=5></FONT><BR> </FONT><FONT color=#ff0000>第四章 
+建立超链接</FONT></H1>
 
-<P align=left>&nbsp;&nbsp;&nbsp;HTML�ļ�������Ҫ��Ӧ��֮һ���ǳ����ӣ���������һ����վ����꣬web�ϵ���ҳ�ǻ������ӵģ���������Ϊ�����ӵ��ı���ͼ�ξͿ������ӵ�����ҳ�档���ı����е���������,�ɲ����������ļ������־��г����������Ĳ���������Ϊ�������ӡ��������ӳ��˿������ı��⣬Ҳ�����Ӹ���ý�壬��������ͼ�󡢶�����ͨ���������ǿ����ܷḻ��ɵĶ�ý�����硣</P>
-<P align=left>���������ӵı�ǩΪ&lt;A&gt;��&lt;/A&gt;</P>
-<P align=left>&nbsp;&nbsp; ��ʽΪ��<STRONG>&lt;</STRONG>A HREF="��Դ��ַ"&nbsp; TARGET="��������" 
-TITLE="ָ��������ʾ������"&gt;����������&lt;/A&gt;</P>
+<P align=left>&nbsp;&nbsp;&nbsp;HTML文件中最重要的应用之一就是超链接，超链接是一个网站的灵魂，web上的网页是互相链接的，单击被称为超链接的文本或图形就可以链接到其它页面。超文本具有的链接能力,可层层链接相关文件，这种具有超级链能力的操作，即称为超级链接。超级链接除了可链接文本外，也可链接各种媒体，如声音、图象、动画，通过它们我们可享受丰富多采的多媒体世界。</P>
+<P align=left>建立超链接的标签为&lt;A&gt;和&lt;/A&gt;</P>
+<P align=left>&nbsp;&nbsp; 格式为：<STRONG>&lt;</STRONG>A HREF="资源地址"&nbsp; TARGET="窗口名称" 
+TITLE="指向连接显示的文字"&gt;超链接名称&lt;/A&gt;</P>
 <P align=left>&nbsp;&nbsp;&nbsp;&nbsp; 
-˵������ǩ&lt;A&gt;��ʾһ�����ӵĿ�ʼ��&lt;/A&gt;��ʾ���ӵĽ�����</P>
+说明：标签&lt;A&gt;表示一个链接的开始，&lt;/A&gt;表示链接的结束；</P>
 <P align=left> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;���ԡ�HREF�����������������ָ��Ŀ���ַ��Ŀ���ַ������Ҫ�ģ�һ��·���ϳ��ֲ��������Դ���޷�����</P>
-<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TARGET:����������ָ�������ӵ�Ŀ�괰�ڣ���Ĭ�Ϸ�ʽ��ԭ���ڡ�</P>
-<P align=center>����Ŀ�괰�ڵ�����</P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;属性“HREF”定义了这个链接所指的目标地址；目标地址是最重要的，一旦路径上出现差错，该资源就无法访问</P>
+<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TARGET:该属性用于指定打开链接的目标窗口，其默认方式是原窗口。</P>
+<P align=center>建立目标窗口的属性</P>
 <TABLE style="WIDTH: 604px; HEIGHT: 121px" borderColor=#003366 cellSpacing=0 
 width=604 border=3 align="center">
   
   <TR>
     <TD>
-      <P align=left>����ֵ</P></TD>
+      <P align=left>属性值</P></TD>
     <TD>
-      <P align=center>�� ��</P></TD></TR>
+      <P align=center>描 述</P></TD></TR>
   <TR>
     <TD>
       <P align=left>_parent</P></TD>
     <TD>
-      <P align=left>����һ�������д򿪣�һ��ʹ�÷���Ŀ��ҳ�ᾭ��ʹ��</P></TD></TR>
+      <P align=left>在上一级窗口中打开，一般使用分桢的框架页会经常使用</P></TD></TR>
   <TR>
     <TD>
       <P align=left>_blank</P></TD>
     <TD>
-      <P align=left>���´��ڴ�</P></TD></TR>
+      <P align=left>在新窗口打开</P></TD></TR>
   <TR>
     <TD>
       <P align=left>_self</P></TD>
     <TD>
-      <P align=left>��ͬһ����򴰿��д򿪣�����һ�㲻������</P></TD></TR>
+      <P align=left>在同一个桢或窗口中打开，这项一般不用设置</P></TD></TR>
   <TR>
     <TD>
       <P align=left>_top</P></TD>
     <TD>
-      <P align=left>������������������д򿪣������κο��</P></TD></TR></TABLE></P>
+      <P align=left>在浏览器的整个窗口中打开，忽略任何框架</P></TD></TR></TABLE></P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-TITLE������������ָ��ָ������ʱ����ʾ�ı������֡�</P>
-<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"����������"��Ҫ���������ӵ�Ԫ�أ�Ԫ�ؿ��԰����ı���Ҳ���԰���ͼ���ı����»�����������������ɫ��ͬ��ͼ������ͨ�����б߿���ʾ����ͼ��������ʱֻҪ����ʾͼ��ı�־<FONT 
->&lt;img&gt;</FONT>Ƕ����<FONT >&lt;A 
-HREF="URL"&gt;&lt;/A&gt;</FONT>֮�����ʵ��ͼ�����ӵ�Ч���������ָ��"����������"��ʱ������״���������Ԫ�ؿ��Է���ָ����Ŀ���ļ���</P>
+TITLE：该属性用于指定指向链接时所显示的标题文字。</P>
+<P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"超链接名称"是要单击到链接的元素，元素可以包含文本，也可以包含图像。文本带下划线且与其它文字颜色不同，图形链接通常带有边框显示。用图形做链接时只要把显示图像的标志<FONT 
+>&lt;img&gt;</FONT>嵌套在<FONT >&lt;A 
+HREF="URL"&gt;&lt;/A&gt;</FONT>之间就能实现图像链接的效果。当鼠标指向"超链接名称"处时会变成手状，单击这个元素可以访问指定的目标文件。</P>
 <P align=left> <FONT color=#ff0000 
-size=5><STRONG>4-1 ����·��</STRONG></FONT></P>
+size=5><STRONG>4-1 链接路径</STRONG></FONT></P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-ÿһ���ļ������Լ��Ĵ��λ�ú�·��������һ���ļ���Ҫ���ӵ��Ǹ��ļ�֮���·����ϵ�Ǵ������ӵĸ�����</P>
+每一个文件都有自己的存放位置和路径，理解一个文件到要链接的那个文件之间的路径关系是创建链接的根本。</P>
 <P align=left>&nbsp;&nbsp;&nbsp; URL(Uniform Resourc 
-Locator)��������Ϊ"ͳһ��Դ��λ��"��ָ�ľ���ÿһ����վ�����еĵ�ַ��ͬһ����վ�µ�ÿһ����ҳ������ͬһ����ַ֮�£��ڴ���һ����վ����ҳʱ������ҪΪÿһ�����Ӷ�������ȫ�ĵ�ַ������ֻ��Ҫȷ����ǰ�ĵ�ͬվ���Ŀ¼֮������·����ϵ�Ϳ����ˡ���ˣ����ӿ��Է��������֣�</P>
+Locator)中文名字为"统一资源定位器"。指的就是每一个网站都具有的地址。同一个网站下的每一个网页都属于同一个地址之下，在创建一个网站的网页时，不需要为每一个连接都输入完全的地址，我们只需要确定当前文档同站点根目录之间的相对路径关系就可以了。因此，链接可以分以下三种：</P>
 <UL>
   <LI>
-<DIV align=left>����·��<BR>
-  �磺http://www.sina.com.cn</DIV>
+<DIV align=left>绝对路径<BR>
+  如：http://www.sina.com.cn</DIV>
   <LI>
-<DIV align=left>���·��<BR> 
-�磺news/index.html</DIV>
+<DIV align=left>相对路径<BR> 
+如：news/index.html</DIV>
   <LI>
-<DIV align=left>��·��<BR> 
-�磺d��/web/news/index.html</DIV></LI></UL>
-<P align=left> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1������·��</P>
+<DIV align=left>根路径<BR> 
+如：d│/web/news/index.html</DIV></LI></UL>
+<P align=left> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、绝对路径</P>
 <P align=left> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;����·���������˱�ʶINTERNET�ϵ��ļ�����Ҫ��������Ϣ���ļ������������ԭ�ĵ������ġ�����������Э�����ƣ��������ƣ��ļ������ƺ��ļ�����</P>
-<P align=left>&nbsp;&nbsp;&nbsp; ���ʽΪ �� ͨѶЭ�� ��//��������ַ��ͨѶ�˿�/�ļ�λ��....../�ļ�����</P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绝对路径：包含了标识INTERNET上的文件所需要的所有信息。文件的链接是相对原文档而定的。包括完整的协议名称，主机名称，文件夹名称和文件名称</P>
+<P align=left>&nbsp;&nbsp;&nbsp; 其格式为 ： 通讯协议 ：//服务器地址：通讯端口/文件位置....../文件名。</P>
 <P align=center><FONT size=5><STRONG><IMG src="./image/url.gif" align=baseline> </STRONG></FONT></P>
 <P align=left><FONT size=5><STRONG>&nbsp;&nbsp;&nbsp;</STRONG></FONT><FONT 
-size=3>lnternet��ѭһ����Ҫ��Э�鼰HTTP(Hypertext&nbsp;Transfer&nbsp;Protocol)���ı�����Э�飬http�����ڴ���Webҳ�Ŀͻ���/������Э�顣�����������Webҳ����ʱ,��Э�齫����һ���������������.�����ӳ�ͨ��,���������ҵ�����ҳ,���������͸��ͻ���,��Ϣ���͵��ͻ��˺�,http</FONT><FONT 
-size=3>���ͷŴ�����.��ʹ�ô�Э����Խ��ܲ���������Ŀͻ�������.</FONT></P>
-<P align=left>&nbsp;&nbsp;&nbsp; WebӦ�ó�����ָWeb�������ϰ��������ྲ̬�ĺͶ�̬����Դ����.Web�������е���Ϊ������ṩ���������. </P>
+size=3>lnternet遵循一个重要的协议及HTTP(Hypertext&nbsp;Transfer&nbsp;Protocol)超文本传输协议，http是用于传输Web页的客户端/服务器协议。当浏览器发出Web页请求时,此协议将建立一个与服务器的链接.当链接畅通后,服务器将找到请求页,并将它发送给客户端,信息发送到客户端后,http</FONT><FONT 
+size=3>将释放此链接.这使得此协议可以接受并服务大量的客户端请求.</FONT></P>
+<P align=left>&nbsp;&nbsp;&nbsp; Web应用程序是指Web服务器上包含的许多静态的和动态的资源集合.Web服务器承但着为浏览器提供服务的责任. </P>
 <P align=left><FONT 
-size=3>&nbsp;&nbsp;&nbsp;www.sina.com.cn������Դ���ڵ�������Ϊ��ͨ�������ʹ��Ĭ�ϵĶ˿ںţ�������Դ��WWW����������web�ļ����£���Դ������Ϊ��index.html.��</FONT></P>
-<P align=left>�� 
-��http://www.163.net/myweb/book.htm������ַΪ���裩<BR>�������� http ����Ϊ www.163.net �ķ������ϵ�Ŀ¼ 
-myweb �л���ļ�book.htm</P>
+size=3>&nbsp;&nbsp;&nbsp;www.sina.com.cn就是资源所在的主机名为：通常情况下使用默认的端口号８０，资源在WWW服务器主机web文件夹下，资源的名称为：index.html.。</FONT></P>
+<P align=left>例 
+：http://www.163.net/myweb/book.htm（此网址为假设）<BR>表明采用 http 从名为 www.163.net 的服务器上的目录 
+myweb 中获得文件book.htm</P>
 <P align=left>     
-&nbsp;&nbsp;&nbsp;&nbsp; 2�����·��</P>
+&nbsp;&nbsp;&nbsp;&nbsp; 2、相对路径</P>
 <P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-���·�����Ե�ǰ�ļ�����·��Ϊ��㣬��������ļ��Ĳ��ҡ�һ����Ե�URL������Э���������ַ��Ϣ����ʾ����·���뵱ǰ�ĵ��ķ���Э�����������ͬ����������ͬ��Ŀ¼·����ͨ��ֻ�����ļ��������ļ���������ֻ���ļ��������������URLָ����Դ�ĵ�λ��ͬһ��������ͬ�ļ����е��ļ�����ʱ����������ӵ�Ŀ���ĵ�����ͬһ��������ͬһ�ļ����¡�</P>
+相对路经是以当前文件所在路径为起点，进行相对文件的查找。一个相对的URL不包括协议和主机地址信息，表示它的路径与当前文档的访问协议和主机名相同，甚至有相同的目录路径。通常只包含文件夹名和文件名。甚至只有文件名。可以用相对URL指向与源文档位于同一服务器或同文件夹中的文件。此时，浏览器链接的目标文档处在同一服务器或同一文件夹下。</P>
 <UL>
   <LI>
 <DIV align=left>     
- ������ӵ�ͬһĿ¼�£���ֻ������Ҫ�����ļ������ơ�</DIV>
+ 如果链接到同一目录下，则只需输入要链接文件的名称。</DIV>
   <LI>
 <DIV align=left 
  >     
- Ҫ���ӵ��¼�Ŀ¼�е��ļ���ֻ��������Ŀ¼����Ȼ���"/"���������ļ�����</DIV>
+ 要链接到下级目录中的文件。只需先输入目录名，然后加"/"，再输入文件名。</DIV>
   <LI>
 <DIV align=left>     
- Ҫ���ӵ���һ��Ŀ¼���ļ�����������"../"���������ļ�����</DIV></LI></UL>
-<P align=center>&nbsp; ���·�����÷�<BR>     
+ 要链接到上一级目录中文件，则先输入"../"，再输入文件名。</DIV></LI></UL>
+<P align=center>&nbsp; 相对路径的用法<BR>     
 </P>
 <P align=center>
 <TABLE style="WIDTH: 668px; HEIGHT: 133px" borderColor=#003366 width=668 
@@ -105,248 +105,248 @@ border=3>
   
   <TR>
     <TD>
-      <P align=center>���·����</P></TD>
+      <P align=center>相对路径名</P></TD>
     <TD>
-      <P align=center>�� ��</P></TD></TR>
+      <P align=center>含 义</P></TD></TR>
   <TR>
     <TD>herf="shouey.html"</TD>
     <TD>
-      <P>shouey.html �Ǳ��ص�ǰ·���µ��ļ�</P></TD></TR>
+      <P>shouey.html 是本地当前路径下的文件</P></TD></TR>
   <TR>
     <TD>herf="web/shouey.html"</TD>
-    <TD>shouey.html �Ǳ��ص�ǰ·���³���"web"��Ŀ¼�µ��ļ�</TD></TR>
+    <TD>shouey.html 是本地当前路径下称做"web"子目录下的文件</TD></TR>
   <TR>
     <TD>herf="../shouey.html"</TD>
-    <TD>shouey.html �Ǳ��ص�ǰĿ¼����һ����Ŀ¼�µ��ļ�</TD></TR>
+    <TD>shouey.html 是本地当前目录的上一级子目录下的文件</TD></TR>
   <TR>
     <TD>herf="../../shouey.html"</TD>
-    <TD>shouey.html �Ǳ��ص�ǰĿ¼����������Ŀ¼�µ��ļ�</TD></TR></TABLE>     
+    <TD>shouey.html 是本地当前目录的上两级子目录下的文件</TD></TR></TABLE>     
  </P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-3����·��</P>
+3、根路径</P>
 <P align=left>&nbsp;&nbsp;&nbsp;&nbsp; 
-��·��Ŀ¼��ַͬ�������ڴ����ڲ����ӣ������������£�������ʹ�ô���������ʽ��</P>
+根路径目录地址同样可用于创建内部链接，但大多数情况下，不建议使用此种链接形式。</P>
 <P align=left>&nbsp;&nbsp;&nbsp;&nbsp; 
-��·��Ŀ¼��ַ����дҲ�ܼ򵥣�������һ��б�ܿ�ͷ��������Ŀ¼��Ȼ����д�ļ������������д�ļ�����<BR>�����Ŀ¼Ҫд�̷��������̷���ʹ��"��",������":"&nbsp;&nbsp;�����DOS��д����ͬ��</P>
+根路径目录地址的书写也很简单，首先以一个斜杠开头，代表根目录，然后书写文件夹名，最后书写文件名。<BR>如果根目录要写盘符，就在盘符后使用"│",而不用":"&nbsp;&nbsp;这点与DOS的写法不同。</P>
 <P align=left>&nbsp; 
-�磺/web/highight/shouey.html<BR>&nbsp;&nbsp;&nbsp;     
-&nbsp; d��/web/highight/shouey.html</P>
+如：/web/highight/shouey.html<BR>&nbsp;&nbsp;&nbsp;     
+&nbsp; d│/web/highight/shouey.html</P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-Ҳ�����߻��ʣ����ӱ��ػ����ϵ��ļ�ʱ��Ӧ��ʹ�����·�����Ǹ�·�����ھ�����������ʹ�����·���ȽϺã����磬�þ���·�����������ӣ������ļ��и��������ƶ�֮����ô���е����Ӷ�Ҫʧ�ܣ������ͱ�����������html�ļ������ӽ������±��ţ���һ�������ļм��Ƶ������������ʱ����Ҫ���¸Ķ��ĵط��͸����ˣ�����һ�����鷳�����顣��ʹ�����·���������ڱ��ػ����������ʺϣ������ϴ������������ϵͳ��Ҳ����Ҫ���ж��ٸ��ľ���׼ȷ���ӡ�</P>
+也许读者会问，链接本地机器上的文件时，应该使用相对路径还是根路径？在绝大多数情况下使用相对路径比较好，例如，用绝对路径定义了链接，当把文件夹改名或者移动之后，那么所有的链接都要失败，这样就必须对你的所有html文件的链接进行重新编排，而一旦将此文夹件移到网络服务器上时，需要重新改动的地方就更多了，那是一件很麻烦的事情。而使用相对路径，不仅在本地机器环境下适合，就是上传到网络或其他系统下也不需要进行多少更改就能准确链接。</P>
 <P align=left><FONT 
-size=5><STRONG><FONT color=#ff0000>4-2&nbsp; �����ӵ�Ӧ��<a name="chaoyingyong" id="chaoyingyong"></a></FONT> 
+size=5><STRONG><FONT color=#ff0000>4-2&nbsp; 超链接的应用<a name="chaoyingyong" id="chaoyingyong"></a></FONT> 
 &nbsp;</STRONG></FONT> </P>
 <P align=left><FONT color=#ff6600 
-size=4><STRONG>4-2-1��ǩ����<a name="shuqian" id="shuqian"></a></STRONG></FONT> </P>
+size=4><STRONG>4-2-1书签链接<a name="shuqian" id="shuqian"></a></STRONG></FONT> </P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-�����ĵ��е��ض�λ��Ҳ����ǩ���ӣ������ҳ��ʱ���ҳ��ܳ���Ҫ���ϵ��϶�������������������㣬Ҫ������߿��Դ���ͷ�Ķ���β���ֿ���ѡ���Լ�����Ȥ�Ĳ����Ķ�������Ч���Ϳ���ͨ����ǩ������ʵ�֣�������ѡ��һ��Ŀ�궨λ�㣬��������һ����λ��ǣ���&lt;a&gt;��ǩ������name��ֵ��ȷ����λ����� 
-&lt;a name="��λ�����"&gt; 
-��Ȼ������ҳ���κεط����������Ŀ���ǵ�����"����"���ڱ����Ͻ��������ӵ�ַ������Ҫ�Ͷ�λ�������ͬ��ǰ�滹Ҫ����"#"�ţ�&lt;a 
+链接文档中的特定位置也叫书签链接，在浏览页面时如果页面很长，要不断的拖动滚动条给浏览带来不便，要是浏览者可以从上头阅读到尾，又可以选择自己感兴趣的部分阅读，这种效果就可以通过书签链接来实现，方法是选者一个目标定位点，用来创建一个定位标记，用&lt;a&gt;标签的属性name的值来确定定位标记名 
+&lt;a name="定位标记名"&gt; 
+。然后在网页的任何地方建立对这个目标标记的链接"标题"，在标题上建立的链接地址的名字要和定位标记名相同，前面还要加上"#"号，&lt;a 
 href= 
-"#��λ�����"&gt;���������������Ҫ���ʵ����ݡ�</P>&nbsp;&nbsp;&nbsp;��ǩ���ӿ�����ͬһҳ�������ӣ�Ҳ�����ڲ�ͬҳ�������ӣ��ڲ�ͬҳ�������ӵ�ǰ������Ҫָ�������ӵ�ҳ���ַ�����ӵ���ǩλ��
+"#定位标记名"&gt;。单击标题就跳到要访问的内容。</P>&nbsp;&nbsp;&nbsp;书签链接可以在同一页面中链接，也可以在不同页面中链接，在不同页面中链接的前提是需要指定好链接的页面地址和链接的书签位置
 <P></P>
-<P align=left>&nbsp;&nbsp;&nbsp;&nbsp; ��ʽ��</P>
+<P align=left>&nbsp;&nbsp;&nbsp;&nbsp; 格式：</P>
 <UL>
   <LI>
-  <DIV align=left>��ͬһҳ��Ҫʹ�����ӵĵ�ַ��<BR>&lt;a href="#��ǩ����" 
-  target="��������"&gt;��������������&lt;/a&gt;<BR></DIV>
+  <DIV align=left>在同一页面要使用链接的地址：<BR>&lt;a href="#书签名称" 
+  target="窗口名称"&gt;超连链标题名称&lt;/a&gt;<BR></DIV>
   <LI>
-  <DIV align=left>�ڲ�ͬҳ��Ҫʹ�����ӵĵ�ַ��<BR>&lt;a href="URL��ַ#��ǩ����" 
-  target="��������"&gt;�����ӱ�������&lt;/a&gt;<BR></DIV>
+  <DIV align=left>在不同页面要使用链接的地址：<BR>&lt;a href="URL地址#书签名称" 
+  target="窗口名称"&gt;超链接标题名称&lt;/a&gt;<BR></DIV>
   <LI>
-  <DIV align=left>���ӵ���Ŀ�ĵ�ַ��<BR>&lt;a 
-  name="��ǩ����"&gt;Ŀ�곬��������&lt;/a&gt;</DIV></LI></UL>
+  <DIV align=left>链接到的目的地址：<BR>&lt;a 
+  name="书签名称"&gt;目标超链接名称&lt;/a&gt;</DIV></LI></UL>
   <P align=left>&nbsp;&nbsp;&nbsp;&nbsp; name<A 
-name=#>������ֵΪ��Ŀ�궨λ��Ķ�λ��ǵ����ƣ��Ǹ��ض�λ�õ�(���λ�õ�Ҳ��ê��)������ơ�</A></P>
-  <P align=left>ʵ��<a name="��4-2-11" id="��4-2-11"></a>��<A 
+name=#>的属性值为该目标定位点的定位标记点名称，是给特定位置点(这个位置点也叫锚点)起个名称。</A></P>
+  <P align=left>实例<a name="例4-2-11" id="例4-2-11"></a>：<A 
 href="./shili/4-2-11.htm">4-2-11html</A></P>
   <p>&lt;HTML&gt;<br>
     &lt;HEAD&gt;<br>
-    &lt;TITLE&gt;��ʫ����&lt;/TITLE&gt;<br>
+    &lt;TITLE&gt;唐诗欣赏&lt;/TITLE&gt;<br>
     &lt;/HEAD&gt;<br>
     &lt;BODY&gt;<br>
-    &lt;a name=&quot;top&quot;&gt;&lt;H2&gt;��ʫ����&lt;/H2&gt;&lt;/a&gt;<br>
-    &lt;a name=&quot;lb&quot;&gt;&lt;H2&gt;���&lt;/H2&gt;&lt;/a&gt;<br>
-    &lt;A href=&quot;#T.2&quot; target=&quot;_blank&quot;&gt;��ƽ�{����&lt;/A&gt;&lt;br&gt;<br>
-&lt;A href=&quot;#T.1&quot;&gt;�L����&lt;/A&gt;&lt;br&gt;<br>
-&lt;A href=&quot;#T.3&quot;&gt;���ª���&lt;/A&gt;<br>
+    &lt;a name=&quot;top&quot;&gt;&lt;H2&gt;唐诗欣赏&lt;/H2&gt;&lt;/a&gt;<br>
+    &lt;a name=&quot;lb&quot;&gt;&lt;H2&gt;李白&lt;/H2&gt;&lt;/a&gt;<br>
+    &lt;A href=&quot;#T.2&quot; target=&quot;_blank&quot;&gt;清平調三首&lt;/A&gt;&lt;br&gt;<br>
+&lt;A href=&quot;#T.1&quot;&gt;長干行&lt;/A&gt;&lt;br&gt;<br>
+&lt;A href=&quot;#T.3&quot;&gt;月下獨酌&lt;/A&gt;<br>
 &lt;HR&gt;</p>
   <p>&lt;BR&gt;&lt;BR&gt;<br>
-    &lt;H3&gt;&lt;A NAME=&quot;T.2&quot;&gt;��ƽ�{����&lt;/A&gt; &lt;/H3&gt;</p>
-  <p>������ѻ����ݣ�&lt;br&gt;���L����¶�A�⡣&lt;br&gt;����Ⱥ��ɽ�^Ҋ��&lt;br&gt;����̨���·ꡣ&lt;br&gt;һ֦�t�G¶���㣬&lt;br&gt;�����ɽ�����c��&lt;br&gt;�膖�h�m�l���ƣ�&lt;br&gt;�ɑz�w�����y��&lt;br&gt;�����A�������g��&lt;br&gt;���þ�����Ц����&lt;br&gt;��ጴ��L�o�޺ޣ�&lt;br&gt;����ͤ�����@�ɡ�</p>
-  <p>&lt;H3&gt;&lt;A NAME=&quot;T.1&quot;&gt;�L����&lt;/A&gt; &lt;/H3&gt;<br>
+    &lt;H3&gt;&lt;A NAME=&quot;T.2&quot;&gt;清平調三首&lt;/A&gt; &lt;/H3&gt;</p>
+  <p>雲想衣裳花想容，&lt;br&gt;春風拂檻露華濃。&lt;br&gt;若非群玉山頭見，&lt;br&gt;會向瑤台月下逢。&lt;br&gt;一枝紅艷露凝香，&lt;br&gt;雲雨巫山枉斷腸。&lt;br&gt;借問漢宮誰得似？&lt;br&gt;可憐飛燕倚新妝。&lt;br&gt;名花傾國兩相歡，&lt;br&gt;常得君王帶笑看。&lt;br&gt;解釋春風無限恨，&lt;br&gt;沈香亭北倚闌干。</p>
+  <p>&lt;H3&gt;&lt;A NAME=&quot;T.1&quot;&gt;長干行&lt;/A&gt; &lt;/H3&gt;<br>
     &lt;PRE&gt;<br>
-    ������~��&lt;br&gt;�ۻ��Tǰ����&lt;br&gt;���T���R����&lt;br&gt;�v��Ū��÷��&lt;br&gt;ͬ���L���&lt;br&gt;��С�o�Ӳ¡�&lt;br&gt;ʮ�Ğ���D��&lt;br&gt;���δ�L�_��&lt;br&gt;���^�򰵱ڣ�&lt;br&gt;ǧ����һ�ء�&lt;br&gt;ʮ��ʼչü��&lt;br&gt;�ͬ�m�c�ҡ�&lt;br&gt;���汧���ţ�&lt;br&gt;�M�������_��&lt;br&gt;ʮ�����h�У�&lt;br&gt;�������˶ѡ�&lt;br&gt;���²����|��&lt;br&gt;Գ�Q���ϰ���&lt;br&gt;�Tǰ�t���E��&lt;br&gt;һһ���G̦��&lt;br&gt;̦��ܒߣ�&lt;br&gt;���~���L�硣&lt;br&gt;���º�������&lt;br&gt;�p�w���@�ݡ�&lt;br&gt;�д˂���ģ�&lt;br&gt;����t��ϡ�&lt;br&gt;���������ͣ�&lt;br&gt;�A������ҡ�&lt;br&gt;��ӭ�����h��&lt;br&gt;ֱ���L�Lɳ��</p>
+    妾髮初覆額，&lt;br&gt;折花門前劇。&lt;br&gt;郎騎竹馬來，&lt;br&gt;遶床弄青梅。&lt;br&gt;同居長干里，&lt;br&gt;兩小無嫌猜。&lt;br&gt;十四為君婦，&lt;br&gt;羞顏未嘗開。&lt;br&gt;低頭向暗壁，&lt;br&gt;千喚不一回。&lt;br&gt;十五始展眉，&lt;br&gt;願同塵與灰。&lt;br&gt;常存抱柱信，&lt;br&gt;豈上望夫臺。&lt;br&gt;十六君遠行，&lt;br&gt;瞿塘灩澦堆。&lt;br&gt;五月不可觸，&lt;br&gt;猿鳴天上哀。&lt;br&gt;門前遲行跡，&lt;br&gt;一一生綠苔。&lt;br&gt;苔深不能掃，&lt;br&gt;落葉秋風早。&lt;br&gt;八月蝴蝶來，&lt;br&gt;雙飛西園草。&lt;br&gt;感此傷妾心，&lt;br&gt;坐愁紅顏老。&lt;br&gt;早晚下三巴，&lt;br&gt;預將書報家。&lt;br&gt;相迎不道遠，&lt;br&gt;直至長風沙。</p>
   <p>&lt;/PRE&gt;<br>
-    &lt;A href=&quot;#top&quot;&gt;��ʫ����&lt;/a&gt;<br>
+    &lt;A href=&quot;#top&quot;&gt;唐诗欣赏&lt;/a&gt;<br>
     &lt;BR&gt;&lt;BR&gt;<br>
-    &lt;H3&gt;&lt;A NAME=&quot;T.3&quot;&gt;���ª���&lt;/A&gt; &lt;/H3&gt;<br>
+    &lt;H3&gt;&lt;A NAME=&quot;T.3&quot;&gt;月下獨酌&lt;/A&gt; &lt;/H3&gt;<br>
     &lt;PRE&gt;<br>
-    ���gһ�ؾƣ�&lt;br&gt;���ßo���H��&lt;br&gt;�e�������£�&lt;br&gt;��Ӱ�����ˡ�&lt;br&gt;�¼Ȳ����&lt;br&gt;Ӱͽ�S������&lt;br&gt;������Ӱ��&lt;br&gt;�И�횼�����&lt;br&gt;�Ҹ�����أ�&lt;br&gt;����Ӱ��y��&lt;br&gt;�ѕrͬ���g��&lt;br&gt;�������ɢ��&lt;br&gt;���Y�o���[��&lt;br&gt;������녝h��<br>
+    花間一壺酒，&lt;br&gt;獨酌無相親。&lt;br&gt;舉杯邀明月，&lt;br&gt;對影成三人。&lt;br&gt;月既不解飲，&lt;br&gt;影徒隨我身。&lt;br&gt;暫伴月將影，&lt;br&gt;行樂須及春。&lt;br&gt;我歌月裴回，&lt;br&gt;我舞影零亂。&lt;br&gt;醒時同交歡，&lt;br&gt;醉後各分散。&lt;br&gt;永結無情遊，&lt;br&gt;相期邈雲漢。<br>
     &lt;/PRE&gt;<br>
-    &lt;p&gt;&lt;a href=&quot;4-2-12.html#libai&quot;&gt;�������Ȩ��&lt;/a&gt;&lt;/p&gt;    <br>
+    &lt;p&gt;&lt;a href=&quot;4-2-12.html#libai&quot;&gt;李白蔑视权贵&lt;/a&gt;&lt;/p&gt;    <br>
     &lt;/BODY&gt;<br>
     &lt;/HTML&gt;</p>
   <P align=left>&nbsp;</P>
-  <P align=left>ʵ��<a name="��4-2-12" id="��4-2-12"></a>��<A 
+  <P align=left>实例<a name="例4-2-12" id="例4-2-12"></a>：<A 
 href="./shili/4-2-12.htm">4-2-12html</A></P>
 <P 
-align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;���&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;center&gt;<BR>&lt;a 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;李白&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;center&gt;<BR>&lt;a 
 href="4-2-11.html#lb"&gt;&lt;h1 align="center"&gt;&lt;font 
-color="#339933"&gt;���&lt;/font&gt;&lt;/h1&gt;&lt;/a&gt;<BR>&lt;font 
+color="#339933"&gt;李白&lt;/font&gt;&lt;/h1&gt;&lt;/a&gt;<BR>&lt;font 
 color="#339933" 
-size="+2"&gt;��ף�701~762����&lt;br&gt;��̫�ף���������ʿ��&lt;br&gt;�漮¤���ɼͣ������ʡ��ˮ�и������ذ��أ���&lt;br&gt;�峯ĩ������������ס������ϸ�ǡ�&lt;br&gt;��׵ļ����ͳ����������Ǹ��գ�&lt;br&gt;ѧ����˵����һ��&lt;br&gt;һ˵��׾͵����ڰ�����������Ͻ����Ҷ�ǣ�&lt;br&gt;����ʱ�游Ǩ�����ݲ�¡�������硣&lt;br&gt;<BR>&lt;p&gt;���������ţ�&lt;br&gt;ϲ���ݺ�ҵ����磬&lt;br&gt;��������֮�£����Ӳƻ���&lt;br&gt;���������жȹ������ĸ����Ǹ����̡�&lt;br&gt;��׶�ʮ���꿪ʼ����ȫ����&lt;br&gt;�߹����������������ϣ�ɽ���ȵ�.&lt;br&gt;&lt;/p&gt;</P>
+size="+2"&gt;李白（701~762），&lt;br&gt;字太白，号青莲居士。&lt;br&gt;祖籍陇西成纪（今甘肃省天水市附近的秦安县），&lt;br&gt;隋朝末年其先租因罪住在中亚细亚。&lt;br&gt;李白的家世和出生地至今还是个谜，&lt;br&gt;学术界说法不一。&lt;br&gt;一说李白就诞生在安西都护府所辖的碎叶城，&lt;br&gt;五岁时随父迁到绵州昌隆县青莲乡。&lt;br&gt;<BR>&lt;p&gt;李白性情豪放，&lt;br&gt;喜爱纵横家的作风，&lt;br&gt;爱好任侠之事，轻视财货。&lt;br&gt;早年在蜀中度过。他的父亲是个富商。&lt;br&gt;李白二十五岁开始漫游全国，&lt;br&gt;走过湖北，江西，河南，山东等地.&lt;br&gt;&lt;/p&gt;</P>
 <P 
 align=left>&lt;p&gt;&lt;A 
-  NAME="libai"&gt;�������Ȩ��&lt;/A&gt;��&lt;br&gt;��˵�������ƣ�&lt;br&gt;����������ǰʹ����ʿ������ѥ��&lt;br&gt;����ʿ��Ϊ���Ǻܴ�ĳ��裬&lt;br&gt;��ժȡ���ʫ�伤ŭ�������&lt;br&gt;����ÿ����������٣�������ͼ�����ֹ��&lt;br&gt;���֪�����ڵ����Ŷ����������&lt;br&gt;���ǿ��󻹼ҡ�&lt;br&gt;���ڴ͸������������.&lt;br&gt;&lt;/p&gt;<BR>
-  &lt;p&gt;������ҹ��ƴ�ΰ�����������ʫ�ˣ�&lt;br&gt;����Ϊ��ʫ�ɡ���&lt;br&gt;����ʫ����������ʫ����ͻ����ʵ�Ļ��롣&lt;br&gt;Ҳ�жԵ�ʱ��������ķ�ӳ�Ͷ����κڰ��������&lt;br&gt;����ɢ�ľ����������ʣ�&lt;br&gt;�����������ص㡣&lt;/p&gt;&lt;/font&gt;&lt;/center&gt;<BR>
+  NAME="libai"&gt;李白蔑视权贵&lt;/A&gt;，&lt;br&gt;传说他喝醉酒，&lt;br&gt;曾在玄宗面前使高力士给他脱靴。&lt;br&gt;高力士认为这是很大的耻辱，&lt;br&gt;就摘取李白诗句激怒杨贵妃。&lt;br&gt;玄宗每次让李白做官，杨贵妃就加以阻止。&lt;br&gt;李白知道玄宗的亲信对他有意见，&lt;br&gt;于是恳求还家。&lt;br&gt;玄宗赐给他财物，放他开.&lt;br&gt;&lt;/p&gt;<BR>
+  &lt;p&gt;李白是我国唐代伟大的浪漫主义诗人，&lt;br&gt;被誉为“诗仙”。&lt;br&gt;他的诗豪迈瑰丽，诗里有突破现实的幻想。&lt;br&gt;也有对当时民生疾苦的反映和对政治黑暗的抨击。&lt;br&gt;他的散文具有清新明朗，&lt;br&gt;奔放流畅的特点。&lt;/p&gt;&lt;/font&gt;&lt;/center&gt;<BR>
   &lt;/body&gt;<BR>
   &lt;/html&gt;</P>
 <P align=left>&nbsp;<FONT size=4 
 ><FONT 
-color=#ff6600><STRONG>4-2-2��վ���ڲ�����<FONT 
-size=3>��</FONT>��<a name="neibu" id="neibu"></a></STRONG></FONT></FONT></P>
+color=#ff6600><STRONG>4-2-2在站点内部建立<FONT 
+size=3>链</FONT>接<a name="neibu" id="neibu"></a></STRONG></FONT></FONT></P>
   <P align=left>&nbsp;&nbsp;&nbsp; 
-��ν�ڲ����ӣ�ָ������ͬһ����վ�ڲ�����ͬ��htmlҳ��֮������ӹ�ϵ���ڽ�����վ�ڲ����ӵ�ʱ��Ҫ��ȷ�ĸ����������ļ�������ǰҳ�����ĸ��Ǳ������ļ�����ǰ���������·��ʱ���Ѿ�����ҽ������ڲ����Ӹ���ڲ�����һ��������·�����ӱȽϺá��������Ǹ�����ͼʾ�����������·���ľ�������ӷ���:</P>
+所谓内部链接，指的是在同一个网站内部，不同的html页面之间的链接关系，在建立网站内部链接的时候，要明确哪个是主链接文件（即当前页），哪个是被链接文件。在前面介绍链接路径时，已经给大家介绍了内部链接概念，内部链接一般采用相对路径链接比较好。下面我们根据如图示，来看看相对路径的具体的链接方法:</P>
   <P align=center><IMG src="./image/lj.gif" align=baseline></P>
-<P align=center>��վ���ڲ���������</P>
+<P align=center>在站点内部建立链接</P>
 <P align=left> 
 <TABLE borderColor=#003366 width=726 border=3 style="WIDTH: 726px; HEIGHT: 215px" align=center>
   
   <TR>
-    <TD>��ǰҳ��</TD>
-    <TD>������ҳ��</TD>
-    <TD>�����Ӵ���</TD></TR>
+    <TD>当前页面</TD>
+    <TD>被链接页面</TD>
+    <TD>超链接代码</TD></TR>
   <TR>
     <TD>2-1.html</TD>
     <TD>3-1.html</TD>
-    <TD>&lt;a href="3-1.html"&gt;������Ԫ��&lt;/a&gt;</TD></TR>
+    <TD>&lt;a href="3-1.html"&gt;超链接元素&lt;/a&gt;</TD></TR>
   <TR>
     <TD>3-1.html</TD>
     <TD>1-1.html</TD>
     <TD>&lt;a 
-  href="asm/1-1.html"&gt;������Ԫ��&lt;/a&gt;</TD>
+  href="asm/1-1.html"&gt;超链接元素&lt;/a&gt;</TD>
   </TR>
   <TR>
     <TD>sy.html</TD>
     <TD>1-1.html</TD>
     <TD>&lt;a 
-  href="ssm/asm/1-1.html"&gt;������Ԫ��&lt;/a&gt;</TD></TR>
+  href="ssm/asm/1-1.html"&gt;超链接元素&lt;/a&gt;</TD></TR>
   <TR>
     <TD>2-1.html</TD>
     <TD>sy.html</TD>
-    <TD>&lt;a href="../sy.html"&gt;������Ԫ��&lt;/a&gt;</TD></TR>
+    <TD>&lt;a href="../sy.html"&gt;超链接元素&lt;/a&gt;</TD></TR>
   <TR>
     <TD>1-1.html</TD>
     <TD>sy.html</TD>
-    <TD>&lt;a href="../../sy.html"&gt;������Ԫ��&lt;/a&gt;</TD>
+    <TD>&lt;a href="../../sy.html"&gt;超链接元素&lt;/a&gt;</TD>
   </TR>
   <TR>
     <TD>sy.html</TD>
     <TD>2-1.html</TD>
     <TD>&lt;a 
-  href="ssm/2-1.html"&gt;������Ԫ��&lt;/a&gt;</TD>
+  href="ssm/2-1.html"&gt;超链接元素&lt;/a&gt;</TD>
   </TR></TABLE></P>
-<P align=left><FONT color=#ff6600 size=4><STRONG>4-2-3 �ⲿ����<a name="waibu" id="waibu"></a></STRONG></FONT></P>
+<P align=left><FONT color=#ff6600 size=4><STRONG>4-2-3 外部链接<a name="waibu" id="waibu"></a></STRONG></FONT></P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-��ν�ⲿ���ӣ�ָ������ת����ǰ��վ�ⲿ����������վ��ҳ�������Ԫ��֮������ӹ�ϵ���������ӵ�URL��ַһ��Ҫ�þ���·����Ҫ��������URL��ַ������Э���������������ļ����������ϵĵ�λ�õ�·���Լ��ļ�����</P>
-<P align=left>��õ��ⲿ���Ӹ�ʽ�ǣ�&lt;a href="http://��ַ"&gt;,���������ĸ�ʽ���±���ʾ��</P>
-<P align=center>URL�������Ӹ�ʽ
+所谓外部链接，指的是跳转到当前网站外部，与其它网站中页面或其它元素之间的链接关系。这种链接的URL地址一般要用绝对路径，要有完整的URL地址，包括协议名，主机名，文件所在主机上的的位置的路径以及文件名。</P>
+<P align=left>最常用的外部链接格式是：&lt;a href="http://网址"&gt;,还有其他的格式如下表所示：</P>
+<P align=center>URL外链部接格式
 <TABLE borderColor=#003366 width="724" border=3 style="WIDTH: 724px; HEIGHT: 183px">
   
   <TR>
-    <TD>�� ��</TD>
-    <TD>URL��ʽ</TD>
-    <TD>�� ��</TD></TR>
+    <TD>服 务</TD>
+    <TD>URL格式</TD>
+    <TD>描 述</TD></TR>
   <TR>
     <TD>WWW</TD>
-    <TD>http://"��ַ"</TD>
-    <TD>������ά��վ��</TD></TR>
+    <TD>http://"地址"</TD>
+    <TD>进入万维网站点</TD></TR>
   <TR>
     <TD>Ftp</TD>
     <TD>ftp://""</TD>
-    <TD>�����ļ�����Э��</TD></TR>
+    <TD>进入文件传输协议</TD></TR>
   <TR>
     <TD>Telnet</TD>
     <TD>telnet://""</TD>
-    <TD>����Telnet��ʽ</TD></TR>
+    <TD>启动Telnet方式</TD></TR>
   <TR>
     <TD>Gopher</TD>
     <TD>gopher://""</TD>
-    <TD>����һ��gopher������</TD></TR>
+    <TD>访问一个gopher服务器</TD></TR>
   <TR>
     <TD>News</TD>
     <TD>news://""</TD>
-    <TD>��������������</TD></TR>
+    <TD>启动新闻讨论组</TD></TR>
   <TR>
     <TD>Email</TD>
     <TD>email://""</TD>
-    <TD>�����ʼ�</TD></TR></TABLE></P>
+    <TD>启动邮件</TD></TR></TABLE></P>
 <P align=left><FONT color=#aa00ff><STRONG>4-2-31 
-��������վ�㣺</STRONG> </FONT></P>
+链接其它站点：</STRONG> </FONT></P>
 <P 
-align=left>&nbsp;&nbsp;վ��֮���ҳ���Ԫ�ص���������ά��������Ϣ�Ĺؼ�������������HTTPЭ����������վ֮��ĳ����ӡ�&nbsp;</P>
-<P align=left>��ʽ��&lt;A HREF="HTTP://"��ַ"&gt;&nbsp;&nbsp; </P>
-<P align=left>ʵ��<a name="��4-2-3" id="��4-2-3"></a>��<A href="./shili/4-2-3.htm">4-2-31.html</A></P>
-<P align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;���ӵ�http://&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;<BR>
-&lt;h2&gt;����·������&lt;/h2&gt;<BR>
+align=left>&nbsp;&nbsp;站点之间的页面和元素的链接是万维网交流信息的关键，这种链接用HTTP协议来建立网站之间的超链接。&nbsp;</P>
+<P align=left>格式：&lt;A HREF="HTTP://"网址"&gt;&nbsp;&nbsp; </P>
+<P align=left>实例<a name="例4-2-3" id="例4-2-3"></a>：<A href="./shili/4-2-3.htm">4-2-31.html</A></P>
+<P align=left>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;TITLE&gt;链接到http://&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;CENTER&gt;<BR>
+&lt;h2&gt;绝对路径链接&lt;/h2&gt;<BR>
 &lt;HR&gt;<BR>
-&lt;A HREF="http://www.sina.com.cn" title="��������ҳ"&gt;&lt;img 
+&lt;A HREF="http://www.sina.com.cn" title="打开新浪首页"&gt;&lt;img 
 src="../../imgelogo(3).gif/"&gt;&lt;/A&gt;&lt;BR&gt;&lt;BR&gt;<BR>
-&lt;A HREF="http://www.tsinghua.edu.cn"&gt;�� �� �� 
-ѧ&lt;/A&gt;&lt;BR&gt;&lt;BR&gt;<BR>&lt;A 
-HREF="http://www.pku.edu.cn"&gt;�� �� �� 
-ѧ&lt;/A&gt;&lt;BR&gt;&lt;BR&gt;<BR>&lt;A HREF="http://www.shisu.edu.cn" 
-target=_blank&gt;�Ϻ������ѧԺ&lt;/A&gt;&lt;BR&gt;<BR>&lt;/CENTER&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
+&lt;A HREF="http://www.tsinghua.edu.cn"&gt;清 华 大 
+学&lt;/A&gt;&lt;BR&gt;&lt;BR&gt;<BR>&lt;A 
+HREF="http://www.pku.edu.cn"&gt;北 京 大 
+学&lt;/A&gt;&lt;BR&gt;&lt;BR&gt;<BR>&lt;A HREF="http://www.shisu.edu.cn" 
+target=_blank&gt;上海外国语学院&lt;/A&gt;&lt;BR&gt;<BR>&lt;/CENTER&gt;<BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt;</P>
 <P align=left><STRONG><FONT color=#aa00ff>4-2-32 
-����E-mail</FONT></STRONG></P>
+发送E-mail</FONT></STRONG></P>
 <P align=left><STRONG>&nbsp;&nbsp;&nbsp; 
-</STRONG>��HTMLҳ���У����Խ���E-mail���ӡ�������ߵ������Ӻ�ϵͳ������Ĭ�ϵı����ʼ�����ϵͳ�����ʼ���</P>
-<P align=left>&nbsp;&nbsp;&nbsp; �����﷨��&lt;a href="mailto:E-mali ��ַ<FONT 
-color=#000000>:</FONT>&nbsp;subject=�ʼ�����"&gt;��������&lt;/a&gt;</P>
-<P align=left>&nbsp;&nbsp;&nbsp;��ʵ��Ӧ���У��û������Լ����������������"?cc=&quot;E-mali��ַ&quot;��"&amp;body=?",��ֱ��ʾ�ڷ����ʼ���ͬʱ���ʼ����͸������ߺ��趨�ʼ��������ݡ�</P>
-<P align=center>�ʼ��Ĳ���
+</STRONG>在HTML页面中，可以建立E-mail链接。当浏览者单击链接后，系统会启动默认的本地邮件服务系统发送邮件。</P>
+<P align=left>&nbsp;&nbsp;&nbsp; 基本语法：&lt;a href="mailto:E-mali 地址<FONT 
+color=#000000>:</FONT>&nbsp;subject=邮件主题"&gt;描述文字&lt;/a&gt;</P>
+<P align=left>&nbsp;&nbsp;&nbsp;在实际应用中，用户还可以加入另外的两个参数"?cc=&quot;E-mali地址&quot;和"&amp;body=?",这分别表示在发送邮件的同时把邮件抄送给第三者和设定邮件主题内容。</P>
+<P align=center>邮件的参数
 <TABLE style="WIDTH: 438px; HEIGHT: 119px" borderColor=#003366 width=438 
 border=3>
   
   <TR>
-    <TD>��&nbsp;&nbsp; ��</TD>
-    <TD>��&nbsp;&nbsp; ��</TD></TR>
+    <TD>参&nbsp;&nbsp; 数</TD>
+    <TD>描&nbsp;&nbsp; 述</TD></TR>
   <TR>
     <TD>subject</TD>
-    <TD>�����ʼ�����</TD></TR>
+    <TD>电子邮件主题</TD></TR>
   <TR>
     <TD>cc</TD>
-    <TD>�����ռ���</TD></TR>
+    <TD>抄送收件人</TD></TR>
   <TR>
     <TD>body</TD>
-    <TD>��������</TD></TR>
+    <TD>主题内容</TD></TR>
   <TR>
     <TD>bcc</TD>
-    <TD>�����ռ���</TD></TR></TABLE></P>
-<P align=left>&nbsp;&nbsp;&nbsp; ���ϣ��ͬʱд�¶�������������֮��ʹ��"&amp;"�ָ�����</P>
-<P align=left>ʵ��<a name="��4-2-32" id="��4-2-32"></a>��<A href="./shili/4-2-32.HTM">4-2-32.html</A></P>
+    <TD>暗送收件人</TD></TR></TABLE></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 如果希望同时写下多个参数，则参数之间使用"&amp;"分隔符。</P>
+<P align=left>实例<a name="例4-2-32" id="例4-2-32"></a>：<A href="./shili/4-2-32.HTM">4-2-32.html</A></P>
 <P 
-align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;�����ʼ�&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;p&gt; 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;发送邮件&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;p&gt; 
 <BR>
-&lt;a href="mailto:zhoujr3071@yahoo.com.cn?cc=benbenmao@163.com&amp;Subject=�簲&amp;bcc=a@b.c<BR>
+&lt;a href="mailto:zhoujr3071@yahoo.com.cn?cc=benbenmao@163.com&amp;Subject=早安&amp;bcc=a@b.c<BR>
 &amp;Body= 
-�簲,����èף��ȹ�һ�����ֵ��糿��"&gt;&nbsp; <BR>�򱿱�è�ĺ��ѷ����ʼ�(���� ����è)<BR>&lt;/a&gt;&nbsp; 
+早安,笨笨猫祝你度过一个快乐的早晨！"&gt;&nbsp; <BR>向笨笨猫的好友发送邮件(抄送 笨笨猫)<BR>&lt;/a&gt;&nbsp; 
 <BR>&lt;/p&gt;&nbsp; <BR>&lt;/body&gt;&nbsp; <BR>&lt;/html&gt; </P>
-<P align=left>&nbsp;&nbsp;&nbsp; ����"�򱿱�è�ĺ��ѷ����ʼ�(���� ����è)"�����ϵͳ���ʼ���������Outlook 
-Exqress�����ʼ���</P>
-<P align=left><STRONG><FONT color=#aa00ff>4-2-33 ����FTP</FONT></STRONG></P>
+<P align=left>&nbsp;&nbsp;&nbsp; 单击"向笨笨猫的好友发送邮件(抄送 笨笨猫)"后打开了系统的邮件服务软件Outlook 
+Exqress发送邮件。</P>
+<P align=left><STRONG><FONT color=#aa00ff>4-2-33 链接FTP</FONT></STRONG></P>
 <P align=left>&nbsp;&nbsp;&nbsp; 
-lnternet����Դ�ḻ��ͨ��ftp�ļ�����Э�飬�Ϳ��Ի�ø�����������������ļ���ftpЭ����ʹ�����������֮���ܹ��໥ͨ�ŵ����ԣ�ftpʹ�ļ����ļ����ܹ���lnternet�Ϲ������䣬ͨ��ftp���Է���ĳ��������������������Ҫ�ü�������˻�����Ȩ������Ϳ�ͨ��ftp�����������</P>
-<P align=left>&nbsp;&nbsp; �﷨��ʽ��</P>
+lnternet上资源丰富，通过ftp文件传输协议，就可以获得各种免费软件和其他文件，ftp协议是使计算机与计算机之间能够相互通信的语言，ftp使文件和文件夹能够在lnternet上公开传输，通过ftp可以访问某个网络或服务器，而不需要该计算机的账户和授权的密码就可通过ftp公开获得数据</P>
+<P align=left>&nbsp;&nbsp; 语法格式：</P>
 <P align=left>&nbsp;&nbsp;&nbsp; &lt;a 
-href="ftp://ftp������ַ"&gt;��������&lt;/a&gt;</P>
-<P align=left>ʵ����<A href="./shili/4-2-33.HTM">4-2-33.html</A></P>
+href="ftp://ftp主机地址"&gt;文字链接&lt;/a&gt;</P>
+<P align=left>实例：<A href="./shili/4-2-33.HTM">4-2-33.html</A></P>
 <P 
-align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;����ftp����&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;p&gt; 
+align=left>&lt;html&gt;<BR>&lt;head&gt;<BR>&lt;title&gt;链接ftp主机&lt;/title&gt;<BR>&lt;/head&gt;<BR>&lt;body&gt;<BR>&lt;p&gt; 
 <BR>&lt;a 
-href=ftp://ftp.pku.edu.cn&gt;������ѧftpվ��&lt;/a&gt;&nbsp; 
+href=ftp://ftp.pku.edu.cn&gt;北京大学ftp站点&lt;/a&gt;&nbsp; 
 <BR>&lt;/p&gt;&nbsp; <BR>&lt;/body&gt;&nbsp; <BR>&lt;/html&gt; </P>
-<P align=center><font size="+3"><b>&nbsp; <a href="3.htm">��һҳ</a>&nbsp; <a href="5.htm">��һҳ</a></b></font></P>
+<P align=center><font size="+3"><b>&nbsp; <a href="3.htm">上一页</a>&nbsp; <a href="5.htm">下一页</a></b></font></P>
 </BODY>
 </HTML>
